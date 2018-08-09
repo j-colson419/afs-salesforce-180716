@@ -1,0 +1,100 @@
+<!-- This is a comment tag -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Demo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    </head>
+    <body>
+        
+        <center>
+            <h1>Welcome to my Webpage</h1>
+            <h4>A Webpage by <a href="https://github.com/Greenboigz" target="_blank">Sam Greenberg</a></h4>
+        </center>
+        <p>
+            This is a paragraph! This is a paragraph! This is a paragraph! 
+            This is a paragraph! This is a paragraph! This is a paragraph! 
+            This is a paragraph! This is a paragraph! This is a paragraph!
+            This is a paragraph! This is a paragraph! This is a paragraph! 
+            This is a paragraph! This is a paragraph! This is a paragraph! 
+            This is a paragraph! This is a paragraph! This is a paragraph!
+            This is a paragraph! This is a paragraph! This is a paragraph! 
+            This is a paragraph! This is a paragraph! This is a paragraph! 
+            This is a paragraph! This is a paragraph! This is a paragraph!
+        </p>
+
+        <center>
+            <img src="https://media.giphy.com/media/LUld6WaHvWUAE/giphy.gif" alt="Rick and Morty" width="100%" />
+        </center>
+
+        <pre style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+            You are my sunshine.
+            My only sunshine.
+            You make me happy,
+            When skies are grey.
+            You'll never know dear,
+            How much <q>I love you</q>.
+            So please don't take my sunshine away
+        </pre>
+
+        <button onClick="alert('JK I did something');" style="color:blue; background-color:lightblue; border-color:blue">I don't do anything</button>
+
+        <blockquote cite="https://www.usatoday.com/story/news/politics/onpolitics/2018/02/19/history-experts-new-york-times-op-ed-trump-worst-president-ever-obama-top-10/353024002/">
+            Donald Trump is America's worst president, says a New York Times opinion piece 
+            that's based on a survey of 170 members of the American Political Science 
+            Association’s Presidents and Executive Politics section.
+        </blockquote>
+        <p>To learn more, read the article <a target="_blank" href="https://www.usatoday.com/story/news/politics/onpolitics/2018/02/19/history-experts-new-york-times-op-ed-trump-worst-president-ever-obama-top-10/353024002/">here</a>.</p>
+
+        <picture>
+            <source media="(max-width:600px)" srcset="https://lh3.googleusercontent.com/zEE3wNRoKGd8py4Jhod6HFaWf6iLjV3wtAjVZR-cC3pB0rRehlhBuKZOag8lL8af4XFAwEuSCl9kebbDpJibDg=s400" />
+            <source media="(max-width:900px)" srcset="https://cdn-jpg3.thedailymeal.com/sites/default/files/2014/09/25/cheeseburger_1.jpg" />
+            <img src="https://www.redrobin.com/content/dam/web/menu/gourmet-burgers/gourmet-cheeseburger-1100.jpg" />
+        </picture>
+        <hr>
+
+        <form>
+
+            <fieldset>
+                <legend>Input Stuff</legend>
+                Name: <input type="text" name="Name"><br>
+                Email: <input type="email" name="Email"><br>
+                Password: <input type="password" name="Password"><br>
+                Favorite Pet:
+                Dog<input type="radio" name="pet" value="dog">
+                Cat<input type="radio" name="pet" value="cat">
+                Hamster<input type="radio" name="pet" value="hamster">
+                Monkey<input type="radio" name="pet" value="monkey">
+                <br>
+                Favorite Color: 
+                <select name="colors">
+                    <option value="red">Red</option>
+                    <option value="orange">Orange</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                    <option value="purple">Purple</option>
+                </select><br>
+                Other Favorite Colors:
+                <select name="multiple-colors" multiple>
+                    <option value="red">Red</option>
+                    <option value="orange">Orange</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                    <option value="purple">Purple</option>
+                </select><br>
+                <textarea name="message" rows="5" cols="50" placeholder="Placeholder Text"></textarea><br>
+                Abled: <input type="checkbox" name="cancheck" value="cancheck"><br>
+                Disabled: <input type="checkbox" name="cannotcheck" value="cannotcheck" disabled><br>
+            </fieldset>
+
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+
+        </form>
+
+    </body>
+</html>
