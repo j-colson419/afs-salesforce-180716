@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM Demo</title>
+    <script type="text/javascript" src="jess-dom-demo.js"></script>
+    <style>
+        .delete-button {
+            border-radius: 5px;
+            border: 2px solid rgb(204, 63, 82);
+            color: rgb(204, 63, 82);
+            background: #ffffff;
+            padding: 2px 6px;
+            box-shadow: -3px 4px 6px .1px rgba(0, 0, 0, 0.808);
+            margin: 4px;
+            font-weight: bold;
+        }
+
+        .delete-button:hover, .delete-button:focus {
+            color: #ffffff;
+            border-color: #ffffff;
+            background-color: rgb(204, 63, 82);
+            box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.808);
+        }
+    </style>
+</head>
+<body>
+    
+    <form action="#">
+        <h3>Who Are You?</h3>
+
+        <fieldset>
+            First Name:
+            <input id="fname" type="text">
+            <br>
+            Last Name:
+            <input id="lname" type="text">
+            <br>
+            Favorite Color:
+            <input id="color" type="color">
+        </fieldset>
+
+        <button id="add">Add</button>
+
+    </form>
+
+    <div id="parent" style="margin-top:50px;">
+        <table id="people-table">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Favorite Color</th>
+                <th>Action</th>
+            </tr>
+        </table>
+    </div>
+
+
+
+
+
+</body>
+</html>

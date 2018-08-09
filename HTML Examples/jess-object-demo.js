@@ -28,14 +28,14 @@ function makePerson2(n, a){
 ///////////////////////////////
 
 function Person(n, a, f){
-    console.log("new Person Constructor.");
-    console.log(this);
+    // console.log("new Person Constructor.");
+    // console.log(this);
     this.name = n;
     this.age = a;
     this.friend = f;
 
     globalvar = 5;
-    console.log(globalvar);
+    // console.log(globalvar);
 }
 
 function makePerson3(n, a, fn, fa){
@@ -57,7 +57,7 @@ var pWithFriends = {
     "age": 45,
     "friend": {"name": "Rachel", "age": 54},
     makeNewFriend: function(fn, fa){
-        console.log(this);
+        // console.log(this);
         var f2 = {"name": fn, "age": fa};
         this.friend2 = f2;
     }
@@ -70,7 +70,7 @@ var pWithFriends2 = {
     "age": 45,
     "friend": {"name": "Jess", "age": 54},
     makeNewFriend: function(fn, fa){
-        console.log(this);
+        // console.log(this);
         var f2 = {"name": fn, "age": fa};
         this.friend2 = f2;
     }
@@ -78,6 +78,28 @@ var pWithFriends2 = {
 
 pWithFriends2.makeNewFriend("Oliver", 98);
 
+/////////////////////////////////////////////////////
+/*Closure
+    There are three types of scope chains with closure:
+        - Inner function has access to its own variables
+            - the variables inside the curly braces
+        - Inner function has access to the outer function's variables.
+        - Inner function has access to global variables.
+*/
+
+function showName(first, last){
+    var nameIntro = "Your name is ";
+    function makeFullName(){
+        return nameIntro + first + " " + last;
+    }
+    var result = makeFullName();
+    return result;
+}
+
+console.log(showName('Jess', 'Colson'));
+
+
+////////////////////////////////////////////////////////
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('create').addEventListener('click', function (e) {
         var name = document.getElementById('name').value;
