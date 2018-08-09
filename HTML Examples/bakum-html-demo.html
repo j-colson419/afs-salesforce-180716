@@ -1,0 +1,318 @@
+<!-- elements are things contained within two angle brackets <>
+to add comments, cntl + / for a question mark.  a tag is the two angle brackets as well
+ -->
+<!-- <!DOCTYPE html> -->
+<!-- this is saying the document type is HTML 5, which is the current version of HTML.
+a browser will be reading this.. the purpose of web browsers is to take the html pages and read 
+and display them:  doctype element.  everything except doctype is between the html elements below.
+the doctype must be the first thing on the page with the exception of comments -->
+<!-- <html> -->
+<!-- <head> -->
+<!-- anything within the head tab will not be displayed.  the purpose of the head tag
+        is the hold metadata for the page.  anything that is descriptive for the page - to help a 
+    browser read to, to help a developer understand it.. etc. -->
+<!-- <title>HTML Demo -->
+
+<!-- </title> -->
+<!-- <meta charset="UTF-8"> -->
+<!-- meta is a selfclosing tag, does not need the /meta -->
+<!-- <body> -->
+<!-- this will hold all of the important info that you want to display.  this will be 
+        what is displayed on your webpage -->
+
+<!-- </body> -->
+<!-- </head> -->
+<!-- </html> -->
+<!-- typing "!" is a shortcut that makes what is above/below -->
+<!DOCTYPE html>
+<html lang="en">
+<!-- below is a head tag, holds metadata.. is not displayed.   it is for the browser to read -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bakum-html-demo</title>
+    <!-- linking the style sheet (external) -->
+    <link rel="stylesheet" href="bakum-css-demo.css">
+    <style>
+        /* p{color:darkred} */
+
+        /* <!-- inline style always take precidence --> */
+    </style>
+</head>
+
+<body>
+
+    <!-- below is a heading tab.. this is displayed
+    the id element must be unique throughout the entire page, remember how you capitalize things as it makes a difference.  you can refernce it with the exact id ie"Top-of-Page -->
+    <h1 id="Top-of-Page">This is the most important heading. Look at this cute puppy!</h1>
+    <h6 class="my-class another-class">This is the least important heading.</h6>
+    <!-- the number after the h controls the size of the heading (see online browser page) 
+    this focuses on the signifigance/importance of the heading.  there are only 6.. h1-h6 -->
+    <p>
+        This is known as a paragraph tab. The content that is displayed is what is in between the two tabs. follow this
+        <a href="http://i.imgur.com/XyWEbyK.jpg">link</a> to see a cute puppy.
+    </p>
+    <p>
+        the photo below is also a link to the cute pupper.
+
+    </p>
+
+    <a href="http://i.imgur.com/XyWEbyK.jpg">
+        <img src="http://i.imgur.com/XyWEbyK.jpg" alt="A cute pupper" height="100%">
+
+    </a>
+    <!-- alt+shift+f should appropriately format your HTML document -->
+    <p>
+        You are my sunshine. My only sunshine. You make me happy, when skies are grey. You'll never know dear, how much I love you.
+        Please don't take my sunshine away.
+    </p>
+    <!-- without a line break function.. it doesn't matter how the spacing is OR using pre line shown below.  pre means pre-formated.  which means it'll show as is.  even removes browser defaults such as fonts unless you add style attributes -->
+    <pre style="font-family:sans-serif">
+
+        You are my <span style="color:gold">sunshine</span>.
+        My only sunshine.
+        You make me happy, when skies are grey.
+        You'll never know dear, how much <q>I love you.</q>
+        Please don't take my sunshine away.</pre>
+
+    <br>
+    <!-- the style below is an inline style thing -->
+    <button style="color:orangered">My First Button</button>
+    <br>
+    <br>
+    <br>
+    <blockquote cite="http://www.moviequotedb.com/movies/remember-the-titans/quote_19610.html">
+        All right now, I don't want them to gain another yard! You BLITZ ALL NIGHT!!! If they cross the line of scrimmage, I'll take
+        every last one of you out! You make sure they remember FOREVER the night they played the Titans!!!
+    </blockquote>
+    <br>
+    <br>
+    <br>
+    <p>
+        To learn more, see the
+        <a href="https://developer.salesforce.com/docs/atlas.en-us.pages.meta/pages/pages_intro.htm" title="Visualforce Developers Guide"
+            target="_blank">Visualforce Developer Guide</a>.
+    </p>
+
+    <picture>
+        <source media="(min-width:900px)" srcset="" width="500px">
+        <source media="(min-width: 700px)" srcset="">
+        <img srcset="" alt="Cute Puppy" style="width:auto">
+        <!-- all of this above adjusts the image based on the page width aka the pixels -->
+    </picture>
+
+    <hr>
+    <!-- this adds a line^^ -->
+    <br>
+    <br>
+    <h3>Grocery List</h3>
+    <!-- below is an example of an unordered list -->
+    <ul style="list-style-type:disk">
+        <li>Eggs</li>
+        <li>Bread</li>
+        <li>Milk</li>
+        <!--this creates a bulleted list  -->
+    </ul>
+    <br>
+    <br>
+    <br>
+
+    <!-- now an ordered list, the difference is that the list is numbered instead of bulleted -->
+    <h3>Steps to open this file in a browser</h3>
+    <!-- the type differntiates if it is numbered, roman numerals, lettered, etc. -->
+    <ol type="I">
+        <!-- b tags and i tags are for bold and italicized, like the q tag is for quote
+        all of the tags below are for formatting.. see web page -->
+        <li>Hold
+            <b>ALT</b> and hit
+            <i>L</i>
+        </li>
+        <li>
+            <strong>Release</strong>
+            <em>all</em>
+            <mark>keys</mark>
+        </li>
+        <li>Hold
+            <b>ALT</b>
+            <del>an</del>
+            <ins>and</ins>
+            <u>hit</u>
+            <i>O</i>
+        </li>
+
+    </ol>
+    <!-- definition list below, dd=definition description, dt=defintion term.  the description
+    will be intented under the term-->
+
+    <h3>Definition List</h3>
+    <dl>
+        <dt>Record Types</dt>
+        <dd>Page Layouts</dd>
+        <dd>Picklist Field Values</dd>
+
+        <dt>Reports & Dashboards</dt>
+        <dd>Scheduling Refreshes</dd>
+        <dd>Running User</dd>
+
+    </dl>
+
+    <hr>
+
+    <!-- we've covered lists, now we are going to go into tables tr=table row, th=table header tag
+    td= table data -->
+    <table border="all">
+        <caption>Example Table Caption</caption>
+        <tr>
+            <th>Header 1</th>
+            <th>Column
+                <sub>2</sub>
+            </th>
+            <th colspan="2">Columns
+                <sup>3 & 4</sup>
+            </th>
+            <!-- ^this mades columns 3 and 4 heading span over 2 columns instead of 1 -->
+        </tr>
+        <tr>
+
+            <th>Row 1</th>
+            <td>[1,1]</td>
+            <td rowspan="2">[1,2]</td>
+            <td>[1,3]</td>
+            <td>[1,4]</td>
+        </tr>
+        <tr>
+            <th>Row 2</th>
+            <td>[2,1]</td>
+            <!-- <td>[2,2]</td> -->
+            <td>[2,3]</td>
+            <td>[2,4]</td>
+            <!-- you can make data span 2 rows, which is why we commented out the one above -->
+        </tr>
+
+    </table>
+    <!-- horizontal rule -->
+    <hr>
+    <!-- moving on from tables.. now we're looking at something about links, refer to h1 heading above.  use the # followed by the ID to refernce the element.  creates a link to the element.  this is how you do bookmarks on pages -->
+    <a href="#Top-of-Page">Click to jump to the top of the page.</a>
+
+    <hr>
+    <!-- block level elements
+    - always start on a new line and take up the full width available to them
+    - the <div> element is a blocl-level element
+    - the div element is often used as a container for other HTML elements.
+        has no required attributes but style, class, and ID are common -->
+
+    <div>
+        <h2>Block Level Elements</h2>
+        <div>Hello</div>
+        <div>World</div>
+    </div>
+
+    <!--    Inline Elements:
+            - the span element is an inline element
+            - often used as a container for text
+            - can be used to style parts of text 
+            -   -->
+
+    <div style="margin-bottom:50px">
+
+        <h2>Inline Elements:</h2>
+        <span>Hello</span>
+        <span>World</span>
+
+    </div>
+
+    <!-- an iframe allows for a window inside of a window -->
+    <div style="padding-left:5%" style="border:dimgrey">
+        <h1 style="Text-align:center">Iframes</h1>
+        <iframe id="frame1" src="https://success.salesforce.com" height="500" width="90%"></iframe>
+    </div>
+
+    <!-- moving on to forms now -->
+    <hr>
+
+    <form>
+
+        <!--attributes of the form tag
+
+    action - defines the action to be performed when the form is submitted, hence the need for a submit button.  If the action attribute is omitted, the action is set to the current page.
+
+    target - specifies if the submitted result will open in a new browser tab, a frame, or in the current window.  default is "_self" which means the form will be submitted in the current window,  "_blank" will make the form results open in a new browser tab.
+
+    method - specifies the HTTP method (GET or POST) to be used when submitting the form data. 
+            http - hyper text transfer protocol
+            html - hyper text markup language (not a programming language)
+-->
+
+        <h1>Please fill out your information.</h1>
+        <!-- fieldset allows to group -->
+        <fieldset>
+            <legend>Personal Information:</legend>
+            First Name:
+            <!-- you must have the name attribute below or no values will be set -->
+            <input type="Text" name="firstname"> Last Name:
+            <input type="Text" name="lastname">
+        </fieldset>
+
+        <fieldset>
+            <legend>Choose your affiliation:</legend>
+            <input type="Radio" name="affiliation" value="cat"> Cat
+            <input type="Radio" name="affiliation" value="dog" checked> Dog
+            <input type="Radio" name="affiliation" value="fish"> Fish
+            <input type="Radio" name="affiliation" value="other"> Other
+            <!-- without the value attribute, HTMl will automcatically use whatever comes after the tag as the value??
+with radio buttons, only one in a grouping can be selected
+the checked attribute creates a default value -->
+        </fieldset>
+
+        <fieldset>
+            <legend>More Input Types</legend>
+            <select name="colors">
+                <!-- select elements create dropdown menus -->
+                <option value="red">Red</option>
+                <option value="orange">Orange</option>
+                <option value="yellow">Yellow</option>
+            </select>
+
+            <select name="Colors2" size="3" multiple>
+                <option value="red">Red</option>
+                <option value="orange" selected>Orange</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+            </select>
+
+            <br>
+            <br>
+            <textarea name="message" rows="5" cols="50" placeholder="Type your message..."></textarea>
+
+            <br> Password:
+            <input type="password" name="password">
+
+            <br>
+
+            <input type="checkbox" name="checkbox" value="cancheck" checked>I can check this box.
+            <br>
+            <input type="checkbox" name="cannotcheck" value="nocheck" disabled> I can't check this box.
+
+        </fieldset>
+        <!-- onclick is an event attribute.  on click, do this thing -->
+        <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+        <input type="reset" value="Reset">
+        <input type="submit" value="Submit">
+
+
+    </form>
+
+    <!-- these are kinda pointless.  only for people reading the code to know what's going on -->
+    <header>This is my header.</header>
+    <nav>This is my nav bar.</nav>
+    <section>Section 1</section>
+    <section>Section 2</section>
+    <footer>This is a footer</footer>
+
+
+</body>
+
+</html>
