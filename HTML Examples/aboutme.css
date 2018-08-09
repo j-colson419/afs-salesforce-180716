@@ -1,0 +1,91 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,900|Montez);
+
+html  {
+  
+  font-family: Lato;
+  font-weight: 200;
+  font-size: 1em;
+  text-align: center;
+  color: #ddd;
+  
+  min-height: 100%;
+
+  background: linear-gradient(-45deg, #670d37 0%, #0c4b7e 100%);
+  
+}
+
+body { 
+    padding: 50px;
+}
+
+  span { 
+    font-family: Montez; 
+    font-size: 1.9em; 
+    font-weight: 300; 
+    margin: 0 0.3em; 
+    color: #ff0080; 
+  }
+
+h1 { 
+  font-size: 1.9em; 
+  width: 900px; 
+  margin: 0 auto 1em; 
+  text-shadow: 0 2px 1px black;
+}
+
+.img {
+
+  margin: 40px auto 0;
+  width: 500px;
+  display: block;
+}
+
+p {
+
+  padding: 5px 10px;
+  display: inline-block;
+  margin: 10px auto;
+
+}
+
+/* Style all font awesome icons */
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-instagram {
+    background: rgb(247, 47, 147);
+    color: white;
+}
+
+.fa-snapchat {
+    background: rgb(234, 247, 47);
+    color: white;
+}
+
+/* li{
+    float: left;
+} */
