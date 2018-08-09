@@ -1,0 +1,45 @@
+/* Inline styling is using a style attrinute on a tag to add inline styles
+    - internal always takes precedence bc it is the last thing read before executing
+/* Internal styling is using the <style> tag in the <head> tag
+/* External style sheets: use the tag <link rel="stylesheet" href="file name">
+
+/* Absolute file path 
+/* Relative file paths are the file paths from the directory that your file path is currently in.
+/* If we are in the same folder, the relative file path will be the name of the file.
+/* HTML file is where we start to build our relative file path
+
+{} is a declaration and each declaration is complete with a property value pair
+; is seperating the declarations
+ pink is the value
+
+/* Element Selector */
+
+p {
+    color:olivedrab;
+    font-size:19px;
+
+}
+
+h1 {
+    color: rgb(182, 0, 70);
+}
+
+/* id selector */
+#Top-of-Page {
+    color: rebeccapurple;
+}
+
+/* Class Selector */
+
+.my-class {
+    color:gray;
+}
+
+.another-class {
+    font-size:5px;
+}
+
+/* Grouping Slectors */
+p, h1, h6 {
+    font-family:cursive;
+}

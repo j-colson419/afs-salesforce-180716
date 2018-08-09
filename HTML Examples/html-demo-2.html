@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<!--HTML is not a programming language, it is a markup language (Hyper Text Markup Language)
+     heading tags are 1-6; p tags are paragraph tags; a tags are anchor tags -->
+<!-- ALT-SHIFT-F should appropiately format things -->
+<!-- <head tag holds metadata while heading tags hold text for headings -->
+    <html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML Demo</title>
+
+    <link rel="stylesheet" href="css-demo2.css">
+
+   
+
+</head>
+
+<body>
+
+    <h1 id="Top-of-Page">This is the most important heading.</h1>
+    <h6 class="my-class another-class">This is the least important heading.</h6>
+
+    <p style="color:purple">This is a paragraph. Follow this
+        <a href="http://en.bcdn.biz/images/emails_source/5aa1d06c-d409-4d4a-8d4f-d90f51350047.jpg">link</a>
+        to see a cute kitten.
+    </p>
+    <p>The photo below is also a link to the cute kitten</p>
+    <br/>
+    <!-- <this adds a break -->
+    <a href="http://en.bcdn.biz/images/emails_source/5aa1d06c-d409-4d4a-8d4f-d90f51350047.jpg">
+        <img src="http://en.bcdn.biz/images/emails_source/5aa1d06c-d409-4d4a-8d4f-d90f51350047.jpg" alt="A Cute Kitten" height="100">
+        <!-- <100 means 100 pixels -->
+
+    </a>
+
+    <pre style="font-family:sans-serif">
+        You are my <span style="color:gold">Sunshine</span>.
+        My only sunshine.
+        You make me happy when skies are grey.
+        You'll never know dear, how much <q> I love you.</q>
+        Please don't take my sunshine away.
+    </pre>
+    <!-- <pre> instead of <p> (means preformatted, allows spacing) 
+        <q> q tags add quotation marks-->
+
+    <br>
+
+    <button style="color:palegreen">My First Button</button>
+
+    <br>
+
+    <blockquote cite="https://www.theodysseyonline.com/43-spongbob-quotes-to-use-in-everyday-conversation">
+            "I don't get it. I made my house a mess, which was making it clean, which made Squidward clean my yard, but that really means he's messing it up. But the opposite of clean is filth, which means filth is clean, that means Squidward is really making my yard a wreck, but I normally wreck my own yard which means, Squidward is being the opposite of Squidward which means he's Spongebob!"
+
+    </blockquote>
+
+    <p>To learn more, see the 
+        <a href="https://www.theodysseyonline.com/43-spongbob-quotes-to-use-in-everyday-conversation" title="Oddysey Article"
+        target="_blank">
+            Oddysey Article
+        </a>
+        .
+    
+    <!-- < target="_blank" makes link open in another window
+    make sure inline styling is all lower case -->
+
+    </p>
+
+    <picture>
+        <source media="(min-width:900px)" 
+        srcset="https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg" 
+            width="500px">
+        <source media="(min-width:700px)"
+        srcset="https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg" 
+            width="300px">
+        <img src="https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg" alt="Cute Kitten" style="width:auto">
+
+    </picture>
+
+    <hr>
+
+    <h3>Grocery List</h3>
+    <ul style="list-style-type:circle" >
+        <!-- <ul> means unordered list (bullet points) 
+            besides circle, could be square or disc-->
+        <li>Eggs</li>
+        <li>Milk</li>
+        <li>Bread</li>
+    </ul>
+
+    <!-- < <b> and <strong> is bold
+        <u> and <ins> are underline -->
+    <h3>Steps to open this file in a browser</h3>
+    <ol type="1">
+        <li>Hold <b>ALT</b> and <i>hit</i> 'L'</li>
+        <li><strong>Release</strong> <em>all</em> 
+            <mark>keys</mark>></li>
+        <li>Hold ALT <del>an</del> <ins>and</ins> hit 'o'</li>
+
+    </ol>
+
+    <h3>Definition List</h3>
+    <!-- <dt> is definition term and <dd> is definition description -->
+    <d1>
+        <dt>Record Types</dt>
+        <dd>Page Layout</dd>
+        <dd>Picklist Field Values</dd>
+
+        <dt>Reports & Dashboards</dt>
+        <dd>Scheduling & Refreshes</dd>
+        <dd>Running User</dd>
+    </d1>
+
+    <hr>
+    <!-- <sub> is subscript and <sup> is superscript 
+        <th> is table header <tr> is table row <td> is table data-->
+    <table border="1">
+        <caption>Example Table Caption</caption>
+        <tr>
+            <th>Header 1</th>
+            <th>Column <sub>2</sub> </th>
+            <th colspan="2">Columns <sup>3 & 4</sup></th>
+        </tr>
+        <tr>
+            <th>Row 1</td>
+            <td>[1,1]</td>
+            <td rowspan="2">[1,2]</td>
+            <td>[1,3]</td>
+            <td>[1,4]</td>
+        </tr>
+        <tr>
+            <th>Row 2</td>
+            <td>[2,1]</td>
+            <td>[2,3]</td>
+            <td>[2,4]</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <a href="#Top-of-Page">Click to jump to top of the pagge.</a>
+    
+    <!-- <hr> is horizontal rule
+    
+        Block Level Elements: 
+            - always start on a new line and take up the full width available
+            - the <div> element is a block-level element
+            - the <div> element is often used as a container for other HTML elements
+                - has no required attributes but style, class, and id are common
+
+        -->
+    <hr>
+
+    <div>
+        <h2>Block Level Elements</h2>
+        <div>Hello</div>
+        <div>World</div>
+    </div>
+
+    <!-- Inline ELements:
+            - the <span> element is an inline element
+            - often used as a container for text. Can be used to style parts of text
+    
+    -->
+
+    <div style="margin-bottom:50px">
+        <h2>Inline Elements</h2>
+        <span>Hello</span>
+        <span>World</span>
+    </div>
+
+    <div style="padding-left:5%">
+        <h1 style="text-align:center">Iframes</h1>
+        <iframe src="https://success.salesforce.com/" height="500" width="90%"></iframe>
+
+    </div>
+
+    <hr>
+
+    <form>
+        <!--
+            action - defines the action to be performed when the form is submitted.
+                -if the action attribute is ommitted, the action is set to the current paage
+            target - specifies if the submitted result will open in a new browser tab, a frame, or in the current window. 
+                - default is "_self" which means the form will be sunmitted in the current window
+                - "_blank" will make the form result open in a new browser tab
+                
+            method - specifies the HTTP method (GET or POST) to be used when submitting the form data.
+
+         -->
+        <h1>Please fill out your information.</h1>
+
+        <fieldset>
+            <legend>Personal Information</legend>
+            First Name:
+            <input type="text" name="firstname">
+            Last Name:
+            <input type="text" name="lastname">
+        </fieldset>
+
+        <fieldset>
+            <legend>Choose your affiliation</legend>
+            <input type="radio" name="affiliation"
+            value="cat" checked> Cat
+            <input type="radio" name="affiliation"
+            value="dog"> Dog
+            <input type="radio" name="affiliation"
+            value="other"> Other
+        </fieldset>
+
+        <fieldset>
+            <legend>More Input Types</legend>
+            <select name="colors">
+                <option value="red">Red</option>
+                <option value="orange">Orange</option>
+                <option value="yellow">Yellow</option>
+            </select>
+
+            <select name="colors2" size=3 multiple>
+                <option value="red">Red</option>
+                <option value="orange" selected>Orange</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+            </select>
+
+            <br>
+
+            <textarea name ="message" rows="5" cols="50"
+            placeholder="This is placeholder text"> This is default text
+
+            </textarea>
+
+            <br>
+
+            Password:
+            <input type="password" name="password">
+
+            <br>
+
+            <input type="checkbox" name="cancheck" value="cancheck">I can check this box. <br> 
+            <input type="checkbox" name="cancheck" value="nocheck" checked disabled>I can't check this box.
+
+        </fieldset>
+
+        <button type="button" onclick="alert('Hello World!')">Click me!</button>
+
+        <input type="reset" value="Reset">
+        <input type="submit" value="Submit">
+
+        <!-- Radio button is like a picklist, you can only pick one
+            Select elements create drop down menus -->
+    </form>
+
+
+
+
+
+
+
+    <header>This is my header.</header>
+    <nav>This is a nav bar.</nav>
+    <section>Section 1</section>
+    <footer>This is a footer.</footer>
+
+
+
+    <div style="margin-bottom:300px">
+
+    </div>
+
+
+
+</body>
+
+</html>

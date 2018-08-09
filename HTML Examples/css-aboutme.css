@@ -1,0 +1,47 @@
+
+p {
+    color:pink;
+    font-size:19px;
+
+}
+
+h1 {
+    color:palevioletred;
+    display: flex;
+    justify-content:center;
+}
+
+h3 {
+    font-size:25px;
+    color:gray;
+    display: flex;
+    justify-content:center;
+}
+
+
+.UMD {
+    display: flex;
+    justify-content:flex-end;
+    width:40%;
+}
+
+.Family {
+    display: flex;
+    justify-content:center;
+    width:60%
+}
+
+.Hobbies {
+    width:60%;
+
+}
+
+.Hobbies:hover {
+    color:olivedrab;
+
+}
+
+
+p, h1, h6 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
