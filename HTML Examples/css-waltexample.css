@@ -1,0 +1,50 @@
+/* 3 different stylings
+    - Inline Styling (will always take precedence)
+        - use a style attribute on a tag
+    - Internal Style (precedence will depend on order it appears in code)
+        - use the style tag in the head tag to put your classes in the style tag
+    - External Style Sheets (precedence will depend on order it appears in code)
+        - use the link tag in the head tag; rel attribute (rel="stylesheet" href="")
+    - bad practice to have all 3 stylings in your code; PICK ONE 
+    2 different file paths
+    - Relative
+        - file path from directory that your file is currently in to whatever location you are currently in (recommended)
+    - Absolute
+        - the entire file path, from your original directory to where the file you are referencing (allows for improved security)*/ 
+
+    /* Notes below describe how css types code. */
+    /*- anything outside of { is a selector
+    - anything before a semi-colon is a declaration
+        - each declaration has a property, with a defined value
+    - semi-colon seperates the declarations*/
+/* Element Selector */
+
+h1{
+    color:purple;
+}
+/* id Selector */
+#Top-of-Page{
+    color:gold;
+}
+/* id is more specific than element, so it will still show up as gold even though it comes after h1 */
+
+/* Class Selector */
+/* refer to class selector using a period */
+.my-class{
+    color: gray;
+}
+.another-class{
+    font-size:20px;
+}
+/* Grouping Selector */
+p, h1, h6{
+    font-family:sans-serif;
+}
+#Intro{
+    color: red;
+    font-size: 50px;
+}
+p{
+    color: red;
+    font-size: 14px;
+}

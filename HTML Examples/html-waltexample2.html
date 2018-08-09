@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML WaltExample</title>
+    <!-- Head tag; everything within it is invisible -->
+    <!-- Head tag holds metadata; whereas heading holds text data for the headings -->
+    <!-- Headings(h3) tags are visible -->
+    <link rel="stylesheet" href="css-waltexample.css"
+</head>
+
+<body>
+    <h1 id="Top-of-Page">This is the most important heading.</h1>
+    <!-- id attributes can be used for any element; has to be unique (case-sensitive) throughout the entire page -->
+    <!-- h tag are heading tags where the number is synonymous with the importance of the heading
+; 6 of them (6 is least important)  -->
+    <h6 class="my-class another-class">This is the least important heading.</h6>
+
+    <p class="my-class">
+        This is a paragraph.Follow this
+        <a href="http://cdn2-www.dogtime.com/assets/uploads/gallery/german-shepherd-dog-breed-pictures/standing-7.jpg">link</a>
+        to see alpha dog.
+    </p>
+    <p>The photo below is also a link to the alpha dog link</p>
+    <a href="http://cdn2-www.dogtime.com/assets/uploads/gallery/german-shepherd-dog-breed-pictures/standing-7.jpg">
+        <img src="http://cdn2-www.dogtime.com/assets/uploads/gallery/german-shepherd-dog-breed-pictures/standing-7.jpg" alt="An Alpha Dog"
+            height="200">
+    </a>
+    <!-- alt+shift+f, properly aligns your openning and clsoing commands -->
+    <pre style="font-family:sans-serif">
+        You are my <span style="color:gold">sunshine</span>.
+        My only sunshine.
+        You make me happy, when skies are grey.
+        You'll never know dear, how much <q>I love you.</q>
+        Please don't take my sunshine away.
+    </pre>
+    <!-- pre means that it is pre formatted -->
+    <br>
+
+    <button style="color:red">My First Button</button>
+
+    <br>
+
+    <blockquote>
+        Redskins will win it all.Facts.
+    </blockquote>
+    <!-- blockquotes allign text in a particular way -->
+    <p>To learn more, see the
+        <a href="https://www.redskins.com/" title="Redskins Website" target="_blank">
+            Redskins Website
+        </a>
+        .
+    </p>
+    <!-- target="_blank" allows you to open link in a new page -->
+    <picture>
+        <source media="(min-width:900px)" scrset="https://s3.amazonaws.com/freebiesupply/large/2x/washington-redskins-football-logo.png"
+            width="500px">
+        <source media="(min-width:700px)" scrset="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzRjzqA5R-UUYlwQLrM0TMjh5qpJRV01kFU7dHJ2GOW8UVGqPQ">
+        <img scr="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzRjzqA5R-UUYlwQLrM0TMjh5qpJRV01kFU7dHJ2GOW8UVGqPQ" alt="Alpha Dog"
+            style="width:auto;">
+    </picture>
+
+    <hr>
+
+    <h3>Grocery List</h3>
+    <ul style="list-style-type:disc">
+        <li>Eggs</li>
+        <li>Milk</li>
+        <li>Bread</li>
+    </ul>
+
+    <h3>Steps to open this file in a browser</h3>
+    <ol type="1">
+        <li>Hold
+            <b>ALT</b> and
+            <i>hit</i> 'L'</li>
+        <li>
+            <strong>Release</strong>
+            <em>all</em>
+            <mark>keys</mark>
+        </li>
+        <!-- mark is a highlight -->
+        <!-- b tag is bold; i tag is italicize -->
+        <li>Hold ALT
+            <del>an</del>
+            <ins>and</ins> hit 'O'</li>
+    </ol>
+    <!-- ol is ordered list -->
+
+    <h3>Definition List</h3>
+    <dl>
+        <!-- dl is definition list -->
+        <dt>Record Types</dt>
+        <!-- dt is definition term -->
+        <dd>Page Layouts</dd>
+        <!-- dd is definition description -->
+        <dd>Picklist Page Values</dd>
+
+        <dt>Reports & Dashboards</dt>
+        <dd>Scheduling Refreshes</dd>
+    </dl>
+
+    <hr>
+
+    <table border="1">
+        <caption>Example Table Caption</caption>
+        <tr>
+            <!-- tr is table row; th is table header -->
+            <th>Header 1</th>
+            <th>Column
+                <sub>2</sub>
+            </th>
+            <!-- sub is subset; sup is superset -->
+            <th colspan="2">Columns
+                <sup>3 & 4</sup>
+            </th>
+        </tr>
+        <tr>
+            <th>Row 1</td>
+                <td>[1,1]</td>
+                <td rowspan="2">[1,2]</td>
+                <!-- rowspan allows you to span along particular rows by pushing subsequent rows along the table -->
+                <td>[1,3]</td>
+                <td>[1,4]</td>
+        </tr>
+        <tr>
+            <th>Row 1</td>
+                <td>[2,1]</td>
+                <td>[2,2]</td>
+                <td>[2,3]</td>
+                <td>[2,4]</td>
+                <!-- td is table data -->
+        </tr>
+    </table>
+    <!-- web browsers are smart enough to know when you have an incorrect closing tag (they don't match) that it will just ignore that closing tag -->
+
+    <hr>
+
+    <a href="#Top-of-Page">Click to jump to the top of the page.</a>
+    <!-- # sign references the id -->
+
+    <hr>
+
+    <!-- Block level Elements:
+    - alwasy start on a new line and take up the full width available
+    - the <div> element is a block-level element
+    - the div element is often used as a container for other HTML elements
+        - has no required attributes, but style, class, and id are common.-->
+    <div>
+        <h2>Block Level Elements</h2>
+        <div>Hello</div>
+        <div>World</div>
+    </div>
+    <div style="margin-bottom:50px">
+        <h2>Inline Elements</h2>
+        <span>Hello</span>
+        <span>World</span>
+    </div>
+
+    <div style="padding-left:5%">
+        <h1 style="text-align:center">IFrames</h1>
+        <iframe id="frame1" src="https://success.salesforce.com" style="height:500px; width:90%"></iframe>
+    </div>
+
+    <hr>
+
+    <form>
+        <!-- 
+            action: defines the action to be performed when the form is submitted. (submit button)
+                - if the action attribute is ommitted, the action is set to the current page.
+            
+            target: specifies if the submitted result will open in a new browser tab, a frame or in the current window.
+                - default is "_self" which means the form will be submitted in the current window.
+                - "_blank will" make the form result open in a new browser tab
+            method: specifies the HTTP method (Get or Post) to be used when submitting the form data.
+                - get and post are http methods (hyper text transfer protocol)
+                - HTML (hyper text mark-up language); not a programming language, its a mark-up language
+         -->
+        <h1>Please fill out your informatoin.</h1>
+
+        <fieldset>
+            <legend>Personal Information:</legend>
+            First Name:
+            <input type="text" name="firstname">
+            <!-- point of a form is to collect information from a website and send it somewhere -->
+            <!-- if you don't have a name for your name attribute you will not be able to send the information -->
+            Last Name:
+            <input type="text" name="last name">
+        </fieldset>
+
+        <fieldset>
+            <legend>Choose your affiliation:</legend>
+            <input type="radio" name="affiliation" value="cat" checked> Cat
+            <!-- without the value attribute, html will automatically use whatever comes after that tag as its value -->
+            <!-- checked allows you to automatically have a value selected upon refresh -->
+            <input type="radio" name="affiliation" value="dog"> Dog
+            <input type="radio" name="affiliation" value="other"> Other
+            <!-- with radio buttons, only one in a group can be selected -->
+        </fieldset>
+
+        <fieldset>
+            <legend>More Input Types</legend>
+            <select name="colors">
+                <!-- select tag is similar to creating a picklist -->
+                <option value="Red">Red</option>
+                <option value="orange">Orange</option>
+                <option value="Yellow">Yellow</option>
+            </select>
+            <select name="colors2" size="3" multiple>
+                <option value="Red">Red</option>
+                <option value="orange" selected>Orange</option>
+                <!-- selected automatically chooses value upon refresh -->
+                <option value="Yellow">Yellow</option>
+                <option value="Green">Green</option>
+            </select>
+
+            <br>
+
+            <textarea name="message" row="5" cols="50" placeholder="This is placeholder text"></textarea>
+
+            <br> Password:
+            <input type="password" name="password">
+
+            <br>
+
+            <input type="checkbox" name="cancheck" value="cancheck" checked> I can check this box.
+            <br>
+            <input type="checkbox" name="cannotcheck" value="nocheck" checked disabled> I can't check this box.
+            <!-- checked disabled is like having a read-only checkbox auto-filled -->
+        </fieldset>
+
+        <button type="button" onclick="alert('Hello World!')">Click me!</button>
+
+        <input type="reset" value="Reset">
+        <input type="submit" value="Submit">
+
+    </form>
+
+    <div style="margin-bottom:300px"></div>
+
+
+
+
+    <footer>This is a footer.</footer>
+    <header>This is my header.</header>
+    <nav>This is a nav bar.</nav>
+    <section>Section 1</section>
+    <section>Section 2</section>
+
+
+
+
+
+
+
+
+    <div style="margin-bottom:300px; margin-top:300px">
+
+    </div>
+
+</body>
+
+</html>
