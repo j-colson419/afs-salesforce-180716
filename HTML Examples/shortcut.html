@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML DEMO</title>
+
+    <link rel="stylesheet" href = "css-example.css">
+
+</head>
+
+<body>
+
+    <h1 id ="Top-of-Page"> This is the most important heading. </h1>
+    <h6 class = "my-class another-class"> This is the least important heading.</h6>
+
+    <p class = "my-class">This is a paragraph. Follow this
+        <a href="https://upload.wikimedia.org/wikipedia/commons/7/75/Cute_grey_kitten.jpg">link</a>
+        to see a cute kitten.
+    </p>
+
+    <p> The photo below is also a link to the cute kitten.</p>
+    <br/>
+    <a href="https://upload.wikimedia.org/wikipedia/commons/7/75/Cute_grey_kitten.jpg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Cute_grey_kitten.jpg" alt="A Cute Kittne" height="100">
+    </a>
+
+    <pre style = "font-family:sans-serif">
+        You are my <span style = "color:gold">sunshine</span>.
+        My only sunshine. 
+        You make me happy, when skies are grey. 
+        You'll never know dear, how much <q>I love you</q>. 
+        Please don't take my sunshine away.
+    </pre>
+
+    <br>
+
+    <button style = "color:blanchedalmond"> BOOP </button>
+
+    <br>
+
+    <blockquote cite = "www.wikipedia.com">
+        "Today is Tuesday. I am learning HTML. A long life dream finally fulfilled. Thanks Accenture."
+    </blockquote>
+
+    <p> To learn more, see the 
+        <a href = "www.google.com" title = "Visualforce Developers Guide" target = "_blank">
+            Visualforce Developer Guide</a>.
+    
+    </p>
+
+    <picture>
+        <source media="(min-width:900px)" srcset = "(insert pic)" width = "500px">
+        <source media = "(min-width: 700px)"
+        srcset = "(insert pic)">
+    </picture>
+
+
+    <hr> 
+
+    <h3>Grocery List</h3>
+    <ul style = "list-style-type:disc">
+
+        <li>Eggs</li>
+        <li>Milk</li>
+        <li>Bread</li>
+    </ul>
+
+
+    <h3>Steps to open this file in a browser</h3>
+    <ol type="1">
+        <li>Hold <b>ALT</b> and <i>hit</i> 'L'</li>
+        <li>
+            <strong>Release</strong>
+            <em>all</em>
+            <mark> keys</mark>
+        </li>
+        <li>Hold ALT <del>an</del> <ins>and</ins> hit 'O'
+        </li>
+    </ol>
+
+    <h3>Defintion List</h3>
+    <d1>
+        <dt>Records Types</dt>
+        <dt>Page Layouts</dd>
+        <dd>Picklist Field Values</dd>
+
+        <dt>Reports & Dashboards</dt>
+        <dd>Scheduling Refreshes</dd>
+        <dd>Running User</dd>
+    </d1>
+
+    <hr> 
+
+    <table border = "1">
+        <caption>Example Table Caption</caption>
+        <tr>
+            <th>Header 1</th>
+            <th>Column <sub>2</sub> </th>
+            <th colspan= "2">Columns  
+                <sup>3 & 4</sup>
+            </th>
+        </tr>
+        <tr>
+            <th>Row 1</td>
+            <td>[1,1]</td>
+            <td rowspan = "4">[1,2]</td>
+            <td>[1,3]</td>
+            <td>[1,4]</td>
+        </tr>
+        <tr>
+            <th>Row 2</td>
+            <td>[2,1]</td>
+            <!-- <td>[2,2]</td>-->
+            <td>[2,3]</td> 
+            <td>[2,4]</td> 
+        </tr>
+        <tr>
+            <th>Row 3</th>
+        </tr>
+    </table>
+
+    <hr>
+
+    <a href = "#Top-of-Page">Click to jump to the top of the page.</a>
+
+    <hr>
+
+    <!-- Block Level Elements:
+        - always start on a new line and take up the full width available 
+        - the <div> element is a block-level element 
+        - the div element is often used as a contianer for other HTML elements
+            - has no required attributes, but style, class, and id are common. 
+    -->
+
+    <div>
+        <h2>Block Level Elements</h2>
+        <div>Hello</div>
+        <div>World</div>
+    </div>
+ 
+   <!-- Block Level Elements:
+        - the <span> element is an inline element
+        - often used as a container for text. Can be used to style parts of text.  
+    -->
+
+    <div style = "margin-bottom:50px">
+        <h2>Inline Elements</h2>
+        <span>Hello</span>
+        <span>World</span>
+    </div>
+
+    <hr>
+
+    <div style = "padding-left:5%>
+
+        <h1 style = "text-align:center">Iframes</h1>
+        <iframe src = "https://success.salesforce.com" height = "500" width = "90%"></iframe>
+    </div>
+
+<hr> 
+
+<form>
+    <!--
+        action -defines the action to be performed
+        when the form is submitted.
+        - if the action attribute is omitted, the action is set to the current page. 
+
+        target - specifies if the submitted result will open in a new browser tab, a frame, or in the current window. 
+            - default is "_self" which means the form will be submitted in the current window.
+            - "_blank" will make the form result open in a new browser tab.
+
+        method - specifies the HTTP method (GET or POST) to be used when submitting the form data.
+    -->
+
+
+    <h1>Please fill out your information.</h1>
+
+    <fieldset>
+        <legend>Personal Information:</legend>
+        First Name:
+        <input type = "text" name = "firstname">
+        Last Name: 
+        <input type= "text" name = "lastname">
+    </fieldset>
+
+    <fieldset>
+        <legend>Choose your affiliation:</legend>
+        <input type = "radio" name = "affiliation" value = "cat" checked> Cat
+        <input type = "radio" name = "affiliation" value = "dog"> Dog
+        <input type = "radio" name = "affiliation" value = "other"> Other
+    </fieldset>
+
+    <fieldset>
+        <legend>More Input Types</legend>
+        <select name = "colors">
+            <option value = "red">Red</option>
+            <option value = "orange">Orange</option>
+            <option value = "yellow">Yellow</option>
+        </select>
+
+        <select name = "colors2" size="3">
+            <option value = "red">Red</option>
+            <option value = "orange" selected > Orange </option>
+            <option value = "yellow">Yellow</option>
+            <option value = "green">Green</option>
+
+        </select>
+
+        <br>
+
+        <textarea name = "message" rows = "5" cols = "50"
+        placeholder="This is placeholder text">This is default text</textarea>
+
+        <br>
+
+        Password: 
+        <input type="password" name ="password">
+
+        <br>
+
+        <input type = "checkbox" name = "cancheck" value="cancheck" checked>  I can check this box. <br>
+        <input type = "checkbox" name = "can check"
+        value= "nocheck" checked disabled> I can't check this box.
+
+    </fieldset>
+
+    <button type= "button" onclick="alert('Hello World!')">Click Me!</button>
+
+    <input type= "reset" value = "Reset">
+    <input type= "submit" value="Submit">
+
+</form>
+
+
+
+
+
+
+
+
+
+
+<div style = "margin-bottom:300px">
+    <p></p>
+</div>
+
+
+<header>This is my header. </header>
+<nav>This is a nav bar. </nav>
+<section>Section 1</section>
+<section>Section 2</section>
+<footer>This is a footer.</footer>
+
+
+
+</body>
+
+</html>

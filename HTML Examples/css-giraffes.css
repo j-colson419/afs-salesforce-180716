@@ -1,0 +1,34 @@
+
+body{
+    font-family: "Georgia", serif;
+    text-align: center;
+    background-color: lightblue;
+}
+
+h1 {
+    color:brown
+}
+
+div.a {
+    text-align: center;
+}
+
+/* id Selector */ 
+/* ids are unique for all elements */ 
+
+#Top-of-Page {
+    color: black; 
+}
+
+/* class Selector */ 
+
+.my-class{
+    color:gray;
+}
+
+.another-class{
+    font-size:20px
+}
+
+/* Grouping Selectors */
+
