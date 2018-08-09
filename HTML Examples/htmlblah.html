@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML Demo</title>
+<link rel= "stylesheet" href= css-sample.css>
+
+<!-- <style>
+    p {
+        color: rgb(255, 0, 76);
+
+    }
+</style> -->
+
+
+<!-- head is for meta data for browser to read -->
+</head>
+
+
+<!-- style path; relative path is from the directory that the file is in; absolute is not in the same folder -->
+<!-- In line styling is the only one it reads -->
+
+
+
+
+<body>
+
+    <h1 id="Top-of-Page">
+        <!-- the number refers to the size -->
+        This is the most important heading
+    </h1>
+    <h6 class="my-class another-class">
+        This is the least important heading
+    </h6>
+    <p>
+        This is a paragraph. Follow This
+        <a href="https://developer.salesforce.com/files/salesforce-developer-network-logo.png">link </a>
+        to see a cute kitten.
+        <!-- tags have attribut, a tag has a href tag so you can click a link -->
+        <br/>
+        <br/>
+
+
+        <a href="https://developer.salesforce.com/files/salesforce-developer-network-logo.png">
+
+            <img src="https://developer.salesforce.com/files/salesforce-developer-network-logo.png" alt="a sales force logo" height="200">
+
+        </a>
+
+    </p>
+
+    <pre style="font-family:sans-serif">
+        You are my sunshine.
+        My only sunshine.
+        You make me happy, when skies are grey.
+        You'll never know dear, <q>how much I love you </q>.
+        Please don't take my sunshine away.
+    </pre>
+
+    <br>
+    <br>
+    <button style="color:rgb(78, 47, 255)"> My first </button>
+
+    <Blockquote>
+        Long quotations. For quotations that are more than four lines of prose or three lines of verse, place quotations in a free-standing
+        block of text and omit quotation marks. Start the quotation on a new line, with the entire quote indented ½ inch
+        from the left margin; maintain double-spacing.LonLong quotations. For quotations that are more than four lines of
+        prose or three lines of verse, place quotations in a free-standing block of text and omit quotation marks. Start
+        the quotation on a new line, with the entire quote indented ½ inch from the left margin; maintain double-spacing.Long
+        quotations. For quotations that are more than four lines of prose or three lines of verse, place quotations in a
+        free-standing block of text and omit quotation marks. Start the quotation on a new line, with the entire quote indented
+        ½ inch from the left margin; maintain double-spacing.Long quotations. For quotations that are more than four lines
+        of prose or three lines of verse, place quotations in a free-standing block of text and omit quotation marks. Start
+        the quotation on a new line, with the entire quote indented ½ inch from the left margin; maintain double-spacing.Long
+        quotations. For quotations that are more than four lines of prose or three lines of verse, place quotations in a
+        free-standing block of text and omit quotation marks. Start the quotation on a new line, with the entire quote indented
+        ½ inch from the left margin; maintain double-spacing.g quotations. For quotations that are more than four lines of
+        prose or three lines of verse, place quotations in a free-standing block of text and omit quotation marks. Start
+        the quotation on a new line, with the entire quote indented ½ inch from the left margin; maintain double-spacing.
+
+    </Blockquote>
+
+    <p>
+        To learn more, see the
+        <a href="https://www.google.com/search?rlz=1C1GCEA_enUS806US806&ei=i_VpW4qEK4fVzgLCv7T4DQ&q=long+quote&oq=long+quote&gs_l=psy-ab.3..0l10.4867.8039.0.8199.17.15.1.0.0.0.108.1046.12j1.14.0....0...1.1.64.psy-ab..3.13.982.0..0i67k1j0i131k1j0i131i67k1j0i10k1.170.whsoakEoLKs"
+            title="Visual Force Develop Guide" target="_blank">
+
+            Visual Force Developer Guide </a>.
+
+    </p>
+
+
+    <picture>
+        <source media=" (min-width:400px)" srcset="http://www.greycloaktech.com/wp-content/uploads/2015/07/url-small.jpg" width="500px">
+        <img </picture>
+
+
+        <hr>
+        <h3> grocery lists </h3>
+        <u1 style="list-style-type: disc">
+            <li>chicke</li>
+            <li> Bread </li>
+        </u1>
+
+        <h3> Steps to open this file in a browser</h3>
+        <ol type: "A">
+            <li> Hold
+                <b> ALT </b> and
+                <i> hit </i> 'L' </li>
+            <li>
+                <strong> Release </strong>
+                <em>Release</em> Release </li>
+            <li>
+                <mark> all keys </mark>
+            </li>
+            <!-- mark is to highlight -->
+            <li> Hold
+                <del> CTRL </del>ALT
+                <ins> ANDDDD </ins> hit 'O'</li>
+            <!-- del is to strike through and ins is to insert which is to underline -->
+
+
+        </ol>
+
+        <!-- q tag is for quotes -->
+
+        <h3> Definition List </h3>
+        <d1>
+            <dt> Record Types</dt>
+            <dd> Objects </dd>
+            <dd> Picklist </dd>
+
+            <dt> Reports</dt>
+            <dd> Dashboards</dd>
+        </d1>
+        <!-- definition list indents definition description under definitin term  -->
+
+        <hr>
+        <table border="1">
+            <caption> Example Table Caption</caption>
+            <tr>
+                <th> Header 1 </th>
+                <th> Column
+                    <sub> 2 </sub>
+                </th>
+                <th colspan="2"> Columns
+                    <sup> 3 & 4 </sup>
+                </th>
+
+            </tr>
+
+            <tr>
+                <td> Row 1</td>
+                <td> [1,1]</td>
+                <td rowspan="4"> [1,2] </td>
+                <td> [1,3] </td>
+                <td> [1,4] </td>
+            </tr>
+
+            <tr>
+                <td> Row 2</td>
+                <td> [2,1]</td>
+                <td> [2,2] </td>
+                <td> [2,3] </td>
+            </tr>
+        </table>
+        <!-- tr is table row, th is table heading  -->
+        <!-- colspan is the span number of rows -->
+
+
+        <hr>
+        <a href="#Top-of-Page"> Click to jump to the top of the page. </a>
+
+        <!-- JUMPS TO TOP OF THE PAGE -->
+        <hr>
+        <hr>
+
+        <!-- BLock Level Elements:
+        always start on a new ine and take up the full width aailable
+    the <div> element is a block level element 
+        has no required attributes but style class and id are common
+    -->
+        <div>
+            <h2> Block level elements </h2>
+            <div>
+                <span style="color: firebrick"> hello</span>
+            </div>
+            <div> world </div>
+        </div>
+        <!--  In line Elements
+the <span element is an inline element
+- often used as an container for text. can be used to style parts of text  -->
+
+        <p> hello</p>
+        <p> world </p>
+
+        <div>
+            <h2> Inline Elements </h2>
+            <span> hello</span>
+            <span> world </span>
+
+        </div>
+
+
+        <div style="padding-left: 5%">
+            <h1 style="text-align:center"> Iframes </h1>
+
+            <iframe src="https://success.salesforce.com/" height="500" width="90%"> </iframe>
+
+        </div>
+
+
+        <form>
+
+
+            <!-- action- defines the action to be performed when the form is submitted .. is the action attribut is omitted the action is set to the current page. 
+            target- specifies if the submitted result will open in a new browser tab, a frame, or in the current windo
+        the dfault is "_self" which means the form will be submitted in the current window
+        "_blank"  will the form result open in a new browser tab
+    
+        Method- specifies the http method (get and post) to be used when submitting the form data-->
+            <h1> Please fill out your information </h1>
+            <fieldset>
+                <legend> Personal Infomation: </legend>
+                First Name:
+                <input type="text" name="firstname"> Last Name:
+                <input type="text" name="lastname">
+            </fieldset>
+
+            <fieldset>
+                <legend> Choose your affiliation:</legend>
+                <input type="radio" name="affiliation" value="cat"> CAT
+                <input type="radio" name="affiliation" value="dog" checked> DOG
+                <input type="radio" name="affiliation" value="other"> Other
+
+            </fieldset>
+
+            <fieldset>
+                <legent> More Input types </legent>
+                <select name="colors">
+                    <option value="red"> red </option>
+                    <option value="blue"> blue </option>
+                    <option value="yellow"> yellow </option>
+                </select>
+
+
+                <select name="colors2" size="5" multiple>
+                    <option value="red"> red </option>
+                    <option value="blue" selected> blue </option>
+                    <option value="yellow"> yellow </option>
+                    <option value="green"> green </option>
+                </select>
+            </fieldset>
+
+            <br>
+            <textarea name="message" rows=" 5" cols="50" placeholder="this is placeholder">
+
+             
+            </textarea>
+
+            <!-- place holder will go away but default will remain -->
+
+            <br> Password:
+            <input type="password" name="password">
+
+            <br>
+
+            <input type="checkbox" name="cancheck" value="cancheck"> I can check this box.
+            <br>
+            <input type="checkbox" name="cancheck" value="nocheck" disabled> I cannot check this box.
+            <input type="checkbox" name="cancheck" value="nocheck" checked disabled> I cannot check this box or change it .
+            <!-- field set is box and legend is title. Input has a box for first NEEDS NAME ATTRIBUTE for it to work-->
+        </form>
+
+        <div style="margin-bottom: 300 px"> </div>
+
+        <header> header </header>
+        <section> section </section>
+        <footer> footer </footer>
+
+
+
+
+        <div>
+
+            <p>
+                <br>
+                <br>
+
+                <br>
+            </p>
+        </div>
+
+
+
+</body>
+<!-- alt shift f to format -->
+
+</html>
