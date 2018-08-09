@@ -1,0 +1,34 @@
+
+/* Element Selector */
+p {
+    color:blue;
+    font-size:19px;
+
+}
+
+h1 {
+    color:purple;
+}
+
+/* id Selector */
+
+#Top-of-Page {
+    color: gold;
+}
+
+/* class Selector */
+
+.my-class {
+    color:gray;
+}
+
+.another-class {
+    font-size:20px;
+}
+
+/* Grouping Selectors */
+
+p, h1, h6 {
+    font-family:sans-serif;
+}
+
