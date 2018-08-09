@@ -1,3 +1,4 @@
+
 // This is a constructor for the Person Object
 function Person(name, age) {
     console.log("first Person constructor");
@@ -89,4 +90,3 @@ document.addEventListener('DOMContentLoaded', function () {
         // document.getElementById('name').value = "Hi";
     }, false);
 });
-
