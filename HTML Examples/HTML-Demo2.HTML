@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML Demo</title>
+
+    <link rel="stylesheet" href="css-demonstration.css">
+</head>
+
+<body>
+
+    <h1 id="Top-of-Page">This is the most important heading.</h1>
+    <h6 class="my-class another-class">This is the least important heading.</h6>
+    <!-- there's only h1-h6 heading tags, no h7 -->
+    <p>This is a paragraph.
+        <!-- ^ a "p" tag denotes a paragraph -->
+        Follow this
+        <a href="https://steamuserimages-a.akamaihd.net/ugc/861727094491823008/BF4D73E6F5FCA88686AC1FFB496BC6B180E20335/">link</a>
+        to see a cute kitten.
+    </p>
+
+    <p>The photo below is also a link to the cute kitten</p>
+    <br/>
+    <a href="https://www.thehappycatsite.com/wp-content/uploads/2017/10/best-treats-for-kittens.jpg">
+        <img src="https://www.thehappycatsite.com/wp-content/uploads/2017/10/best-treats-for-kittens.jpg" alt="A Cute Kitten" height="100">
+        <!-- "src" = source & "alt" = alternative description to show besides the photo -->
+    </a>
+    <!-- alt + shift + f = proper formatting of HTML coding -->
+
+    <pre style="font-family:sans-serif">
+    You are my <span style="color:gold">sunshine</span>.
+    My only sunshine.
+    You make me happy, when skies are grey.
+    You'll never know, dear, how much <q>I love you.</q>
+    <!-- "q" tag is a quote -->
+    Please don't take my sunshine away.
+</pre>
+    <!-- "pre" is short for preformatted; whatever texts falls within the above lines is preformatted. -->
+    <br/>
+
+    <button style="color:rgb(145, 58, 196)">My First Button</button>
+
+    <br/>
+
+    <blockquote cite="https://genius.com/Spice-girls-wannabe-lyrics">
+        Ha ha ha ha ha Yo, I'll tell you what I want, what I really, really want So tell me what you want, what you really, really
+        want I'll tell you what I want, what I really, really want So tell me what you want, what you really, really want
+        I wanna, (ha) I wanna, (ha) I wanna, (ha) I wanna, (ha) I wanna really, really, really wanna zigazig ah
+    </blockquote>
+
+    <p>To learn more, see the
+        <a href="https://genius.com/Spice-girls-wannabe-lyrics" title="Visualforce Deverlopers Guide" target="_blank">
+            Viualforce Developer Guide</a>
+        .
+    </p>
+
+    <picture>
+        <source media="(min-width=900px)" srcset="https://hips.hearstapps.com/del.h-cdn.co/assets/17/11/1489456319-delish-baileys-brownies-4.jpg"
+            width="500px">
+
+        <source media="(min-width:700px)" srcset=https://images-gmi-pmc.edge-generalmills.com/087d17eb-500e-4b26-abd1-4f9ffa96a2c6.jpg>
+        <img src="https://assets.marthastewart.com/styles/wmax-750/d26/classic-cheesecake-d104417/classic-cheesecake-d104417_horiz.jpg?itok=x6TIrh3N"
+            alt="Cute Kitten" style="width:auto;">
+
+    </picture>
+
+    <hr>
+    <!-- horizonal rule tag (self-closing) -->
+
+    <h3>Grocery List</h3>
+    <ul style="list-style-type:circle">
+        <!-- unordered list, used for something like bullet points -->
+        <li>Eggs</li>
+        <li>Milk</li>
+        <li>Bread</li>
+        <!-- li = list items -->
+    </ul>
+
+    <h3>Steps to open this file in a browser</h3>
+
+    <ol type="1">
+        <!-- "ol" = ordered list, and the difference between ol and il
+            is that the markers are numbered -->
+        <li>Hold
+            <b>ALT</b> and
+            <i>hit</i> 'L'</li>
+        <li>
+            <strong>Release</strong>
+            <!-- strong brings importance to a word -->
+            <em>all</em>
+            <!-- em = emphasize -->
+            <mark>keys</mark>
+            <!-- "mark" highlights -->
+        </li>
+        <li>Hold ALT
+            <del>and</del>
+            <ins>and</ins> hit 'O'</li>
+    </ol>
+
+    <h3>Definition List</h3>
+    <dl>
+        <!-- "dl" = defintion list -->
+
+        <dt>Record Types</dt>
+        <!-- "dt" = definition term -->
+        <dd>Page Layouts</dd>
+        <!-- "dd" = definition description -->
+        <dd>Picklist Field Values</dd>
+
+        <dt>Reports & Fshboards</dt>
+        <dd>Scheduling Refreshes</dd>
+        <dd>Running User</dd>
+
+    </dl>
+
+    <hr>
+
+    <table border="1">
+        <caption>Example Table Caption</caption>
+        <tr>
+            <th>Header 1</th>
+            <th>Column 2</th>
+            <th colspan="2">Columns
+                <sup>3 & 4</sup>
+            </th>
+        </tr>
+        <tr>
+            <th>Row 1</th>
+            <td>[1,1]</td>
+            <td rowspan="2">[1,2]</td>
+            <td>[1,3]</td>
+            <td>[1,4]</td>
+        </tr>
+        <tr>
+            <th>Row 2</th>
+            <td>[2,1]</td>
+            <td>[2,3]</td>
+            <td>[2,4]</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <a href="#Top-of-Page">Click to jump to the top of he page.</a>
+
+    <hr>
+
+    <!-- Block Level Elements:
+            - always start on a new line a take up the full width available
+            - the <div> element is a block-level element
+            - the point of the <div> is to separate elements
+            - the <div> element is often used as a container for othter HTML elements
+                 has no required attributes, but style, class, and id are common.
+    -->
+
+    <div>
+        <h2>Block Level Elements</h2>
+        <div>Hello</div>
+        <div>World</div>
+    </div>
+
+    <!-- Inline Elements:
+    - the <span> element is an inline element
+    - often used as a ontainer for text; can be used to style parts of text
+-->
+
+    <div style="margin-bottom:50px">
+        <h2>Inline Elements</h2>
+        <span>Hello</span>
+        <span>World</span>
+    </div>
+
+
+    <div style="padding-left:5%">
+        <h1 style="text-align:center">Iframes</h1>
+        <iframe src="https://success.salesforce.com" height="500px" width="90%"></iframe>
+    </div>
+
+    <br>
+
+    <form>
+        <!-- 
+            action - defines the action to be performed when the form is submitted
+                - if the action attribute is ommitted, the action is set to the current page
+            
+            target - specifies if the submitted result will open in a new web browser tab, a frame, or in the current window
+                - default is "_self" which means the form will be submitted in the current window.
+                - "_blank" will make the form result open in a new web browser tab.
+            
+            method - specifies the HTTP (hyper text transfer protocol) method (GET or POST) to be used when submitting the form data
+         -->
+         
+         <!-- html = *hyper text markup language* -->
+
+        <h1>Please fill out your information.</h1>
+
+        <fieldset>
+            <legend>Personal Information:</legend>
+            First Name:
+            <input type="text" name="firstname"> Last Name:
+            <input type="text" name="lastname">
+        </fieldset>
+
+        <fieldset>
+            <legend>Choose your affiliation:</legend>
+            <input type="radio" name="affiliation" value="cat" checked> Cat
+            <!-- if you don't include the "value" attribute, HTML will automatically send
+        the label that comes after the input tab -->
+            <!-- the "checked" attribute allows you to have a default value chosen -->
+            <!-- only one radio button can be selected -->
+            <input type="radio" name="affiliation" value="dog"> Dog
+            <input type="radio" name="affiliation" value="other"> Other
+        </fieldset>
+
+        <fieldset>
+            <legend>More Input Types</legend>
+            <select name="colors">
+                <!-- select creates a drop down menu-->
+                <option value="red">Red</option>
+                <option value="orange">Orange</option>
+                <option value="yellow">Yellow</option>
+            </select>
+
+            <select name="colors2" size="3" multiple>
+                <option value="red">Red</option>
+                <option value="orange" selected>Orange</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+            </select>
+
+            <br>
+
+            <textarea name="message" rows="5" cols="50" placeholder="This is placeholder text"></textarea>
+
+            <br> Password:
+            <input type="password" name="password">
+
+            <br>
+
+            <input type="checkbox" name="can check" value="can check"> I can check this box.
+            <br>
+            <input type="checkbox" nae="cannotcheck" value="no check" disabled> I can't check this box.
+        </fieldset>
+
+        <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+        <!-- alert is a function; inside the parentheses is the parameter being passed to the function -->
+    </form>
+
+    <div style="margin-bottom: 300px">
+
+
+        <header>This is my header.</header>
+        <nav>This is my nav bar.</nav>
+        <section>Section 1</section>
+        <section>Section 2</section>
+        <footer>This is my footer.</footer>
+    </div>
+
+    <div style="margin-bottom:300px">
+    </div>
+
+</body>
+
+</html>

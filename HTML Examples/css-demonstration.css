@@ -1,0 +1,50 @@
+/* CSS = cascading style sheets */
+/* 
+    inline styling = use a style attribute on a tag 
+    internal style = use the style tag in the head tag to put your classes in the style tag
+    external style sheets = use <link rel="stylesheet" href="">
+
+-order or precedence-
+    */
+
+/* style paths:
+    1. relative = the file path from the directory that your file is currently in, to whatever location you want to be
+    2. absolute = the entire file path, from your origin directory to where the file you're referencing is */
+
+/*element selector*/
+p {
+    color:blue; /* declaration - each declaration has a property, with a defined value... color = property | blue = value */
+    font-size:14px;
+}
+
+h1 {
+    color:purple;
+}
+
+/* id Selector */
+#Top-of-Page{
+    color:gold;
+}
+
+/* class Selector */
+.my-class {
+    color: gray;
+
+}
+
+.another-class{
+    font-size:20px;
+}
+
+/* grouping Selectors */
+p, h1, h6 {
+    /* if you want certatin elemets to have the same attribute, separate them by commas */
+    font-family:sans-serif;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 17%;
+}
