@@ -1,0 +1,41 @@
+/*  3 ways to have styling (order matters)
+
+    1.Inline styling (using a styling attribute on a tag to add styles)
+    2.internal styles- using the style tag in the head tag to put your css classes in your html page
+    3.External style sheets -use the link tag in the head with the rel attribute style sheet href which is the path to your style sheets
+    
+    
+    File paths
+        1. relative- the file path from the file you are currently in (the file name)
+        2. absolute- the entire file path from your origin directory to where the file your referencing is
+     */
+
+p { color: blue;
+    font-size: 14;
+
+}
+
+h1 {
+    color: purple;
+}
+
+/* id selector */
+#Top-of-Page {
+    color: gold
+
+}
+/* The top of the page will overwrite the hi because it is more specific (which is why it shows up gold not purple) */
+
+/* Class Selector */
+
+.my-class {
+    color: grey;
+}
+.another-class {
+    font-size: 20px
+}
+
+/* Grouping Selectors */
+p, h1, h6 {
+    font-family: sans-serif
+}
