@@ -26,7 +26,7 @@
         }
     </style>
 </head>
-<body>
+<body id="body">
     
     <form action="#">
         <h3>Who Are You?</h3>
@@ -40,24 +40,36 @@
             <br>
             Favorite Color:
             <input id="color" type="color">
+            
+        </fieldset>
+        <fieldset>
+            <legend>String Interpolation</legend>
+            Animal Type:
+            <input id="animal" name="si" type="text">
+            <br>
+            Temperment:
+            <input id="temperment" name="si" type="text">
         </fieldset>
 
         <button id="add">Add</button>
 
     </form>
 
-    <div id="parent" style="margin-top:50px;">
+    <div id="parent" style="margin-top:50px; margin-bottom:50px;">
         <table id="people-table">
             <tr>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Favorite Color</th>
-                <th>Action</th>
+                <!-- <th>Action</th> -->
             </tr>
         </table>
     </div>
 
-
+    <div>
+        You clicked on: 
+        <span id="c-target"></span>
+    </div>
 
 
 
