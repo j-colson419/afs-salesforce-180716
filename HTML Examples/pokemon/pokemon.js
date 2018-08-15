@@ -27,9 +27,7 @@ function onSuccessAddAllPokemons(pokemons) {
     while (pokemon_grid.firstChild) {
         pokemon_grid.removeChild(pokemon_grid.firstChild);
     }
-    for (var p = 0; p < pokemons.length; p++) {
-        var pokemon = pokemons[p];
-
+    pokemons.forEach((pokemon, p) => {
         var card = document.createElement('div');
         card.setAttribute("class", "card");
 
@@ -37,18 +35,18 @@ function onSuccessAddAllPokemons(pokemons) {
         card_content.setAttribute("class", "card-content");
 
         var img = document.createElement('img');
-        // img.setAttribute("src", 'https://rebekahlang.files.wordpress.com/2015/08/pokemon-egg-gif.gif');
+        img.setAttribute("src", 'https://rebekahlang.files.wordpress.com/2015/08/pokemon-egg-gif.gif');
         img.setAttribute("alt", pokemon.name);
 
-        // var image = new Image();
-        // image.onload = () => {
-        //     img.setAttribute("src", image.src);
-        //     console.log(`Loaded ${pokemon.name}, ${image.src}.`);
-        // }
-        // image.onerrer = () => {
-        //     console.log(`Error ${pokemon.name}, ${image.src}.`);
-        // }
-        img.setAttribute('src', `https://pokeapi.co/media/img/${pokemon.url.split("\/")[6]}.png`);
+        var image = new Image();
+        image.onload = () => {
+            img.setAttribute("src", image.src);
+            console.log(`Loaded ${pokemon.name}, ${image.src}.`);
+        }
+        image.onerrer = () => {
+            console.log(`Error ${pokemon.name}, ${image.src}.`);
+        }
+        image.src = `https://pokeapi.co/media/img/${pokemon.url.split("\/")[6]}.png`;
 
         var container = document.createElement('div');
         container.setAttribute("class", "container");
@@ -62,7 +60,7 @@ function onSuccessAddAllPokemons(pokemons) {
         card.appendChild(card_content);
 
         pokemon_grid.appendChild(card);
-    }
+    });
     window.setTimeout(resizeAllGridCards, 100);
 }
 

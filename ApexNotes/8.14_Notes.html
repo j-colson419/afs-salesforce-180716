@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Apex Notes 8/14/2018</title>
+        <link rel="stylesheet" href="bootstrap.css">
+    </head>
+    <body>
+        <div class="header" id="myHeader">
+            <h1>Apex Notes</h1>
+        </div>
+        <div class="content parallax">
+            <fieldset>
+                <legend>Apex Development Environments</legend>
+                <h3>Force.com IDE</h3>
+                <p>
+                    A powerful client application for creating, modifying and deploying 
+                    Force.com applications.
+                </p>
+                <ul>
+                    <li>Is a plugin for the Eclipse IDE.</li>
+                    <li>It is an environment for building and deploying SF apps.</li>
+                    <li>
+                        Provides tools such as source code editors, teest execution 
+                        tools, wizards, and has integrated help.
+                    </li>                   
+                </ul>
+                <hr>
+                <h3>Salesforce User Interface</h3>
+                <p>
+                    You can write salesforce code in any of the following ways from 
+                    the Salesforce User Interface:
+                </p>
+                <ul>
+                    <li>Write an Apex Class from setup in quick find box.</li>
+                    <li>
+                        Write an Apex Trigger by finding the triggers in the 
+                        settings of the Object settings.
+                    </li>
+                </ul>
+                <hr>
+                <h3>Developer Console</h3>
+                <p>
+                    An integrated development environment with a collection of 
+                    tools you can use to create, debug, and test applications in your Salesforce organization.
+                </p>
+                <ul style="column-count: 3; list-style-type: none;">
+                    <li>Writing code</li>
+                    <li>Compiling code</li>
+                    <li>Debugging</li>
+                    <li>Testing</li>
+                    <li>Checking performance</li>
+                    <li>SOQL Queries</li>
+                    <li>Text coloring and autocomplete</li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>Apex</legend>
+                <p>
+                    A development platform for building software as a service (SaaS) applications 
+                    on top of Salesforce.com's customer relationship management (CRM) functionality.
+                </p>
+                <ul>
+                    <li>Strongly typed, Object-Oriented Programming Language</li>
+                    <li>NOT a general purpose programming language</li>
+                    <li>Allows developers to <u>execute flow</u> and <u>transaction control statements</u></li>
+                    <li>Acts like database stored procedures.</li>
+                </ul>
+                <div class="row">
+                    <div class="column">
+                        <p>Use Cases</p>
+                        <ul>
+                            <li>Perform complex validation over multiple objects.</li>
+                            <li>Create complex business processes.</li>
+                            <li>
+                                Attach custom logic to another operation, so that it occurs whenever 
+                                that operation is executed.
+                            </li>
+                        </ul>
+                        <p><u>Cannot</u> be used to:</p>
+                        <ul>
+                            <li>Render elements in the UI (other than error messages)</li>
+                            <li><u>Change</u> standard functionality</li>
+                            <li>Create temporary files</li>
+                            <li>Spawn threads</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <p>As a language, Apex is...</p>
+                        <ul>
+                            <li>Integrated</li>
+                            <li>Easy to use</li>
+                            <li>Data focused</li>
+                            <li><u>Rigorous</u> - a strongly typed language that uses direct references to schema objects.</li>
+                            <li>Hosted</li>
+                            <li>Multi-tenant aware</li>
+                            <li>Easy to test</li>
+                            <li>Versioned</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="text-align: center">
+                    <img src="https://4.bp.blogspot.com/-swofQLY36Is/V3YYOVJGw6I/AAAAAAAAANc/FLR4_IyWCHMHod5avyQMMW0oQqe3q1d6ACLcB/s1600/202.png"
+                        alt="Salesforce Cloud Diagram" class="large-image">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Apex Definitions</legend>
+                <h3>Statement</h3>
+                <ul>
+                    <li>Is any coded instrction that performs an action.</li>
+                    <li>Must end with a <code>;</code>.</li>
+                </ul>
+                <hr>
+                <h3>Block</h3>
+                <ul>
+                    <li>A seies of statements grouped together with <code>{}</code>.</li>
+                    <li>Can be used anywhere a single statement would be allowed.</li>
+                </ul>
+                <pre>
+                    <code>
+if (true) {
+    System.debug(1);
+    System.debug(2);
+} else {
+    System.debug(3);
+    System.debug(4);
+}
+
+if (true)
+    System.debug(1);
+else
+    System.debug(2);
+                    </code>
+                </pre>
+                <hr>
+                <h3>Expressions</h3>
+                <p>
+                    A construct made up of variables, operators, and method invocations
+                    that evaluates to a single value.
+                </p>
+                <hr>
+                <h3>Types:</h3>
+                <ul>
+                    <li>Literal expressions</li>
+                    <li>A new sObject, Apex object, list, set, or map</li>
+                    <li>Any value that can act as the Left side of an assignment operation</li>
+                    <li>An SOQL or SOSL query surrounded by <code>[]</code></li>
+                    <li>A static or instance method invocation</li>
+                </ul>
+                <pre>
+                    <code>
+// Literal expression
+1 + 1
+
+// New sObject, Apex Object, ...etc.
+new Account(&lt;field_initializers&gt;)
+new Integer[&lt;n&gt;]
+new Account[]{&lt;element&gt;}
+new List&lt;Account&gt;()
+new Set&lt;String&gt;{}
+new Map&lt;String, Integer&gt;()
+
+// An value that can ct as the left-hand side of an assignmen operator
+Integer i;
+myList[3];
+myContact.name;
+
+// an SOQL query surrounded by []
+Account[] aa = [SELECT Id, Name FROM Account WHERE Name='Acme'];
+
+// A static or instance method invocation
+System.assert(true);
+changePoint(new Point(x,y));
+                    </code>
+                </pre>
+                <hr>
+                <h3>Operators</h3>
+                <p>
+                    Expressions can be joined w/ operators to create.
+                </p>
+                <h5>Command Expressions</h5>
+                <ul style="column-count: 4; list-style-type:none;">
+                    <li><code>=</code></li>
+                    <li><code>+=</code></li>
+                    <li><code>-=</code></li>
+                    <li><code>*=</code></li>
+                    <li><code>/=</code></li>
+                    <li><code>|=</code></li>
+                    <li><code>&=</code></li>
+                    <li><code>expr ? stmnt : stmnt</code></li>
+                    <li><code>==</code></li>
+                    <li><code>===</code></li>
+                    <li><code>++</code></li>
+                    <li><code>--</code></li>
+                </ul>
+            </fieldset>
+        </div>
+    </body>
+</html>
