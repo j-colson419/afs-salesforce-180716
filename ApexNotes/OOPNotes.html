@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+    <head>
+        <title>OOP</title>
+        <link rel="shortcut icon" type="image/x-icon" href="https://png.icons8.com/color/1600/salesforce.png" />
+        <link rel="stylesheet" href="styling.css">
+        <link rel="stylesheet" href="highlight/styles/atom-one-light.css">
+    </head>
+    <body>
+        <div class="header" id="myHeader">
+            <h1>Object Oriented Programming</h1>
+        </div>
+        <div class="content parallax">
+            <fieldset>
+                <legend>Table of Contents</legend>
+                <ul class="table-of-contents" style="column-count: 3; list-style-type: none;">
+                    <li><a href="#headline-1" class="button">Encapsulation</a></li>
+                    <li><a href="#headline-2" class="button">Inheritance</a></li>
+                    <li><a href="#headline-3" class="button">Polymorphism</a></li>
+                    <li><a href="#headline-4" class="button">Abstraction</a></li>
+                    <li><a href="#headline-5" class="button">Additional Notes</a></li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend><a name="headline-1">Encapsulation</a></legend>
+                <p>
+                    A mechanism of wrapping the data (variables) and code acting on the data (methods) 
+                    together as a single unit. In encapsulation, the variables of a class will be hidden 
+                    from other classes, and can be accessed only through the methods of their current 
+                    class. Therefore, it is also known as data hiding.
+                </p>
+                <h3>Access Modifiers</h3>
+                <p>
+                    Keywords in object-oriented languages that set the accessibility of classes, 
+                    methods, and other members. Access modifiers are a specific part of 
+                    programming language syntax used to facilitate the encapsulation of components.
+                </p>
+                <ul>
+                    <li>
+                        <b>Private</b> - Visible only to objects of the classes in which it is defined.
+                        <ul>
+                            <li>
+                                If you do not specify an access modifier, the method or variable is 
+                                private.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Protected</b> - This is the default, and means that the method or variable 
+                        is accessible only within the Apex class in which it is defined.  
+                        <ul>
+                            <li>
+                                You can only use this access modifier for instance methods and member 
+                                variables.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Public</b> - The class, method, or member is accessible in any Apex code
+                        in this application or namespace.
+                    </li>
+                    <li>
+                        <b>Global</b> - The method or variable can be used by any Apex code that has 
+                        access to the class, not just the Apex code in the same application. 
+                        <ul>
+                            <li>If used for a method or variable the class must also be global.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <hr>
+                <h3>Getters & Setters</h3>
+                <pre><code id="example-1"></code></pre>
+            </fieldset>
+            <fieldset>
+                <legend><a name="headline-2">Inheritance</a></legend>
+            </fieldset>
+            <fieldset>
+                <legend><a name="headline-3">Polymorphism</a></legend>
+            </fieldset>
+            <fieldset>
+                <legend><a name="headline-4">Inheritance</a></legend>
+            </fieldset>
+            <fieldset>
+                <legend><a name="headline-5">Additional Notes</a></legend>
+                <h3>Control Flow Statements</h3>
+                <p>A statement that controls the flow of your code.</p>
+                <h4>If-Else</h4>
+                <pre><code id="example-2"></code></pre>
+                <h4>Switch</h4>
+                <pre><code id="example-3"></code></pre>
+                <h4>Loops</h4>
+            </fieldset>
+        </div>
+        <script src="highlight/highlight.pack.js"></script><!-- Source: https://highlightjs.org/ -->
+        <script src="OOPNotes.js"></script>
+    </body>
+</html>

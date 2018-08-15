@@ -1,8 +1,10 @@
 <!doctype html>
 <html>
     <head>
-        <title>Apex Notes 8/14/2018</title>
+        <title>Apex Notes</title>
+        <link rel="shortcut icon" type="image/x-icon" href="https://png.icons8.com/color/1600/salesforce.png" />
         <link rel="stylesheet" href="styling.css">
+        <link rel="stylesheet" href="highlight/styles/atom-one-light.css">
     </head>
     <body>
         <div class="header" id="myHeader">
@@ -10,7 +12,17 @@
         </div>
         <div class="content parallax">
             <fieldset>
-                <legend>Apex Development Environments</legend>
+                <legend>Table of Contents</legend>
+                <ul class="table-of-contents" style="column-count: 3; list-style-type: none;">
+                    <li><a href="#headline-1" class="button">Apex Development Environment</a></li>
+                    <li><a href="#headline-2" class="button">Apex Background</a></li>
+                    <li><a href="#headline-3" class="button">Apex Definition</a></li>
+                    <li><a href="#headline-4" class="button">Apex Data Types</a></li>
+                    <li><a href="#headline-5" class="button">Apex Classes</a></li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend><a name="headline-1">Apex Development Environments</a></legend>
                 <h3>Force.com IDE</h3>
                 <p>
                     A powerful client application for creating, modifying and deploying 
@@ -54,7 +66,7 @@
                 </ul>
             </fieldset>
             <fieldset>
-                <legend>Apex</legend>
+                <legend><a name="headline-2">Apex Background</a></legend>
                 <p>
                     A development platform for building software as a service (SaaS) applications 
                     on top of Salesforce.com's customer relationship management (CRM) functionality.
@@ -104,7 +116,7 @@
                 </div>
             </fieldset>
             <fieldset>
-                <legend>Apex Definitions</legend>
+                <legend><a name="headline-3">Apex Definitions</a></legend>
                 <h3>Statement</h3>
                 <ul>
                     <li>Is any coded instrction that performs an action.</li>
@@ -116,9 +128,7 @@
                     <li>A seies of statements grouped together with <code>{}</code>.</li>
                     <li>Can be used anywhere a single statement would be allowed.</li>
                 </ul>
-                <pre>
-                    <code id="example-1"></code>
-                </pre>
+                <pre><code id="example-1" class="java"></code></pre>
                 <hr>
                 <h3>Expressions</h3>
                 <p>
@@ -134,9 +144,7 @@
                     <li>An SOQL or SOSL query surrounded by <code>[]</code></li>
                     <li>A static or instance method invocation</li>
                 </ul>
-                <pre>
-                    <code id="example-2"></code>
-                </pre>
+                <pre><code id="example-2" class="java"></code> </pre>
                 <hr>
                 <h3>Operators</h3>
                 <p>
@@ -181,10 +189,9 @@
                         </ol>
                     </div>
                 </div>
-                <hr>
             </fieldset>
             <fieldset>
-                <legend>Data Types:</legend>
+                <legend><a name="headline-4">Apex Data Types</a></legend>
                 <h3>Primitives</h3>
                 <ul style="column-count: 3; list-style-type: none;">
                     <li><b>Integer</b></li>
@@ -226,9 +233,7 @@
                                 Can use generic sObject
                             </li>
                         </ul>
-                        <pre>
-                            <code id="example-3"></code>
-                        </pre>
+                        <pre><code id="example-3" class="java"></code></pre>
                     </li>
                     <li><b>Null</b></li>
                     <li>
@@ -238,7 +243,7 @@
                                 Use <code>enum</code> keyword to define.
                             </li>
                         </ul>
-                        <pre><code id="example-4"></code></pre>
+                        <pre><code id="example-4" class="java"></code></pre>
                     </li>
                 </ul>
                 <hr>
@@ -246,17 +251,88 @@
                 <ul>
                     <li>
                         <b>Lists (arrays)</b> - used when order matters. Can have duplicates.
-                        <pre><code id="example-5"></code></pre>
+                        <pre><code id="example-5" class="java"></code></pre>
                     </li>
                     <li>
-                        <b>Maps</b>
+                        <b>Maps</b> - key-value pairs
+                        <ul>
+                            <li>
+                                Because keys have to be unique, adding a value of a key that already exists 
+                                overwrites the existing value
+                            </li>
+                        </ul>
+                        <pre><code id="example-7" class="java"></code></pre>
                     </li>
                     <li>
-                        <b>Sets</b>
+                        <b>Sets</b> - unique unordered values
+                        <pre><code id="example-6" class="java"></code></pre>
                     </li>
                 </ul>
             </fieldset>
+            <fieldset>
+                <legend><a name="headline-5">Apex Classes</a></legend>
+                <div class="row">
+                    <div class="column-2">
+                        <h4>Definitions</h4>
+                        <ul>
+                            <li><b>Class</b> - A blueprint from which objects are created.</li>
+                            <li><b>Object</b> - An instance of a class.</li>
+                        </ul>
+                        <p>To define a class you need...</p>
+                        <ul>
+                            <li><b>Access Modifier</b> - <code>public</code>, <code>private</code>, <code>global</code>, ...</li>
+                            <li><b>Definition Modifier</b> - <code>Virtual</code>, <code>Abstract</code>, ...</li>
+                            <li><b>Class</b> - keyword</li>
+                        </ul>
+                    </div>
+                    <div class="column-2">
+                        <h4>Class Model Example</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Class: Grade</th>
+                                </tr>
+                                <tr>
+                                    <td>Variables</td>
+                                    <td>Methods</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ID</td>
+                                    <td>setGrade</td>
+                                </tr>
+                                <tr>
+                                    <td>Grade</td>
+                                    <td>averageGrades</td>
+                                </tr>
+                                <tr>
+                                    <td>Student</th>
+                                    <td>hasGrade</td>
+                                </tr>
+                                <tr>
+                                    <td>Class</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Room</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <pre><code id="example-8" class="java"></code></pre>
+                <pre><code id="example-9" class="java"></code></pre>
+                <h4>Methods</h4>
+                <ul>
+                    <li>All <u>primitive</u> data type arguments are <u>passed by value</u></li>
+                    <li>All <u>non-primitive</u> data type arguments are <u>passed by reference</u></li>
+                </ul>
+                <pre><code id="example-10" class="java"></code></pre>
+            </fieldset>
         </div>
-        <script src="notes.js"></script>
+        <script src="highlight/highlight.pack.js"></script><!-- Source: https://highlightjs.org/ -->
+        <script src="ApexNotes.js"></script>
     </body>
 </html>
