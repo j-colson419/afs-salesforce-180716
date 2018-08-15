@@ -66,7 +66,7 @@
                     <li>Acts like database stored procedures.</li>
                 </ul>
                 <div class="row">
-                    <div class="column">
+                    <div class="column-2">
                         <p>Use Cases</p>
                         <ul>
                             <li>Perform complex validation over multiple objects.</li>
@@ -84,7 +84,7 @@
                             <li>Spawn threads</li>
                         </ul>
                     </div>
-                    <div class="column">
+                    <div class="column-2">
                         <p>As a language, Apex is...</p>
                         <ul>
                             <li>Integrated</li>
@@ -117,20 +117,7 @@
                     <li>Can be used anywhere a single statement would be allowed.</li>
                 </ul>
                 <pre>
-                    <code>
-if (true) {
-    System.debug(1);
-    System.debug(2);
-} else {
-    System.debug(3);
-    System.debug(4);
-}
-
-if (true)
-    System.debug(1);
-else
-    System.debug(2);
-                    </code>
+                    <code id="example-1"></code>
                 </pre>
                 <hr>
                 <h3>Expressions</h3>
@@ -139,7 +126,7 @@ else
                     that evaluates to a single value.
                 </p>
                 <hr>
-                <h3>Types:</h3>
+                <h3>Types</h3>
                 <ul>
                     <li>Literal expressions</li>
                     <li>A new sObject, Apex object, list, set, or map</li>
@@ -148,37 +135,14 @@ else
                     <li>A static or instance method invocation</li>
                 </ul>
                 <pre>
-                    <code>
-// Literal expression
-1 + 1
-
-// New sObject, Apex Object, ...etc.
-new Account(&lt;field_initializers&gt;)
-new Integer[&lt;n&gt;]
-new Account[]{&lt;element&gt;}
-new List&lt;Account&gt;()
-new Set&lt;String&gt;{}
-new Map&lt;String, Integer&gt;()
-
-// An value that can ct as the left-hand side of an assignmen operator
-Integer i;
-myList[3];
-myContact.name;
-
-// an SOQL query surrounded by []
-Account[] aa = [SELECT Id, Name FROM Account WHERE Name='Acme'];
-
-// A static or instance method invocation
-System.assert(true);
-changePoint(new Point(x,y));
-                    </code>
+                    <code id="example-2"></code>
                 </pre>
                 <hr>
                 <h3>Operators</h3>
                 <p>
                     Expressions can be joined w/ operators to create.
                 </p>
-                <h5>Command Expressions</h5>
+                <h4>Command Expressions</h4>
                 <ul style="column-count: 4; list-style-type:none;">
                     <li><code>=</code></li>
                     <li><code>+=</code></li>
@@ -193,7 +157,106 @@ changePoint(new Point(x,y));
                     <li><code>++</code></li>
                     <li><code>--</code></li>
                 </ul>
+                <h4>Operator Precendence</h4>
+                <div class="row">
+                    <div class="column-3">
+                        <ol start="1">
+                            <li><code>{} () ++ --</code></li>
+                            <li><code>! -x +x (type) new</code></li>
+                            <li><code>* /</code></li>
+                        </ol>
+                    </div>
+                    <div class="column-3">
+                        <ol start="4">
+                            <li><code>+ -</code></li>
+                            <li><code>&gt; &ge; &lt; &le;</code></li>
+                            <li><code>== !=</code></li>
+                        </ol>
+                    </div>
+                    <div class="column-3">
+                        <ol start="7">
+                            <li><code>&&</code></li>
+                            <li><code>||</code></li>
+                            <li><code>= += -= *= /= &= |=</code></li>
+                        </ol>
+                    </div>
+                </div>
+                <hr>
+            </fieldset>
+            <fieldset>
+                <legend>Data Types:</legend>
+                <h3>Primitives</h3>
+                <ul style="column-count: 3; list-style-type: none;">
+                    <li><b>Integer</b></li>
+                    <li><b>Long</b></li>
+                    <li><b>Boolean</b></li>
+                    <li><b>String</b></li>
+                    <li><b>Float</b></li>
+                    <li><b>Double</b></li>
+                    <li><b>Decimal</b></li>
+                    <li><b>Date</b></li>
+                    <li><b>Datetime</b></li>
+                    <li><b>Time</b></li>
+                    <li><b>ID</b></li>
+                    <li><b>Blob</b></li>
+                    <li><b>Object</b> - all Apex datatypes <i>inherit</i> from <i>Object</i></li>
+                </ul>
+                <hr>
+                <h3>Non-Standard Primitives</h3>
+                <ul>
+                    <li>
+                        <b>AnyType</b> - The <code>valueOf</code> static method converts an sObject field of type 
+                        AnyType to a standard primitive. AnyType is used within the Lightning platform database 
+                        exclusively for sObject fields in field history tracking tables.
+                    </li>
+                    <li>
+                        <b>Currency</b> - The <code>Currency.newInstance</code> static method creates a literal of 
+                        type Currency. This method is for use solely within SOQL and SOSL WHERE clauses to filter 
+                        against sObject currency fields. You cannot instantiate Currency in any other type of Apex.
+                    </li>
+                </ul>
+                <hr>
+                <h3>Non-Primitive Data Types</h3>
+                <ul>
+                    <li>
+                        <b>sObject</b> - represents a row of data and can only be declared in Apex using the SOAP 
+                        API name of the object.
+                        <ul>
+                            <li>
+                                Can use generic sObject
+                            </li>
+                        </ul>
+                        <pre>
+                            <code id="example-3"></code>
+                        </pre>
+                    </li>
+                    <li><b>Null</b></li>
+                    <li>
+                        <b>Enums</b> - abstract data type that each take on exactly one of a finite list of identifies that <u>you</u> specifiy.
+                        <ul>
+                            <li>
+                                Use <code>enum</code> keyword to define.
+                            </li>
+                        </ul>
+                        <pre><code id="example-4"></code></pre>
+                    </li>
+                </ul>
+                <hr>
+                <h3>Collections</h3>
+                <ul>
+                    <li>
+                        <b>Lists (arrays)</b> - used when order matters. Can have duplicates.
+                        <pre><code id="example-5"></code></pre>
+                    </li>
+                    <li>
+                        <b>Maps</b>
+                    </li>
+                    <li>
+                        <b>Sets</b>
+                    </li>
+                </ul>
             </fieldset>
         </div>
+        <script src="notes.js"></script>
     </body>
 </html>

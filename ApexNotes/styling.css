@@ -168,9 +168,14 @@ input[type="reset"]:hover {
     text-align: center;
 }
 
-.column {
+.column-2 {
     float: left;
     width: 50%;
+}
+
+.column-3 {
+    float: left;
+    width: 33%;
 }
 
 /* Clear floats after the columns */
@@ -186,4 +191,8 @@ pre code {
     display: block;
     padding: 20px;
     margin: 0 20px;
+}
+
+h1, h2, h3, h4, h5 {
+    text-decoration: underline;
 }
