@@ -1,0 +1,338 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Apex Notes</title>
+        <link rel="shortcut icon" type="image/x-icon" href="https://png.icons8.com/color/1600/salesforce.png" />
+        <link rel="stylesheet" href="styling.css">
+        <link rel="stylesheet" href="highlight/styles/atom-one-light.css">
+    </head>
+    <body>
+        <div class="header" id="myHeader">
+            <h1>Apex Notes</h1>
+        </div>
+        <div class="content parallax">
+            <fieldset>
+                <legend>Table of Contents</legend>
+                <ul class="table-of-contents" style="column-count: 3; list-style-type: none;">
+                    <li><a href="#headline-1" class="button">Apex Development Environment</a></li>
+                    <li><a href="#headline-2" class="button">Apex Background</a></li>
+                    <li><a href="#headline-3" class="button">Apex Definition</a></li>
+                    <li><a href="#headline-4" class="button">Apex Data Types</a></li>
+                    <li><a href="#headline-5" class="button">Apex Classes</a></li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend><a name="headline-1">Apex Development Environments</a></legend>
+                <h3>Force.com IDE</h3>
+                <p>
+                    A powerful client application for creating, modifying and deploying 
+                    Force.com applications.
+                </p>
+                <ul>
+                    <li>Is a plugin for the Eclipse IDE.</li>
+                    <li>It is an environment for building and deploying SF apps.</li>
+                    <li>
+                        Provides tools such as source code editors, teest execution 
+                        tools, wizards, and has integrated help.
+                    </li>                   
+                </ul>
+                <hr>
+                <h3>Salesforce User Interface</h3>
+                <p>
+                    You can write salesforce code in any of the following ways from 
+                    the Salesforce User Interface:
+                </p>
+                <ul>
+                    <li>Write an Apex Class from setup in quick find box.</li>
+                    <li>
+                        Write an Apex Trigger by finding the triggers in the 
+                        settings of the Object settings.
+                    </li>
+                </ul>
+                <hr>
+                <h3>Developer Console</h3>
+                <p>
+                    An integrated development environment with a collection of 
+                    tools you can use to create, debug, and test applications in your Salesforce organization.
+                </p>
+                <ul style="column-count: 3; list-style-type: none;">
+                    <li>Writing code</li>
+                    <li>Compiling code</li>
+                    <li>Debugging</li>
+                    <li>Testing</li>
+                    <li>Checking performance</li>
+                    <li>SOQL Queries</li>
+                    <li>Text coloring and autocomplete</li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend><a name="headline-2">Apex Background</a></legend>
+                <p>
+                    A development platform for building software as a service (SaaS) applications 
+                    on top of Salesforce.com's customer relationship management (CRM) functionality.
+                </p>
+                <ul>
+                    <li>Strongly typed, Object-Oriented Programming Language</li>
+                    <li>NOT a general purpose programming language</li>
+                    <li>Allows developers to <u>execute flow</u> and <u>transaction control statements</u></li>
+                    <li>Acts like database stored procedures.</li>
+                </ul>
+                <div class="row">
+                    <div class="column-2">
+                        <p>Use Cases</p>
+                        <ul>
+                            <li>Perform complex validation over multiple objects.</li>
+                            <li>Create complex business processes.</li>
+                            <li>
+                                Attach custom logic to another operation, so that it occurs whenever 
+                                that operation is executed.
+                            </li>
+                        </ul>
+                        <p><u>Cannot</u> be used to:</p>
+                        <ul>
+                            <li>Render elements in the UI (other than error messages)</li>
+                            <li><u>Change</u> standard functionality</li>
+                            <li>Create temporary files</li>
+                            <li>Spawn threads</li>
+                        </ul>
+                    </div>
+                    <div class="column-2">
+                        <p>As a language, Apex is...</p>
+                        <ul>
+                            <li>Integrated</li>
+                            <li>Easy to use</li>
+                            <li>Data focused</li>
+                            <li><u>Rigorous</u> - a strongly typed language that uses direct references to schema objects.</li>
+                            <li>Hosted</li>
+                            <li>Multi-tenant aware</li>
+                            <li>Easy to test</li>
+                            <li>Versioned</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="text-align: center">
+                    <img src="https://4.bp.blogspot.com/-swofQLY36Is/V3YYOVJGw6I/AAAAAAAAANc/FLR4_IyWCHMHod5avyQMMW0oQqe3q1d6ACLcB/s1600/202.png"
+                        alt="Salesforce Cloud Diagram" class="large-image">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend><a name="headline-3">Apex Definitions</a></legend>
+                <h3>Statement</h3>
+                <ul>
+                    <li>Is any coded instrction that performs an action.</li>
+                    <li>Must end with a <code>;</code>.</li>
+                </ul>
+                <hr>
+                <h3>Block</h3>
+                <ul>
+                    <li>A seies of statements grouped together with <code>{}</code>.</li>
+                    <li>Can be used anywhere a single statement would be allowed.</li>
+                </ul>
+                <pre><code id="example-1" class="apex"></code></pre>
+                <hr>
+                <h3>Expressions</h3>
+                <p>
+                    A construct made up of variables, operators, and method invocations
+                    that evaluates to a single value.
+                </p>
+                <hr>
+                <h3>Types</h3>
+                <ul>
+                    <li>Literal expressions</li>
+                    <li>A new sObject, Apex object, list, set, or map</li>
+                    <li>Any value that can act as the Left side of an assignment operation</li>
+                    <li>An SOQL or SOSL query surrounded by <code>[]</code></li>
+                    <li>A static or instance method invocation</li>
+                </ul>
+                <pre><code id="example-2" class="apex"></code> </pre>
+                <hr>
+                <h3>Operators</h3>
+                <p>
+                    Expressions can be joined w/ operators to create.
+                </p>
+                <h4>Command Expressions</h4>
+                <ul style="column-count: 4; list-style-type:none;">
+                    <li><code>=</code></li>
+                    <li><code>+=</code></li>
+                    <li><code>-=</code></li>
+                    <li><code>*=</code></li>
+                    <li><code>/=</code></li>
+                    <li><code>|=</code></li>
+                    <li><code>&=</code></li>
+                    <li><code>expr ? stmnt : stmnt</code></li>
+                    <li><code>==</code></li>
+                    <li><code>===</code></li>
+                    <li><code>++</code></li>
+                    <li><code>--</code></li>
+                </ul>
+                <h4>Operator Precendence</h4>
+                <div class="row">
+                    <div class="column-3">
+                        <ol start="1">
+                            <li><code>{} () ++ --</code></li>
+                            <li><code>! -x +x (type) new</code></li>
+                            <li><code>* /</code></li>
+                        </ol>
+                    </div>
+                    <div class="column-3">
+                        <ol start="4">
+                            <li><code>+ -</code></li>
+                            <li><code>&gt; &ge; &lt; &le;</code></li>
+                            <li><code>== !=</code></li>
+                        </ol>
+                    </div>
+                    <div class="column-3">
+                        <ol start="7">
+                            <li><code>&&</code></li>
+                            <li><code>||</code></li>
+                            <li><code>= += -= *= /= &= |=</code></li>
+                        </ol>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend><a name="headline-4">Apex Data Types</a></legend>
+                <h3>Primitives</h3>
+                <ul style="column-count: 3; list-style-type: none;">
+                    <li><b>Integer</b></li>
+                    <li><b>Long</b></li>
+                    <li><b>Boolean</b></li>
+                    <li><b>String</b></li>
+                    <li><b>Float</b></li>
+                    <li><b>Double</b></li>
+                    <li><b>Decimal</b></li>
+                    <li><b>Date</b></li>
+                    <li><b>Datetime</b></li>
+                    <li><b>Time</b></li>
+                    <li><b>ID</b></li>
+                    <li><b>Blob</b></li>
+                    <li><b>Object</b> - all Apex datatypes <i>inherit</i> from <i>Object</i></li>
+                </ul>
+                <hr>
+                <h3>Non-Standard Primitives</h3>
+                <ul>
+                    <li>
+                        <b>AnyType</b> - The <code>valueOf</code> static method converts an sObject field of type 
+                        AnyType to a standard primitive. AnyType is used within the Lightning platform database 
+                        exclusively for sObject fields in field history tracking tables.
+                    </li>
+                    <li>
+                        <b>Currency</b> - The <code>Currency.newInstance</code> static method creates a literal of 
+                        type Currency. This method is for use solely within SOQL and SOSL WHERE clauses to filter 
+                        against sObject currency fields. You cannot instantiate Currency in any other type of Apex.
+                    </li>
+                </ul>
+                <hr>
+                <h3>Non-Primitive Data Types</h3>
+                <ul>
+                    <li>
+                        <b>sObject</b> - represents a row of data and can only be declared in Apex using the SOAP 
+                        API name of the object.
+                        <ul>
+                            <li>
+                                Can use generic sObject
+                            </li>
+                        </ul>
+                        <pre><code id="example-3" class="apex"></code></pre>
+                    </li>
+                    <li><b>Null</b></li>
+                    <li>
+                        <b>Enums</b> - abstract data type that each take on exactly one of a finite list of identifies that <u>you</u> specifiy.
+                        <ul>
+                            <li>
+                                Use <code>enum</code> keyword to define.
+                            </li>
+                        </ul>
+                        <pre><code id="example-4" class="apex"></code></pre>
+                    </li>
+                </ul>
+                <hr>
+                <h3>Collections</h3>
+                <ul>
+                    <li>
+                        <b>Lists (arrays)</b> - used when order matters. Can have duplicates.
+                        <pre><code id="example-5" class="apex"></code></pre>
+                    </li>
+                    <li>
+                        <b>Maps</b> - key-value pairs
+                        <ul>
+                            <li>
+                                Because keys have to be unique, adding a value of a key that already exists 
+                                overwrites the existing value
+                            </li>
+                        </ul>
+                        <pre><code id="example-7" class="apex"></code></pre>
+                    </li>
+                    <li>
+                        <b>Sets</b> - unique unordered values
+                        <pre><code id="example-6" class="apex"></code></pre>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend><a name="headline-5">Apex Classes</a></legend>
+                <div class="row">
+                    <div class="column-2">
+                        <h4>Definitions</h4>
+                        <ul>
+                            <li><b>Class</b> - A blueprint from which objects are created.</li>
+                            <li><b>Object</b> - An instance of a class.</li>
+                        </ul>
+                        <p>To define a class you need...</p>
+                        <ul>
+                            <li><b>Access Modifier</b> - <code>public</code>, <code>private</code>, <code>global</code>, ...</li>
+                            <li><b>Definition Modifier</b> - <code>Virtual</code>, <code>Abstract</code>, ...</li>
+                            <li><b>Class</b> - keyword</li>
+                        </ul>
+                    </div>
+                    <div class="column-2">
+                        <h4>Class Model Example</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Class: Grade</th>
+                                </tr>
+                                <tr>
+                                    <td>Variables</td>
+                                    <td>Methods</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ID</td>
+                                    <td>setGrade</td>
+                                </tr>
+                                <tr>
+                                    <td>Grade</td>
+                                    <td>averageGrades</td>
+                                </tr>
+                                <tr>
+                                    <td>Student</th>
+                                    <td>hasGrade</td>
+                                </tr>
+                                <tr>
+                                    <td>Class</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Room</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <pre><code id="example-8" class="apex"></code></pre>
+                <pre><code id="example-9" class="apex"></code></pre>
+                <h4>Methods</h4>
+                <ul>
+                    <li>All <u>primitive</u> data type arguments are <u>passed by value</u></li>
+                    <li>All <u>non-primitive</u> data type arguments are <u>passed by reference</u></li>
+                </ul>
+                <pre><code id="example-10" class="apex"></code></pre>
+            </fieldset>
+        </div>
+        <script src="highlight/highlight.pack.js"></script><!-- Source: https://highlightjs.org/ -->
+        <script src="ApexNotes.js"></script>
+    </body>
+</html>
