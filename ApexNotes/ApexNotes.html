@@ -13,16 +13,17 @@
         <div class="content parallax">
             <fieldset>
                 <legend>Table of Contents</legend>
-                <ul class="table-of-contents" style="column-count: 3; list-style-type: none;">
-                    <li><a href="#headline-1" class="button">Apex Development Environment</a></li>
-                    <li><a href="#headline-2" class="button">Apex Background</a></li>
-                    <li><a href="#headline-3" class="button">Apex Definition</a></li>
-                    <li><a href="#headline-4" class="button">Apex Data Types</a></li>
-                    <li><a href="#headline-5" class="button">Apex Classes</a></li>
+                <ul class="table-of-contents">
+                    <li><a href="#dev-environment" class="button">Development Environment</a></li>
+                    <li><a href="#background" class="button">Background</a></li>
+                    <li><a href="#definitions" class="button">Definitions</a></li>
+                    <li><a href="#data-types" class="button">Data Types</a></li>
+                    <li><a href="#classes" class="button">Classes</a></li>
+                    <li><a href="#triggers" class="button">Triggers</a></li>
                 </ul>
             </fieldset>
             <fieldset>
-                <legend><a name="headline-1">Apex Development Environments</a></legend>
+                <legend><a name="dev-environment">Development Environments</a></legend>
                 <h3>Force.com IDE</h3>
                 <p>
                     A powerful client application for creating, modifying and deploying 
@@ -55,7 +56,7 @@
                     An integrated development environment with a collection of 
                     tools you can use to create, debug, and test applications in your Salesforce organization.
                 </p>
-                <ul style="column-count: 3; list-style-type: none;">
+                <ul class="column-3">
                     <li>Writing code</li>
                     <li>Compiling code</li>
                     <li>Debugging</li>
@@ -66,7 +67,7 @@
                 </ul>
             </fieldset>
             <fieldset>
-                <legend><a name="headline-2">Apex Background</a></legend>
+                <legend><a name="background">Background</a></legend>
                 <p>
                     A development platform for building software as a service (SaaS) applications 
                     on top of Salesforce.com's customer relationship management (CRM) functionality.
@@ -116,7 +117,7 @@
                 </div>
             </fieldset>
             <fieldset>
-                <legend><a name="headline-3">Apex Definitions</a></legend>
+                <legend><a name="definitions">Definitions</a></legend>
                 <h3>Statement</h3>
                 <ul>
                     <li>Is any coded instrction that performs an action.</li>
@@ -151,7 +152,7 @@
                     Expressions can be joined w/ operators to create.
                 </p>
                 <h4>Command Expressions</h4>
-                <ul style="column-count: 4; list-style-type:none;">
+                <ul class="column-4">
                     <li><code>=</code></li>
                     <li><code>+=</code></li>
                     <li><code>-=</code></li>
@@ -191,9 +192,9 @@
                 </div>
             </fieldset>
             <fieldset>
-                <legend><a name="headline-4">Apex Data Types</a></legend>
+                <legend><a name="data-types">Data Types</a></legend>
                 <h3>Primitives</h3>
-                <ul style="column-count: 3; list-style-type: none;">
+                <ul class="column-3" style="font-weight: 100;">
                     <li><b>Integer</b></li>
                     <li><b>Long</b></li>
                     <li><b>Boolean</b></li>
@@ -270,7 +271,7 @@
                 </ul>
             </fieldset>
             <fieldset>
-                <legend><a name="headline-5">Apex Classes</a></legend>
+                <legend><a name="classes">Classes</a></legend>
                 <div class="row">
                     <div class="column-2">
                         <h4>Definitions</h4>
@@ -336,6 +337,104 @@
                     <li>All <u>non-primitive</u> data type arguments are <u>passed by reference</u></li>
                 </ul>
                 <pre><code id="example-10" class="apex"></code></pre>
+            </fieldset>
+            <fieldset>
+                <legend><a name="triggers">Triggers</a></legend>
+                <p>Triggers allow you to perform custom actions <b>before</b> or <b>after</b> changes (insertions, updates, deletion) to Salesforce records. Because of this, Apex considers all such operations to be a single unit of work and sets limits of the number of operations that can be performed to prevent infinite recursion.</p>
+                <ul>
+                    <li>Triggers are stored as <b>meta data</b> under the object of which they are associated.</li>
+                    <li>Can only write 'after undelete' triggers for certain objects: Account, Asset, Car, Contact, ContentDocument, Contract, <b>Custom Objects</b>, Events, Lead, Opportunity, Product, Solution, Task.</li>
+                    <li>The code block of a trigger cannot contain the <code>static</code> keyword.</li>
+                    <li>You do not have to <b>manually</b> commit and database changes made by a trigger.</li>
+                </ul>
+                <div class="row">
+                    <div class="column-2">
+                        <h4>Types of Operations</h4>
+                        <ul>
+                            <li><b>Delete</b></li>
+                            <li><b>Undelete</b></li>
+                            <li><b>Insert</b></li>
+                            <li><b>Upsert</b> - Execute both before and after insert or before and after triggers as appropriate.</li>
+                            <li><b>Update</b></li>
+                            <li><b>Merge</b> - Executes both before and after delete for losing records and before and acter pdate for the winning records.</li>
+                        </ul>
+                    </div>
+                    <div class="column-2">
+                        <h4>Trigger Timing</h4>
+                        <ul>
+                            <li><b>Before</b> - Used to update or validate records <b>before</b> they are saved to the database.</li>
+                            <li><b>After</b> - Used to access field values that are set by the system and effect changes in other records. Records that fires the after trigger are <b>read-only</b>.</li>
+                        </ul>
+                        <h4>Best Practices</h4>
+                        <ul>
+                            <li>Triggers must be written to handle bulk operations.</li>
+                            <li>
+                                <b>Don't</b> write SOQL queries in loops!
+                                <ul>
+                                    <li>Governor Limit: 100 <code>SELECT</code> statements.</li>
+                                </ul>
+                            </li>
+                            <li>Use collections often for DML operations.</li>
+                        </ul>
+                    </div>
+                </div>
+                <h3>Bulk Triggers</h3>
+                <p><b>All</b> triggers are bulk triggers by default and can process multiple records at a time.</p>
+                <pre><code id="example-11"></code></pre>
+                <h3>Trigger Context Variables</h3>
+                <div class="row">
+                    <div class="column-2">
+                        <h4>System.Trigger</h4>
+                        <ul>
+                            <li><code>isExecuting</code> - true if current context is a trigger.</li>
+                            <li><code>isInsert</code> - true is the trig was fired by an <b>insert</b> operation.</li>
+                            <li><code>isUpdate</code></li>
+                            <li><code>isDelete</code></li>
+                            <li><code>isUndelete</code></li>
+                            <li><code>isBefore</code> - true if trig fired <b>before</b> an record was saved.</li>
+                            <li><code>isUpdate</code></li>
+                            <li>
+                                <code>new</code> - returns a list of the new versions of the sObject records.
+                                <ul>
+                                    <li>only available in <code>insert</code>, <code>update</code>, and <code>undelete</code>.</li>
+                                    <li>List records can only be <b>modified</b> in <b>before</b> triggers.</li>
+                                </ul>
+                            </li>
+                            <li><code>newMap</code> - returns a map of IDs to the new versions of the sObject records.</li>
+                            <li><code>old</code> - only available in <code>update</code> and <code>delete</code> triggers.</li>
+                            <li><code>oldMap</code> - only available in <code>update</code> and <code>delete</code> triggers.</li>
+                        </ul>
+                    </div>
+                    <div class="column-2">
+                        <h4>Context Variable Considerations</h4>
+                        <ul>
+                            <li><code>trigger.new</code> and <code>trigger.old</code> cannot be used in DML operations.</li>
+                            <li>
+                                You can use an object to change its own field values using <code>trigger.new</code>, but only in <b>before</b> triggers.
+                                <ul>
+                                    <li><code>trigger.old</code> is not saved in after triggers so a runtime exception is thrown.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <code>trigger.old</code> is always read-only.
+                            </li>
+                        </ul>
+                        <h4>Trigger Exceptions</h4>
+                        <ul>
+                            <li>You can prevent DML operations from occurring by calling the <code>addError()</code> method on records or fields.</li>
+                            <li>Errors display in UI and are logged when used on <code>trigger.new</code> in <code>insert</code> and <code>update</code>triggers and on <code>trigger.old</code> in <code>delete</code> triggers.</li>
+                        </ul>
+                    </div>
+                </div>
+                <h4>Trigger Flow Diagram</h4>
+                <div class="row">
+                    <div class="column-2">
+                        <img src="images/IMG_6053.jpg" alt="Trigger Flow Diagram">
+                    </div>
+                    <div class="column-2">
+                        <pre><code id="example-12"></code></pre>
+                    </div>
+                </div>   
             </fieldset>
         </div>
         <script src="highlight/highlight.pack.js"></script><!-- Source: https://highlightjs.org/ -->

@@ -168,14 +168,38 @@ input[type="reset"]:hover {
     text-align: center;
 }
 
-.column-2 {
+div.column-2 {
     float: left;
     width: 50%;
 }
 
-.column-3 {
+div.column-3 {
     float: left;
     width: 33%;
+}
+
+ul.column-2 {
+    column-count: 2; 
+    list-style-type: none; 
+    text-align: center; 
+    padding-left: 0; 
+    font-weight: bold;
+}
+
+ul.column-3 {
+    column-count: 3; 
+    list-style-type: none; 
+    text-align: center; 
+    padding-left: 0; 
+    font-weight: bold;
+}
+
+ul.column-4 {
+    column-count: 4; 
+    list-style-type: none; 
+    text-align: center; 
+    padding-left: 0; 
+    font-weight: bold;
 }
 
 /* Clear floats after the columns */
@@ -245,6 +269,11 @@ tbody tr:nth-child(even) {
     background-color: rgb(250, 210, 179);
 }
 
+ul.table-of-contents {
+    column-count: 3; 
+    list-style-type: none;
+}
+
 ul.table-of-contents li {
     text-align: center;
 }
@@ -258,4 +287,12 @@ ul.table-of-contents li {
     border-radius: 5px;
     margin: 5px;
     display: inline-block;
-  }
+}
+
+img {
+    display: block;
+    margin: 0px auto;
+    border: solid #003865 5px;
+    border-radius: 5px;
+    width: 90%;
+}

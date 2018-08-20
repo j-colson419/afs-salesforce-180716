@@ -1,3 +1,6 @@
-// Testing out Methods
+trigger TriggerName on ObjectName (trigger_events) {
 
-MyGradeClass.debugMessage();
+    for (ObjectName on : Trigger.new) {
+        // Do some stuff
+    }
+}
