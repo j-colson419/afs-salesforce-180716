@@ -10,432 +10,433 @@
         <div class="header" id="myHeader">
             <h1>Apex Notes</h1>
         </div>
-        <div class="content parallax">
-            <fieldset>
-                <legend>Table of Contents</legend>
-                <ul class="table-of-contents">
-                    <li><a href="#dev-environment" class="button">Development Environment</a></li>
-                    <li><a href="#background" class="button">Background</a></li>
-                    <li><a href="#definitions" class="button">Definitions</a></li>
-                    <li><a href="#data-types" class="button">Data Types</a></li>
-                    <li><a href="#classes" class="button">Classes</a></li>
-                    <li><a href="#triggers" class="button">Triggers</a></li>
-                </ul>
-            </fieldset>
-            <fieldset>
-                <legend><a name="dev-environment">Development Environments</a></legend>
-                <h3>Force.com IDE</h3>
-                <p>
-                    A powerful client application for creating, modifying and deploying 
-                    Force.com applications.
-                </p>
+        <div class="main">
+            <div class="nav">
                 <ul>
-                    <li>Is a plugin for the Eclipse IDE.</li>
-                    <li>It is an environment for building and deploying SF apps.</li>
-                    <li>
-                        Provides tools such as source code editors, teest execution 
-                        tools, wizards, and has integrated help.
-                    </li>                   
+                    <li><a href="#dev-environment" class="navitem">Dev. Environment</a></li>
+                    <li><a href="#background" class="navitem">Background</a></li>
+                    <li><a href="#definitions" class="navitem">Definitions</a></li>
+                    <li><a href="#data-types" class="navitem">Data Types</a></li>
+                    <li><a href="#classes" class="navitem">Classes</a></li>
+                    <li><a href="#triggers" class="navitem">Triggers</a></li>
                 </ul>
-                <hr>
-                <h3>Salesforce User Interface</h3>
-                <p>
-                    You can write salesforce code in any of the following ways from 
-                    the Salesforce User Interface:
-                </p>
-                <ul>
-                    <li>Write an Apex Class from setup in quick find box.</li>
-                    <li>
-                        Write an Apex Trigger by finding the triggers in the 
-                        settings of the Object settings.
-                    </li>
-                </ul>
-                <hr>
-                <h3>Developer Console</h3>
-                <p>
-                    An integrated development environment with a collection of 
-                    tools you can use to create, debug, and test applications in your Salesforce organization.
-                </p>
-                <ul class="column-3">
-                    <li>Writing code</li>
-                    <li>Compiling code</li>
-                    <li>Debugging</li>
-                    <li>Testing</li>
-                    <li>Checking performance</li>
-                    <li>SOQL Queries</li>
-                    <li>Text coloring and autocomplete</li>
-                </ul>
-            </fieldset>
-            <fieldset>
-                <legend><a name="background">Background</a></legend>
-                <p>
-                    A development platform for building software as a service (SaaS) applications 
-                    on top of Salesforce.com's customer relationship management (CRM) functionality.
-                </p>
-                <ul>
-                    <li>Strongly typed, Object-Oriented Programming Language</li>
-                    <li>NOT a general purpose programming language</li>
-                    <li>Allows developers to <u>execute flow</u> and <u>transaction control statements</u></li>
-                    <li>Acts like database stored procedures.</li>
-                </ul>
-                <div class="row">
-                    <div class="column-2">
-                        <p>Use Cases</p>
-                        <ul>
-                            <li>Perform complex validation over multiple objects.</li>
-                            <li>Create complex business processes.</li>
-                            <li>
-                                Attach custom logic to another operation, so that it occurs whenever 
-                                that operation is executed.
-                            </li>
-                        </ul>
-                        <p><u>Cannot</u> be used to:</p>
-                        <ul>
-                            <li>Render elements in the UI (other than error messages)</li>
-                            <li><u>Change</u> standard functionality</li>
-                            <li>Create temporary files</li>
-                            <li>Spawn threads</li>
-                        </ul>
+            </div>
+            <div class="content parallax" id="content">
+                <fieldset>
+                    <legend><a name="dev-environment">Development Environments</a></legend>
+                    <h3>Force.com IDE</h3>
+                    <p>
+                        A powerful client application for creating, modifying and deploying 
+                        Force.com applications.
+                    </p>
+                    <ul>
+                        <li>Is a plugin for the Eclipse IDE.</li>
+                        <li>It is an environment for building and deploying SF apps.</li>
+                        <li>
+                            Provides tools such as source code editors, teest execution 
+                            tools, wizards, and has integrated help.
+                        </li>                   
+                    </ul>
+                    <hr>
+                    <h3>Salesforce User Interface</h3>
+                    <p>
+                        You can write salesforce code in any of the following ways from 
+                        the Salesforce User Interface:
+                    </p>
+                    <ul>
+                        <li>Write an Apex Class from setup in quick find box.</li>
+                        <li>
+                            Write an Apex Trigger by finding the triggers in the 
+                            settings of the Object settings.
+                        </li>
+                    </ul>
+                    <hr>
+                    <h3>Developer Console</h3>
+                    <p>
+                        An integrated development environment with a collection of 
+                        tools you can use to create, debug, and test applications in your Salesforce organization.
+                    </p>
+                    <ul class="column-3">
+                        <li>Writing code</li>
+                        <li>Compiling code</li>
+                        <li>Debugging</li>
+                        <li>Testing</li>
+                        <li>Checking performance</li>
+                        <li>SOQL Queries</li>
+                        <li>Text coloring and autocomplete</li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend><a name="background">Background</a></legend>
+                    <p>
+                        A development platform for building software as a service (SaaS) applications 
+                        on top of Salesforce.com's customer relationship management (CRM) functionality.
+                    </p>
+                    <ul>
+                        <li>Strongly typed, Object-Oriented Programming Language</li>
+                        <li>NOT a general purpose programming language</li>
+                        <li>Allows developers to <u>execute flow</u> and <u>transaction control statements</u></li>
+                        <li>Acts like database stored procedures.</li>
+                    </ul>
+                    <div class="row">
+                        <div class="column-2">
+                            <p>Use Cases</p>
+                            <ul>
+                                <li>Perform complex validation over multiple objects.</li>
+                                <li>Create complex business processes.</li>
+                                <li>
+                                    Attach custom logic to another operation, so that it occurs whenever 
+                                    that operation is executed.
+                                </li>
+                            </ul>
+                            <p><u>Cannot</u> be used to:</p>
+                            <ul>
+                                <li>Render elements in the UI (other than error messages)</li>
+                                <li><u>Change</u> standard functionality</li>
+                                <li>Create temporary files</li>
+                                <li>Spawn threads</li>
+                            </ul>
+                        </div>
+                        <div class="column-2">
+                            <p>As a language, Apex is...</p>
+                            <ul>
+                                <li>Integrated</li>
+                                <li>Easy to use</li>
+                                <li>Data focused</li>
+                                <li><u>Rigorous</u> - a strongly typed language that uses direct references to schema objects.</li>
+                                <li>Hosted</li>
+                                <li>Multi-tenant aware</li>
+                                <li>Easy to test</li>
+                                <li>Versioned</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="column-2">
-                        <p>As a language, Apex is...</p>
-                        <ul>
-                            <li>Integrated</li>
-                            <li>Easy to use</li>
-                            <li>Data focused</li>
-                            <li><u>Rigorous</u> - a strongly typed language that uses direct references to schema objects.</li>
-                            <li>Hosted</li>
-                            <li>Multi-tenant aware</li>
-                            <li>Easy to test</li>
-                            <li>Versioned</li>
-                        </ul>
+                    <div style="text-align: center">
+                        <img src="https://4.bp.blogspot.com/-swofQLY36Is/V3YYOVJGw6I/AAAAAAAAANc/FLR4_IyWCHMHod5avyQMMW0oQqe3q1d6ACLcB/s1600/202.png"
+                            alt="Salesforce Cloud Diagram" class="large-image">
                     </div>
-                </div>
-                <div style="text-align: center">
-                    <img src="https://4.bp.blogspot.com/-swofQLY36Is/V3YYOVJGw6I/AAAAAAAAANc/FLR4_IyWCHMHod5avyQMMW0oQqe3q1d6ACLcB/s1600/202.png"
-                        alt="Salesforce Cloud Diagram" class="large-image">
-                </div>
-            </fieldset>
-            <fieldset>
-                <legend><a name="definitions">Definitions</a></legend>
-                <h3>Statement</h3>
-                <ul>
-                    <li>Is any coded instrction that performs an action.</li>
-                    <li>Must end with a <code>;</code>.</li>
-                </ul>
-                <hr>
-                <h3>Block</h3>
-                <ul>
-                    <li>A seies of statements grouped together with <code>{}</code>.</li>
-                    <li>Can be used anywhere a single statement would be allowed.</li>
-                </ul>
-                <pre><code id="example-1" class="apex"></code></pre>
-                <hr>
-                <h3>Expressions</h3>
-                <p>
-                    A construct made up of variables, operators, and method invocations
-                    that evaluates to a single value.
-                </p>
-                <hr>
-                <h3>Types</h3>
-                <ul>
-                    <li>Literal expressions</li>
-                    <li>A new sObject, Apex object, list, set, or map</li>
-                    <li>Any value that can act as the Left side of an assignment operation</li>
-                    <li>An SOQL or SOSL query surrounded by <code>[]</code></li>
-                    <li>A static or instance method invocation</li>
-                </ul>
-                <pre><code id="example-2" class="apex"></code> </pre>
-                <hr>
-                <h3>Operators</h3>
-                <p>
-                    Expressions can be joined w/ operators to create.
-                </p>
-                <h4>Command Expressions</h4>
-                <ul class="column-4">
-                    <li><code>=</code></li>
-                    <li><code>+=</code></li>
-                    <li><code>-=</code></li>
-                    <li><code>*=</code></li>
-                    <li><code>/=</code></li>
-                    <li><code>|=</code></li>
-                    <li><code>&=</code></li>
-                    <li><code>expr ? stmnt : stmnt</code></li>
-                    <li><code>==</code></li>
-                    <li><code>===</code></li>
-                    <li><code>++</code></li>
-                    <li><code>--</code></li>
-                </ul>
-                <h4>Operator Precendence</h4>
-                <div class="row">
-                    <div class="column-3">
-                        <ol start="1">
-                            <li><code>{} () ++ --</code></li>
-                            <li><code>! -x +x (type) new</code></li>
-                            <li><code>* /</code></li>
-                        </ol>
+                </fieldset>
+                <fieldset>
+                    <legend><a name="definitions">Definitions</a></legend>
+                    <h3>Statement</h3>
+                    <ul>
+                        <li>Is any coded instrction that performs an action.</li>
+                        <li>Must end with a <code>;</code>.</li>
+                    </ul>
+                    <hr>
+                    <h3>Block</h3>
+                    <ul>
+                        <li>A seies of statements grouped together with <code>{}</code>.</li>
+                        <li>Can be used anywhere a single statement would be allowed.</li>
+                    </ul>
+                    <pre><code id="example-1" class="apex"></code></pre>
+                    <hr>
+                    <h3>Expressions</h3>
+                    <p>
+                        A construct made up of variables, operators, and method invocations
+                        that evaluates to a single value.
+                    </p>
+                    <hr>
+                    <h3>Types</h3>
+                    <ul>
+                        <li>Literal expressions</li>
+                        <li>A new sObject, Apex object, list, set, or map</li>
+                        <li>Any value that can act as the Left side of an assignment operation</li>
+                        <li>An SOQL or SOSL query surrounded by <code>[]</code></li>
+                        <li>A static or instance method invocation</li>
+                    </ul>
+                    <pre><code id="example-2" class="apex"></code> </pre>
+                    <hr>
+                    <h3>Operators</h3>
+                    <p>
+                        Expressions can be joined w/ operators to create.
+                    </p>
+                    <h4>Command Expressions</h4>
+                    <ul class="column-4">
+                        <li><code>=</code></li>
+                        <li><code>+=</code></li>
+                        <li><code>-=</code></li>
+                        <li><code>*=</code></li>
+                        <li><code>/=</code></li>
+                        <li><code>|=</code></li>
+                        <li><code>&=</code></li>
+                        <li><code>expr ? stmnt : stmnt</code></li>
+                        <li><code>==</code></li>
+                        <li><code>===</code></li>
+                        <li><code>++</code></li>
+                        <li><code>--</code></li>
+                    </ul>
+                    <h4>Operator Precendence</h4>
+                    <div class="row">
+                        <div class="column-3">
+                            <ol start="1">
+                                <li><code>{} () ++ --</code></li>
+                                <li><code>! -x +x (type) new</code></li>
+                                <li><code>* /</code></li>
+                            </ol>
+                        </div>
+                        <div class="column-3">
+                            <ol start="4">
+                                <li><code>+ -</code></li>
+                                <li><code>&gt; &ge; &lt; &le;</code></li>
+                                <li><code>== !=</code></li>
+                            </ol>
+                        </div>
+                        <div class="column-3">
+                            <ol start="7">
+                                <li><code>&&</code></li>
+                                <li><code>||</code></li>
+                                <li><code>= += -= *= /= &= |=</code></li>
+                            </ol>
+                        </div>
                     </div>
-                    <div class="column-3">
-                        <ol start="4">
-                            <li><code>+ -</code></li>
-                            <li><code>&gt; &ge; &lt; &le;</code></li>
-                            <li><code>== !=</code></li>
-                        </ol>
+                </fieldset>
+                <fieldset>
+                    <legend><a name="data-types">Data Types</a></legend>
+                    <h3>Primitives</h3>
+                    <ul class="column-3" style="font-weight: 100;">
+                        <li><b>Integer</b></li>
+                        <li><b>Long</b></li>
+                        <li><b>Boolean</b></li>
+                        <li><b>String</b></li>
+                        <li><b>Float</b></li>
+                        <li><b>Double</b></li>
+                        <li><b>Decimal</b></li>
+                        <li><b>Date</b></li>
+                        <li><b>Datetime</b></li>
+                        <li><b>Time</b></li>
+                        <li><b>ID</b></li>
+                        <li><b>Blob</b></li>
+                        <li><b>Object</b> - all Apex datatypes <i>inherit</i> from <i>Object</i></li>
+                    </ul>
+                    <hr>
+                    <h3>Non-Standard Primitives</h3>
+                    <ul>
+                        <li>
+                            <b>AnyType</b> - The <code>valueOf</code> static method converts an sObject field of type 
+                            AnyType to a standard primitive. AnyType is used within the Lightning platform database 
+                            exclusively for sObject fields in field history tracking tables.
+                        </li>
+                        <li>
+                            <b>Currency</b> - The <code>Currency.newInstance</code> static method creates a literal of 
+                            type Currency. This method is for use solely within SOQL and SOSL WHERE clauses to filter 
+                            against sObject currency fields. You cannot instantiate Currency in any other type of Apex.
+                        </li>
+                    </ul>
+                    <hr>
+                    <h3>Non-Primitive Data Types</h3>
+                    <ul>
+                        <li>
+                            <b>sObject</b> - represents a row of data and can only be declared in Apex using the SOAP 
+                            API name of the object.
+                            <ul>
+                                <li>
+                                    Can use generic sObject
+                                </li>
+                            </ul>
+                            <pre><code id="example-3" class="apex"></code></pre>
+                        </li>
+                        <li><b>Null</b></li>
+                        <li>
+                            <b>Enums</b> - abstract data type that each take on exactly one of a finite list of identifies that <u>you</u> specifiy.
+                            <ul>
+                                <li>
+                                    Use <code>enum</code> keyword to define.
+                                </li>
+                            </ul>
+                            <pre><code id="example-4" class="apex"></code></pre>
+                        </li>
+                    </ul>
+                    <hr>
+                    <h3>Collections</h3>
+                    <ul>
+                        <li>
+                            <b>Lists (arrays)</b> - used when order matters. Can have duplicates.
+                            <pre><code id="example-5" class="apex"></code></pre>
+                        </li>
+                        <li>
+                            <b>Maps</b> - key-value pairs
+                            <ul>
+                                <li>
+                                    Because keys have to be unique, adding a value of a key that already exists 
+                                    overwrites the existing value
+                                </li>
+                            </ul>
+                            <pre><code id="example-7" class="apex"></code></pre>
+                        </li>
+                        <li>
+                            <b>Sets</b> - unique unordered values
+                            <pre><code id="example-6" class="apex"></code></pre>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend><a name="classes">Classes</a></legend>
+                    <div class="row">
+                        <div class="column-2">
+                            <h4>Definitions</h4>
+                            <ul>
+                                <li><b>Class</b> - A blueprint from which objects are created.</li>
+                                <li><b>Object</b> - An instance of a class.</li>
+                            </ul>
+                            <p>To define a class you need...</p>
+                            <ul>
+                                <li><b>Access Modifier</b> - <code>public</code>, <code>private</code>, <code>global</code>, ...</li>
+                                <li><b>Definition Modifier</b> - <code>Virtual</code>, <code>Abstract</code>, ...</li>
+                                <li><b>Class</b> - keyword</li>
+                            </ul>
+                        </div>
+                        <div class="column-2">
+                            <h4>Class Model Example</h4>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Class: Grade</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Variables</td>
+                                        <td>Methods</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>ID</td>
+                                        <td>setGrade</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Grade</td>
+                                        <td>averageGrades</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Student</th>
+                                        <td>hasGrade</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Class</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Room</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                    <div class="column-3">
-                        <ol start="7">
-                            <li><code>&&</code></li>
-                            <li><code>||</code></li>
-                            <li><code>= += -= *= /= &= |=</code></li>
-                        </ol>
+                    <div class="row">
+                        <div class="column-2">
+                            <pre><code id="example-8" class="apex"></code></pre>
+                        </div>
+                        <div class="column-2">
+                            <pre><code id="example-9" class="apex"></code></pre>
+                        </div>
                     </div>
-                </div>
-            </fieldset>
-            <fieldset>
-                <legend><a name="data-types">Data Types</a></legend>
-                <h3>Primitives</h3>
-                <ul class="column-3" style="font-weight: 100;">
-                    <li><b>Integer</b></li>
-                    <li><b>Long</b></li>
-                    <li><b>Boolean</b></li>
-                    <li><b>String</b></li>
-                    <li><b>Float</b></li>
-                    <li><b>Double</b></li>
-                    <li><b>Decimal</b></li>
-                    <li><b>Date</b></li>
-                    <li><b>Datetime</b></li>
-                    <li><b>Time</b></li>
-                    <li><b>ID</b></li>
-                    <li><b>Blob</b></li>
-                    <li><b>Object</b> - all Apex datatypes <i>inherit</i> from <i>Object</i></li>
-                </ul>
-                <hr>
-                <h3>Non-Standard Primitives</h3>
-                <ul>
-                    <li>
-                        <b>AnyType</b> - The <code>valueOf</code> static method converts an sObject field of type 
-                        AnyType to a standard primitive. AnyType is used within the Lightning platform database 
-                        exclusively for sObject fields in field history tracking tables.
-                    </li>
-                    <li>
-                        <b>Currency</b> - The <code>Currency.newInstance</code> static method creates a literal of 
-                        type Currency. This method is for use solely within SOQL and SOSL WHERE clauses to filter 
-                        against sObject currency fields. You cannot instantiate Currency in any other type of Apex.
-                    </li>
-                </ul>
-                <hr>
-                <h3>Non-Primitive Data Types</h3>
-                <ul>
-                    <li>
-                        <b>sObject</b> - represents a row of data and can only be declared in Apex using the SOAP 
-                        API name of the object.
-                        <ul>
-                            <li>
-                                Can use generic sObject
-                            </li>
-                        </ul>
-                        <pre><code id="example-3" class="apex"></code></pre>
-                    </li>
-                    <li><b>Null</b></li>
-                    <li>
-                        <b>Enums</b> - abstract data type that each take on exactly one of a finite list of identifies that <u>you</u> specifiy.
-                        <ul>
-                            <li>
-                                Use <code>enum</code> keyword to define.
-                            </li>
-                        </ul>
-                        <pre><code id="example-4" class="apex"></code></pre>
-                    </li>
-                </ul>
-                <hr>
-                <h3>Collections</h3>
-                <ul>
-                    <li>
-                        <b>Lists (arrays)</b> - used when order matters. Can have duplicates.
-                        <pre><code id="example-5" class="apex"></code></pre>
-                    </li>
-                    <li>
-                        <b>Maps</b> - key-value pairs
-                        <ul>
-                            <li>
-                                Because keys have to be unique, adding a value of a key that already exists 
-                                overwrites the existing value
-                            </li>
-                        </ul>
-                        <pre><code id="example-7" class="apex"></code></pre>
-                    </li>
-                    <li>
-                        <b>Sets</b> - unique unordered values
-                        <pre><code id="example-6" class="apex"></code></pre>
-                    </li>
-                </ul>
-            </fieldset>
-            <fieldset>
-                <legend><a name="classes">Classes</a></legend>
-                <div class="row">
-                    <div class="column-2">
-                        <h4>Definitions</h4>
-                        <ul>
-                            <li><b>Class</b> - A blueprint from which objects are created.</li>
-                            <li><b>Object</b> - An instance of a class.</li>
-                        </ul>
-                        <p>To define a class you need...</p>
-                        <ul>
-                            <li><b>Access Modifier</b> - <code>public</code>, <code>private</code>, <code>global</code>, ...</li>
-                            <li><b>Definition Modifier</b> - <code>Virtual</code>, <code>Abstract</code>, ...</li>
-                            <li><b>Class</b> - keyword</li>
-                        </ul>
+                    <h4>Methods</h4>
+                    <ul>
+                        <li>All <u>primitive</u> data type arguments are <u>passed by value</u></li>
+                        <li>All <u>non-primitive</u> data type arguments are <u>passed by reference</u></li>
+                    </ul>
+                    <pre><code id="example-10" class="apex"></code></pre>
+                </fieldset>
+                <fieldset>
+                    <legend><a name="triggers">Triggers</a></legend>
+                    <p>Triggers allow you to perform custom actions <b>before</b> or <b>after</b> changes (insertions, updates, deletion) to Salesforce records. Because of this, Apex considers all such operations to be a single unit of work and sets limits of the number of operations that can be performed to prevent infinite recursion.</p>
+                    <ul>
+                        <li>Triggers are stored as <b>meta data</b> under the object of which they are associated.</li>
+                        <li>Can only write 'after undelete' triggers for certain objects: Account, Asset, Car, Contact, ContentDocument, Contract, <b>Custom Objects</b>, Events, Lead, Opportunity, Product, Solution, Task.</li>
+                        <li>The code block of a trigger cannot contain the <code>static</code> keyword.</li>
+                        <li>You do not have to <b>manually</b> commit and database changes made by a trigger.</li>
+                    </ul>
+                    <div class="row">
+                        <div class="column-2">
+                            <h4>Types of Operations</h4>
+                            <ul>
+                                <li><b>Delete</b></li>
+                                <li><b>Undelete</b></li>
+                                <li><b>Insert</b></li>
+                                <li><b>Upsert</b> - Execute both before and after insert or before and after triggers as appropriate.</li>
+                                <li><b>Update</b></li>
+                                <li><b>Merge</b> - Executes both before and after delete for losing records and before and acter pdate for the winning records.</li>
+                            </ul>
+                        </div>
+                        <div class="column-2">
+                            <h4>Trigger Timing</h4>
+                            <ul>
+                                <li><b>Before</b> - Used to update or validate records <b>before</b> they are saved to the database.</li>
+                                <li><b>After</b> - Used to access field values that are set by the system and effect changes in other records. Records that fires the after trigger are <b>read-only</b>.</li>
+                            </ul>
+                            <h4>Best Practices</h4>
+                            <ul>
+                                <li>Triggers must be written to handle bulk operations.</li>
+                                <li>
+                                    <b>Don't</b> write SOQL queries in loops!
+                                    <ul>
+                                        <li>Governor Limit: 100 <code>SELECT</code> statements.</li>
+                                    </ul>
+                                </li>
+                                <li>Use collections often for DML operations.</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="column-2">
-                        <h4>Class Model Example</h4>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th colspan="2">Class: Grade</th>
-                                </tr>
-                                <tr>
-                                    <td>Variables</td>
-                                    <td>Methods</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>ID</td>
-                                    <td>setGrade</td>
-                                </tr>
-                                <tr>
-                                    <td>Grade</td>
-                                    <td>averageGrades</td>
-                                </tr>
-                                <tr>
-                                    <td>Student</th>
-                                    <td>hasGrade</td>
-                                </tr>
-                                <tr>
-                                    <td>Class</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>Room</td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <h3>Bulk Triggers</h3>
+                    <p><b>All</b> triggers are bulk triggers by default and can process multiple records at a time.</p>
+                    <pre><code id="example-11"></code></pre>
+                    <h3>Trigger Context Variables</h3>
+                    <div class="row">
+                        <div class="column-2">
+                            <h4>System.Trigger</h4>
+                            <ul>
+                                <li><code>isExecuting</code> - true if current context is a trigger.</li>
+                                <li><code>isInsert</code> - true is the trig was fired by an <b>insert</b> operation.</li>
+                                <li><code>isUpdate</code></li>
+                                <li><code>isDelete</code></li>
+                                <li><code>isUndelete</code></li>
+                                <li><code>isBefore</code> - true if trig fired <b>before</b> an record was saved.</li>
+                                <li><code>isUpdate</code></li>
+                                <li>
+                                    <code>new</code> - returns a list of the new versions of the sObject records.
+                                    <ul>
+                                        <li>only available in <code>insert</code>, <code>update</code>, and <code>undelete</code>.</li>
+                                        <li>List records can only be <b>modified</b> in <b>before</b> triggers.</li>
+                                    </ul>
+                                </li>
+                                <li><code>newMap</code> - returns a map of IDs to the new versions of the sObject records.</li>
+                                <li><code>old</code> - only available in <code>update</code> and <code>delete</code> triggers.</li>
+                                <li><code>oldMap</code> - only available in <code>update</code> and <code>delete</code> triggers.</li>
+                            </ul>
+                        </div>
+                        <div class="column-2">
+                            <h4>Context Variable Considerations</h4>
+                            <ul>
+                                <li><code>trigger.new</code> and <code>trigger.old</code> cannot be used in DML operations.</li>
+                                <li>
+                                    You can use an object to change its own field values using <code>trigger.new</code>, but only in <b>before</b> triggers.
+                                    <ul>
+                                        <li><code>trigger.old</code> is not saved in after triggers so a runtime exception is thrown.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <code>trigger.old</code> is always read-only.
+                                </li>
+                            </ul>
+                            <h4>Trigger Exceptions</h4>
+                            <ul>
+                                <li>You can prevent DML operations from occurring by calling the <code>addError()</code> method on records or fields.</li>
+                                <li>Errors display in UI and are logged when used on <code>trigger.new</code> in <code>insert</code> and <code>update</code>triggers and on <code>trigger.old</code> in <code>delete</code> triggers.</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="column-2">
-                        <pre><code id="example-8" class="apex"></code></pre>
-                    </div>
-                    <div class="column-2">
-                        <pre><code id="example-9" class="apex"></code></pre>
-                    </div>
-                </div>
-                <h4>Methods</h4>
-                <ul>
-                    <li>All <u>primitive</u> data type arguments are <u>passed by value</u></li>
-                    <li>All <u>non-primitive</u> data type arguments are <u>passed by reference</u></li>
-                </ul>
-                <pre><code id="example-10" class="apex"></code></pre>
-            </fieldset>
-            <fieldset>
-                <legend><a name="triggers">Triggers</a></legend>
-                <p>Triggers allow you to perform custom actions <b>before</b> or <b>after</b> changes (insertions, updates, deletion) to Salesforce records. Because of this, Apex considers all such operations to be a single unit of work and sets limits of the number of operations that can be performed to prevent infinite recursion.</p>
-                <ul>
-                    <li>Triggers are stored as <b>meta data</b> under the object of which they are associated.</li>
-                    <li>Can only write 'after undelete' triggers for certain objects: Account, Asset, Car, Contact, ContentDocument, Contract, <b>Custom Objects</b>, Events, Lead, Opportunity, Product, Solution, Task.</li>
-                    <li>The code block of a trigger cannot contain the <code>static</code> keyword.</li>
-                    <li>You do not have to <b>manually</b> commit and database changes made by a trigger.</li>
-                </ul>
-                <div class="row">
-                    <div class="column-2">
-                        <h4>Types of Operations</h4>
-                        <ul>
-                            <li><b>Delete</b></li>
-                            <li><b>Undelete</b></li>
-                            <li><b>Insert</b></li>
-                            <li><b>Upsert</b> - Execute both before and after insert or before and after triggers as appropriate.</li>
-                            <li><b>Update</b></li>
-                            <li><b>Merge</b> - Executes both before and after delete for losing records and before and acter pdate for the winning records.</li>
-                        </ul>
-                    </div>
-                    <div class="column-2">
-                        <h4>Trigger Timing</h4>
-                        <ul>
-                            <li><b>Before</b> - Used to update or validate records <b>before</b> they are saved to the database.</li>
-                            <li><b>After</b> - Used to access field values that are set by the system and effect changes in other records. Records that fires the after trigger are <b>read-only</b>.</li>
-                        </ul>
-                        <h4>Best Practices</h4>
-                        <ul>
-                            <li>Triggers must be written to handle bulk operations.</li>
-                            <li>
-                                <b>Don't</b> write SOQL queries in loops!
-                                <ul>
-                                    <li>Governor Limit: 100 <code>SELECT</code> statements.</li>
-                                </ul>
-                            </li>
-                            <li>Use collections often for DML operations.</li>
-                        </ul>
-                    </div>
-                </div>
-                <h3>Bulk Triggers</h3>
-                <p><b>All</b> triggers are bulk triggers by default and can process multiple records at a time.</p>
-                <pre><code id="example-11"></code></pre>
-                <h3>Trigger Context Variables</h3>
-                <div class="row">
-                    <div class="column-2">
-                        <h4>System.Trigger</h4>
-                        <ul>
-                            <li><code>isExecuting</code> - true if current context is a trigger.</li>
-                            <li><code>isInsert</code> - true is the trig was fired by an <b>insert</b> operation.</li>
-                            <li><code>isUpdate</code></li>
-                            <li><code>isDelete</code></li>
-                            <li><code>isUndelete</code></li>
-                            <li><code>isBefore</code> - true if trig fired <b>before</b> an record was saved.</li>
-                            <li><code>isUpdate</code></li>
-                            <li>
-                                <code>new</code> - returns a list of the new versions of the sObject records.
-                                <ul>
-                                    <li>only available in <code>insert</code>, <code>update</code>, and <code>undelete</code>.</li>
-                                    <li>List records can only be <b>modified</b> in <b>before</b> triggers.</li>
-                                </ul>
-                            </li>
-                            <li><code>newMap</code> - returns a map of IDs to the new versions of the sObject records.</li>
-                            <li><code>old</code> - only available in <code>update</code> and <code>delete</code> triggers.</li>
-                            <li><code>oldMap</code> - only available in <code>update</code> and <code>delete</code> triggers.</li>
-                        </ul>
-                    </div>
-                    <div class="column-2">
-                        <h4>Context Variable Considerations</h4>
-                        <ul>
-                            <li><code>trigger.new</code> and <code>trigger.old</code> cannot be used in DML operations.</li>
-                            <li>
-                                You can use an object to change its own field values using <code>trigger.new</code>, but only in <b>before</b> triggers.
-                                <ul>
-                                    <li><code>trigger.old</code> is not saved in after triggers so a runtime exception is thrown.</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <code>trigger.old</code> is always read-only.
-                            </li>
-                        </ul>
-                        <h4>Trigger Exceptions</h4>
-                        <ul>
-                            <li>You can prevent DML operations from occurring by calling the <code>addError()</code> method on records or fields.</li>
-                            <li>Errors display in UI and are logged when used on <code>trigger.new</code> in <code>insert</code> and <code>update</code>triggers and on <code>trigger.old</code> in <code>delete</code> triggers.</li>
-                        </ul>
-                    </div>
-                </div>
-                <h4>Trigger Flow Diagram</h4>
-                <div class="row">
-                    <div class="column-2">
-                        <img src="images/IMG_6053.jpg" alt="Trigger Flow Diagram">
-                    </div>
-                    <div class="column-2">
-                        <pre><code id="example-12"></code></pre>
-                    </div>
-                </div>   
-            </fieldset>
+                    <h4>Trigger Flow Diagram</h4>
+                    <div class="row">
+                        <div class="column-2">
+                            <img src="images/IMG_6053.jpg" alt="Trigger Flow Diagram">
+                        </div>
+                        <div class="column-2">
+                            <pre><code id="example-12"></code></pre>
+                        </div>
+                    </div>   
+                </fieldset>
+            </div>
         </div>
         <script src="highlight/highlight.pack.js"></script><!-- Source: https://highlightjs.org/ -->
         <script src="ApexNotes.js"></script>
