@@ -9,12 +9,16 @@ html, body {
     color: #fff;
     text-align: center;
     border-bottom: solid 4px #E87722;
-    font-family: 'Courier New', Courier, monospace;
     height: 100px;
 }
 
 .header h1 {
-    font-size: 40px;
+    font-family: 'Great Vibes'; 
+    font-weight: normal; 
+    font-style: normal; 
+    font-size: 70px;
+    margin: 15px;
+    text-decoration: none;
 }
 
 .main {
@@ -32,6 +36,7 @@ html, body {
     height: 100%;
     background-color: #f1f1f1;
     margin: 0;
+    width: 200px;
 }
 
 .nav ul {
@@ -62,6 +67,15 @@ html, body {
 .nav li a:hover {
     background-color: #003865;
     color: white;
+}
+
+.nav > div {
+    vertical-align: bottom;
+}
+
+.nav img {
+    vertical-align: bottom;
+    display: inline;
 }
 
 .content {
@@ -110,11 +124,12 @@ fieldset legend {
     background: #003865;
     color: #fff;
     padding: 5px 10px ;
-    font-size: 25px;
+    font-size: 28px;
     border-radius: 5px;
     border-color: #003865;
     box-shadow: 0 0 0 5px #ddd;
     margin-left: 20px;
+    cursor: context-menu;
 }
 
 .large-image {
@@ -275,6 +290,19 @@ pre code {
     margin: 0 20px;
 }
 
+pre {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    overflow: hidden;
+}
+
+p {
+    margin-left: 20px;
+}
+
 h1, h2, h3, h4, h5 {
     text-decoration: underline;
 }
@@ -347,10 +375,42 @@ ul.table-of-contents li {
     display: inline-block;
 }
 
-img {
+.content img {
     display: block;
     margin: 0px auto;
     border: solid #003865 5px;
     border-radius: 5px;
     width: 90%;
+    margin-bottom: 20px;
+}
+
+.nav img {
+    width: 50%;
+    display: block;
+    margin: 0px auto;
+}
+
+.intro h1, .intro h2, .intro h3, .intro h4, .intro h5, .intro p {
+    display: inline;
+}
+
+.content::-webkit-scrollbar-track
+{
+	background-color: #ddd;
+}
+
+.content::-webkit-scrollbar
+{
+    width: 10px;
+	background-color: #ddd;
+}
+
+.content::-webkit-scrollbar-thumb
+{
+	background-color: #003865;
+    height: 80px;
+}
+
+div > ul {
+    margin-top: 0;
 }
