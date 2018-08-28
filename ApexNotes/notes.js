@@ -1,7 +1,7 @@
 /**
- * 
- * @param {URL} file 
- * @param {function} onSuccess 
+ * Reads the text file specified by the file string and the 
+ * @param {string} file URL path to the file
+ * @param {function} onSuccess function called when the file is successfully read
  */
 function readTextFile(file, onSuccess)
 {
@@ -21,20 +21,33 @@ function readTextFile(file, onSuccess)
     rawFile.send(null);
 }
 
-window.addEventListener('DOMContentLoaded', function(){
-    console.log('DOMContentLoaded');
-    var example;
-    var index = 1;
-    while (example = document.getElementById('example-'+index)) {
-        readTextFile(`apex-examples/example-${index++}.cls`, (text) => {
-            example.innerText = text;
-            hljs.highlightBlock(example);
-        });
-    }
+/**
+ * Loads the notes on DOMContentLoaded
+ * @param {string} locationNotes Name for the notes repository
+ */
+function loadNotes(locationNotes, fileType='cls') {
+    window.addEventListener('DOMContentLoaded', function(){
+        console.log('DOMContentLoaded');
+        var example;
+        var index = 1;
+        while (example = document.getElementById('example-'+index)) {
+            readTextFile(`${locationNotes}/example-${index++}.${fileType}`, (text) => {
+                i = 0;
+                while(example.innerHTML.indexOf('hljs-keyword') == -1 && i++ < 10) {
+                    // console.log("Retrying... " + i);
+                    example.innerText = text;
+                    hljs.highlightBlock(example);
+                }
+            });
+        }
+    
+        highlightActiveNav();
+    });
+}
 
-    highlightActiveNav();
-});
-
+/**
+ * Highlights the active navigation
+ */
 function highlightActiveNav() {
     var items = [], tags = [];
     var content = document.getElementById('content');

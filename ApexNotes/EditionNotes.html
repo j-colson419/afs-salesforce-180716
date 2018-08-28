@@ -1,0 +1,251 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Salesforce Sandboxes</title>
+        <link rel="shortcut icon" type="image/x-icon" href="https://png.icons8.com/color/1600/salesforce.png" />
+        <link rel="stylesheet" href="styling.css">
+        <link rel="stylesheet" href="highlight/styles/atom-one-light.css">
+        <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div class="header" id="myHeader">
+            <h1>Salesforce Sandboxes</h1>
+        </div>
+        <div class="main">
+            <div class="nav">
+                <ul>
+                    <li><a href="#editions" class="navitem">Salesforce Editions</a></li>
+                    <li><a href="#sandboxes" class="navitem">Sandboxes</a></li>
+                    <li><a href="#sandbox-refresh" class="navitem">Sandbox Refreshes</a></li>
+                    <li><a href="#sandbox-use-cases" class="navitem">Sandbox Use Cases</a></li>
+                    <li><a href="#sandbox-deployment" class="navitem">Sandbox Deployment</a></li>
+                    <li><a href="#sandbox-deployment-tools" class="navitem">Deployment Tools</a></li>
+                    <li><a href="#change-set-deployment" class="navitem">Change Set Deployment</a></li>
+                </ul>
+                <div>
+                    <img src="https://png.icons8.com/color/1600/salesforce.png" alt="Salesforce" />
+                </div>
+            </div>
+            <div class="content parallax" id="content">
+                <fieldset>
+                    <legend><a name="editions">Salesforce Edition Options</a></legend>
+                    <h3>Developer Edition</h3>
+                    <h4>Description</h4>
+                    <p>Provides access to the Lightning Platform and APIs. It lets developers extend Salesforce, integrate with other applications, and develop new tools and applications. Developer Edition also provides access to many of the features available in Enterprise Edition.</p>
+                    <h4>Limitations</h4>
+                    <div class="row">
+                        <div class="column-2">
+                            <ul>
+                                <li>2 Active Users of Salesforce User License.</li>
+                                <li>Organization cannot be used for commercial purpose.</li>
+                                <li>5 MB of total data storage.</li>
+                                <li>20 MB of total file storgage.</li>
+                            </ul>
+                        </div>
+                        <div class="column-2">
+                            <ul>
+                                <li>1 MB Big Object Storage</li>
+                                <li>Sandboxes are not available</li>
+                                <li>5000 API calls per 24 hours</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <h3>Professional Edition</h3>
+                    <h4>Description</h4>
+                    <p>Designed for businesses requiring full-featured CRM functionality. It includes straightforward and easy-to-use customization, integration, and administration tools to facilitate any small to midsize deployment. For Sales Cloud Professional trial and purchased subscription editions, Lightning Experience is the exclusive user interface for end users. </p>
+                    <hr>
+                    <h3>Enterprise Edition</h3>
+                    <h4>Description</h4>
+                    <p>Meets the needs of large and complex businesses. It gives you advanced customization and administration tools, in addition to all the functionality available in Professional Edition, that can support large-scale deployments. Enterprise Edition also includes access to Salesforce APIs, so you can easily integrate with back-office systems.</p>
+                    <hr>
+                    <h3>Unlimited Edition</h3>
+                    <h4>Description</h4>
+                    <p>Maximizes your success and extends it across the entire enterprise through the Lightning Platform. It gives you new levels of platform flexibility for managing and sharing all your information on demand. Includes all Enterprise Edition functionality, Premier Support, full mobile access, unlimited custom apps, increased storage limits, and other features.</p>
+                    <hr>
+                    <h3>Sandbox Limits by Edition</h3>
+                    <img src="images/EditionSandboxLimits.PNG" alt="Sandbox Editions Limitations" />
+                </fieldset>
+                <fieldset>
+                    <legend><a name="sandboxes">Sandboxes</a></legend>
+                    <p>Sandboxes are isolated from your production org, so operations that you perform in your sandboxes don’t affect your production org.</p>
+                    <h3>Sandbox Types</h3>
+                    <h4>Developer Sandbox</h4>
+                    <p>
+                        A Developer sandbox is intended for development and testing in an isolated environment. A Developer Sandbox includes a copy of your production org’s configuration (metadata).
+                    </p>
+                    <h4>Developer Pro Sandbox</h4>
+                    <p>
+                        A Developer Pro sandbox is intended for development and testing in an isolated environment and can host larger data sets than a Developer sandbox. A Developer Pro sandbox includes a copy of your production org’s configuration (metadata). Use a Developer Pro sandbox to handle more development and quality assurance tasks and for integration testing or user training.
+                    </p>
+                    <h4>Partial Copy Sandbox</h4>
+                    <p>
+                        A Partial Copy sandbox is intended to be used as a testing environment. This environment includes a copy of your production org’s configuration (metadata) and a sample of your production org’s data as defined by a sandbox template. Use a Partial Copy sandbox for quality assurance tasks such as user acceptance testing, integration testing, and training.
+                    </p>
+                    <h4>Full Sandbox</h4>
+                    <p>
+                        A Full sandbox is intended to be used as a testing environment. Only Full sandboxes support performance testing, load testing, and staging. Full sandboxes are a replica of your production org, including all data, such as object records and attachments, and metadata. The length of the refresh interval makes it difficult to use Full sandboxes for development. <br>
+                        We recommend that you apply a sandbox template so that your sandbox contains only the records that you need for testing or other tasks. <br>
+                        When you create a Full sandbox, you also have to decide how much field tracking history and Chatter activity to include.
+                        <ul>
+                            <li>The default is to omit field tracking, but you can include up to 180 days of field tracking. If you track field history for many objects in your production org, specify fewer days to avoid generating an excessive amount of data.</li>
+                            <li>Chatter activity data can be extensive, which can add a significant amount of time to your Full sandbox copy.</li>
+                        </ul>
+                        Limit the amount of field history that you copy, and copy your Chatter data only if you need it for your testing use cases.
+                    </p>
+                    <hr>
+                    <h3>Sandbox Types Comparison by Role</h3>
+                    <img src="images/SandboxTypeComparison.PNG" alt="Sandbox Types for Various Roles" />
+                </fieldset>
+                <fieldset>
+                    <legend><a name="sandbox-refresh">Sandbox Refreshes</a></legend>
+                    <h3>Sandbox Refresh Cycles</h3>
+                    <ul>
+                        <li>
+                            Full Sandboxes can be refreshed ONCE every 29 days
+                            <ul>
+                                <li>No exceptions to the 29 day rule – once refreshed, you cannot refresh again within the 29 day window</li>
+                                <li>Plan ahead! Refresh your sandbox when it makes sense for the project (ie, immediately prior to beginning development or testing)</li>
+                                <li>Use metadata migration tools (force.com IDE) and data migration tools (data loader, ETL) to migrate configuration and data inside a 29 day refresh window</li>
+                            </ul>
+                        </li>
+                        <li>Developer and Developer Pro sandboxes can be refreshed once a day.</li>
+                    </ul>
+                    <hr>
+                    <h3>Sandbox Refresh Limitations</h3>
+                    <img src="images/SandboxRefreshLimits.PNG" alt="Sandbox Refresh Limits" />
+                    <hr>
+                    <h3>Sandbox Refresh Duration</h3>
+                    <ul>
+                        <li>Sandbox refresh duration timeframes vary and cannot be guaranteed</li>
+                        <li>Refresh times can take minutes, days, or even more than a week</li>
+                        <li>All sandbox refresh requests are placed into a queue and will be processed on a first come first served basis.</li>
+                        <li>There is no capability to modify the queue order so please ensure you have enough lead time for your refresh to be queued and then processed</li>
+                        <li><b>Plan appropriately – do not wait until the last minute to request your full sandbox refresh if needed for a project initiative – expect this to take some time it may take several days depending upon the number of requests in the queue and the size of the data being copied</b></li>
+                        <li> Full sandbox refreshes take the most amount of time, given that they are copying both full prod configuration AND data vs Developer Pro and Developer sandboxes which are only copying configuration metadata</li>
+                        <li>The amount of data, custom objects, and code have an impact on sandbox refresh durations – ie, more data, more complex configuration = longer refresh cycles</li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend><a name="sandbox-use-cases">Sandbox Use Cases</a></legend>
+                    <h3>Typical Sandbox Use Cases</h3>
+                    <img src="images/SandboxUseCases.PNG" alt="Typical Sandbox Use Cases" />
+                    <hr>
+                    <h3>Sandbox Type Use Case Alignment</h3>
+                    <img src="images/SandboxTypeUseCases.PNG" alt="Use Case Alignment" />
+                </fieldset>
+                <fieldset>
+                    <legend><a name="sandbox-deployment">Sandbox Deployment</a></legend>
+                    <h3>Make Changes Safely</h3>
+                    <p>
+                        With the power of Lightning Platform, your organization can run lean and clean. Keeping it lean means making smart customizations the right way, so you enjoy a tailor-made experience with easy maintenance. Keeping it clean means accurate data, so when the business asks, “How many customers bought more of my product this year?” you can trust the answer is right.<br>
+                        To keep your organization lean and clean, use a consistent process of build, test, and deploy. People refer to this process as application lifecycle management or change management.
+                    </p>
+                    <h4>Build</h4>
+                    <p>
+                        In the appropriate environment, define functional requirements and develop your changes.
+                    </p>
+                    <h4>Test</h4>
+                    <p>
+                        Test your changes. Testing verifies that the changes behave as you expect, and don’t deliver any undesired side-effects. Then, test the changes on a small set of experienced people who can give you feedback (user acceptance testing).
+                    </p>
+                    <h4>Deploy</h4>
+                    <p>
+                        Once testing is successfully completed, make your changes available in production. Training people about the changes is a best practice.
+                    </p>
+                    <hr>
+                    <h3>What's Safe to Change in Production?</h3>
+                    <p>
+                        You can develop new functionality in a production organization. However, untested customizations can create a mess in production by deleting data or even worse. Customizations that don’t affect data are safe to do in a production organization, such as developing new dashboards, reports, and email templates.
+                    </p>
+                    <h4>What can happen if you don’t test changes before making them available in production?</h4>
+                    <ul>
+                        <li>A workflow rule or trigger accidentally creates an infinite processing loop.</li>
+                        <li>A logic error in a validation rule that means you can never save a record.</li>
+                        <li>Page layout changes confuse people instead of improving their experience.</li>
+                    </ul>
+                    <h4>A typical development lifecycle for customizations in a production organization can provide some protection:</h4>
+                    <ol>
+                        <li>Create functional requirements.</li>
+                        <li>Develop and test changes using the Salesforce user interface. Create profiles to hide your changes until they’re fully tested.</li>
+                        <li>Update profiles to reveal your changes to the appropriate users.</li>
+                        <li>Notify people about the changes.</li>
+                    </ol>
+                    <p>
+                        The safest way to customize your organization is to make and test changes in a copy of your organization, called a sandbox. Build and test changes before deploying to production. In fact, some changes must be done in a sandbox. For example, you can’t write Apex code directly in a production organization.
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend><a name="sandbox-deployment-tools">Sandbox Deployment Tools</a></legend>
+                    <h3>Main Deployment Tools</h3>
+                    <div class="intro"><h4>Change Sets</h4> - <i>Point & Click</i></div>
+                    <ul>
+                        <li>Straight sandbox to production migrations</li>
+                        <li>Change management without using a local file system</li>
+                        <li>Auditing previously deployed changes</li>
+                        <li>Enforcing code migration paths</li>
+                        <li>Deploying the same components to multiple orgs</li>
+                    </ul>
+                    <div class="intro"><h4>Ant Migration Tool</h4> - <i>Scriptable</i></div>
+                    <ul>
+                        <li>Development projects for which you need to populate a test environment with a lot of setup changes—Making these changes using a web interface can take a long time.</li>
+                        <li>Multistage release processes—A typical development process requires iterative building, testing, and staging before releasing to a production environment. Scripted retrieval and deployment of components can make this process much more efficient.</li>
+                        <li>Repetitive deployment using the same parameters—You can retrieve all the metadata in your organization, make changes, and deploy a subset of components. If you need to repeat this process, it’s as simple as calling the same deployment target again.</li>
+                        <li>When migrating from stage to production is done by IT—Anyone that prefers deploying in a scripting environment will find the Ant Migration Tool a familiar process.</li>
+                        <li>Scheduling batch deployments—You can schedule a deployment for midnight to not disrupt users. Or you can pull down changes to your Developer Edition org every day.Development projects for which you need to populate a test environment with a lot of setup changes—Making these changes using a web interface can take a long time.</li>
+                        <li>Multistage release processes—A typical development process requires iterative building, testing, and staging before releasing to a production environment. Scripted retrieval and deployment of components can make this process much more efficient.</li>
+                        <li>Repetitive deployment using the same parameters—You can retrieve all the metadata in your organization, make changes, and deploy a subset of components. If you need to repeat this process, it’s as simple as calling the same deployment target again.</li>
+                        <li>When migrating from stage to production is done by IT—Anyone that prefers deploying in a scripting environment will find the Ant Migration Tool a familiar process.</li>
+                        <li>Scheduling batch deployments—You can schedule a deployment for midnight to not disrupt users. Or you can pull down changes to your Developer Edition org every day.</li>
+                    </ul>
+                    <hr>
+                    <h3>Other Deployment Tools</h3>
+                    <img src="images/OtherDeploymentTools.PNG" alt="Other Deployment Tools" />
+                    <hr>
+                    <h3>Deployment Artifacts</h3>
+                    <img src="images/OtherMigrationArtifacts.PNG" alt="Deployment Artifacts" />
+                </fieldset>
+                <fieldset>
+                    <legend><a name="change-set-deployment">Change Set Deployment</a></legend>
+                    <p>After you’ve created and tested changes in a safe environment, deploy the changes to your production org using change sets.</p>
+                    <img style="width: 50%;" src="https://res.cloudinary.com/hy4kyit2a/image/upload/f_auto,q_auto/doc/trailhead/en-us435b7852ab97a22dadac95975a37a69d.jpg" alt="Deploying Change Set Cycle" />
+                    <h3>Authorize a Deployment Connection</h3>
+                    <p>
+                        Before you can receive change sets from a sandbox or other organization, authorize a deployment connection in the organization that receives the changes.
+                    </p>
+                    <ol>
+                        <li>Log into the organization that’ll receive inbound change sets. Usually this is the production organization associated with your sandbox.</li>                        
+                        <li>From Setup, enter "Deployment" in the "Quick Find" box, then select <strong>Deployment Settings</strong>.</li>
+                        <li>Click <strong>Edit</strong> next to the organization from which you want to receive outbound change sets. Usually this is your sandbox.</li>                        
+                        <li>Select <strong>Allow Inbound Changes</strong> and click <strong>Save</strong>.</li>                        
+                    </ol>
+                    <h3>Create and Upload an Outbound Change Set</h3>
+                    <p>Typically, you create an outbound change set in a sandbox organization and deploy it to production. But depending on your development lifecycle, you might choose to migrate changes in either direction between related organizations.</p>
+                    <ol class="ol steps enumList">
+                        <li>From Setup, enter Outbound Change Sets in the Quick Find box, then select <strong>Outbound Change Sets</strong>.</li>
+                        <li>Click <strong>New</strong>.</li>
+                        <li>Enter a name for your change set and click <strong>Save</strong>.</li>
+                        <li>In the Change Set Components section, click <strong>Add</strong>.</li>
+                        <li>Choose the type of component (for example, Custom Object
+                        or Custom Field), the components you want to add, and click <strong>Add To Change Set</strong>.If you are experimenting
+                        with a test custom object and custom field, try adding just one of
+                        them to the change set first.</li>
+                        <li>Click <strong>View/Add Dependencies</strong> to see
+                        whether the components you’ve added to the change set are dependent
+                        on other customizations.In the case of the test
+                        custom object and custom field, the related component and page layout
+                        will both be listed.</li>
+                        <li>Select the dependent components you want to add and click <strong>Add To Change Set</strong>.</li>
+                        <li>Click <strong>Upload</strong> and choose your target
+                        organization.The outbound change set detail page
+                        displays a message and you get an email notification when the upload
+                        is complete.</li>
+                    </ol>
+                </fieldset>
+            </div>
+        </div>
+        <script src="highlight/highlight.pack.js"></script><!-- Source: https://highlightjs.org/ -->
+        <script src="notes.js"></script>
+        <script>loadNotes('dml-examples')</script>
+    </body>
+</html>

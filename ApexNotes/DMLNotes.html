@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+    <head>
+        <title>DML Notes</title>
+        <link rel="shortcut icon" type="image/x-icon" href="https://png.icons8.com/color/1600/salesforce.png" />
+        <link rel="stylesheet" href="styling.css">
+        <link rel="stylesheet" href="highlight/styles/atom-one-light.css">
+    </head>
+    <body>
+        <div class="header" id="myHeader">
+            <h1>DML Notes</h1>
+        </div>
+        <div class="main">
+            <div class="nav">
+                <ul>
+                    <li><a href="#data-man" class="navitem">Data Manipulation</a></li>
+                    <li><a href="#additional-notes" class="navitem">Additional Notes</a></li>
+                    <li><a href="#SOQL-SOSL" class="navitem">SOQL & SOSL</a></li>
+                </ul>
+            </div>
+            <div class="content parallax" id="content">
+                <fieldset>
+                    <legend><a name="data-man">Data Manipulation</a></legend>
+                    <h3>Database Manipulation Language (DML)</h3>
+                    <ul>
+                        <li><b>read operations</b> - writen in SOQL</li>
+                        <li>
+                            <b>write operations</b>
+                            <ul>
+                                <li><code>insert</code></li>
+                                <li><code>update</code></li>
+                                <li><code>delete</code></li>
+                                <li><code>upsert</code></li>
+                                <li><code>merge</code></li>
+                                <li><code>undelete</code></li>
+                            </ul>
+                        </li>
+                        <li><i>Insert, update, and delete - if one fails, they all fail!</i></li>
+                    </ul>
+                    <hr>
+                    <h3>Database Classes</h4>
+                    <p>Actions performed on database classes behave the same as the DML operations for the following Database methods:</p>
+                    <ul class="column-3">
+                        <li><code>insert()</code></li>
+                        <li><code>update()</code></li>
+                        <li><code>delete()</code></li>
+                    </ul>
+                    <p>For example: <code>Database.insert(new Account(Name='N'), false);</code> behaves the same as <code>insert new Account(Name='N');</code></p>
+                    <h4>Important Notes</h4>
+                    <ul>
+                        <li>You can have a maximum of <b>150</b> DML operations per transaction.</li>
+                        <li>You can have a maximum of <b>10,000</b> rows per DML operation.</li>
+                        <li>Use the <code>SaveResult</code> class to get information about a successful or erroneous Database <code>insert</code> or <code>update</code>.</li>
+                        <li>Use the <code>DeleteResult</code> class to get information about a successful or erroneous Database <code>delete</code>.</li>
+                    </ul>
+                    <pre><code id="example-2"></code></pre>
+                </fieldset>
+                <fieldset>
+                    <legend><a name="SOQL-SOSL">SOQL & SOSL</a></legend>
+                    <div class="row">
+                        <div class="column-2">
+                            <h3>Salesforce Object Query Langueage (SOQL)</h3>
+                            <p>Evaluates to a list of sObjects, a single sObject, or an integer.</p>
+                            <ul>
+                                <li>Used when we know which object the data resides in.</li>
+                                <li>Retrieve data from single object or multiple related objects.</li>
+                                <li>Count the number of records meeting specific criteria.</li>
+                                <li>Sort results within the query.</li>
+                                <li>Retrieve data from number, date, or checkbox fields.</li>
+                            </ul>
+                            <pre><code id="example-3"></code></pre>
+                            
+                        </div>
+                        <div class="column-2">
+                            <h3>Salesforce Object Search Langueage (SOSL)</h3>
+                            <p>Evaluates to a list of lists of sObjects.</p>
+                            <ul>
+                                <li>Used when we don't know which object the data resides in.</li>
+                                <li>Retrieve data for a specific term.</li>
+                                <li>Retrive multiple non-related objects/fields.</li>
+                                <li>Retrieve data in Chinese, Japanese, or Thai.</li>
+                            </ul>
+                            <pre><code id="example-4"></code></pre>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column-2">
+                            <h4>Where to write SOQl queries?</h4>
+                            <ul>
+                                <li>In Schema Explorer in Force.com IDE.</li>
+                                <li>In Query Editor tab in DevCons.</li>
+                                <li>In Apex Statements</li>
+                                <li>In VisualForce controllers and getter methods.</li>
+                                <li>In the queryString paramter in a <code>query()</code>.</li>
+                            </ul> 
+                        </div>
+                        <div class="column-2">
+                            <h4>Where to write SOSl queries?</h4>
+                            <ul>
+                                <li>In Schema Explorer in Force.com IDE.</li>
+                                <li>In Query Editor tab in DevCons.</li>
+                                <li>In Apex Statements</li>
+                                <li>In VisualForce controllers and getter methods.</li>
+                                <li>In the queryString paramter in a <code>search.query()</code>.</li>
+                            </ul> 
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend><a name="additional-notes">Additional Notes</a></legend>
+                    <h3>Try-Catch Statements</h3>
+                    <p>Used to run code that might be erroneous and fail. If the code fails you can run other code to correct for the failure or make note of it.</p>
+                    <pre><code id="example-1"></code></pre>
+                </fieldset>
+            </div>
+        </div>
+        <script src="highlight/highlight.pack.js"></script><!-- Source: https://highlightjs.org/ -->
+        <script src="notes.js"></script>
+        <script>loadNotes('dml-examples')</script>
+    </body>
+</html>

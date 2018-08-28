@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Visualforce</title>
+        <link rel="shortcut icon" type="image/x-icon" href="https://png.icons8.com/color/1600/salesforce.png" />
+        <link rel="stylesheet" href="styling.css">
+        <link rel="stylesheet" href="highlight/styles/atom-one-light.css">
+    </head>
+    <body>
+        <div class="header" id="myHeader">
+            <h1>Visualforce</h1>
+        </div>
+        <div class="main">
+            <div class="nav">
+                <ul>
+                    <li><a href="#visualforce" class="navitem">Visualforce</a></li>
+                </ul>
+            </div>
+            <div class="content parallax" id="content">
+                <fieldset>
+                    <legend><a name="visualforce">Visualforce</a></legend>
+                    <p>The component-based user interface framework for the Force.com platform. The framework includes a tag-based markup language, similar to HTML. Each Visualforce tag corresponds to a coarse or fine-grained user interface component, such as a section of a page, or a field.</p>
+                    <ul>
+                        <li>Controllers and extensions provide the logic interaction and behavior for an application. Force.com provides standard controllers for all standard and custom business entities. These controllers provide access to standard platform behavior including saving, logic, and navigation.</li>
+                        <li>Custom controllers, written in Apex, deliver the flexibility to define your own logic, navigation, algorithms, and database and web services interactivity. With the stateful programming model provided by Visualforce, custom controllers can maintain state between pages making development of wizards straightforward. Custom controllers can themselves leverage the standard controller.</li>
+                    </ul>
+                    <h3>Visualforce Page</h3>
+                    <p>
+                        Developers can use Visualforce to create a Visualforce page definition. A page definition consists of two primary elements:
+                        <ul>
+                            <li>Visualforce markup</li>
+                            <li>A Visualforce controller</li>
+                        </ul>
+                    </p>
+                    <h3>Visualforce Markup</h3>
+                    <p>Visualforce markup consists of Visualforce tags, HTML, JavaScript, or any other Web-enabled code embedded within a single <code>&lt;apex:page&gt;</code> tag. The markup defines the user interface components that should be included on the page, and the way they should appear.</p>
+                    <h3>Visualforce Controller</h3>
+                    <p>A Visualforce controller is a set of instructions that specify what happens when a user interacts with the components specified in associated Visualforce markup, such as when a user clicks a button or link. Controllers also provide access to the data that should be displayed in a page, and can modify component behavior.</p>
+                    <ul>
+                        <li>
+                            <u>Standard Controller</u> - consists of the same functionality and logic that is used for a standard Salesforce page. For example, if you use the standard Accounts controller, clicking a Save button in a Visualforce page results in the same behavior as clicking Save on a standard Account edit page.
+                        </li>
+                        <li>
+                            <u>Standard List Controller</u> - enables you to create Visualforce pages that can display or act on a set of records. Examples of existing Salesforce pages that work with a set of records include list pages, related lists, and mass action pages.
+                        </li>
+                        <li>
+                            <u>Custom Controller</u> - a class written in Apex that implements all of a page's logic, without leveraging a standard controller. If you use a custom controller, you can define new navigation elements or behaviors, but you must also reimplement any functionality that was already provided in a standard controller.
+                        </li>
+                        <li>
+                            <u>Controller Extension</u> is a class written in Apex that adds to or overrides behavior in a standard or custom controller. Extensions allow you to leverage the functionality of another controller while adding your own custom logic.
+                        </li>
+                    </ul>
+                    <pre><code id="example-1" class="html"></code></pre>
+                </fieldset>
+            </div>
+        </div>
+        <script src="highlight/highlight.pack.js"></script><!-- Source: https://highlightjs.org/ -->
+        <script src="notes.js"></script>
+        <script>loadNotes('visualforce-examples', 'vfp')</script>
+    </body>
+</html>
