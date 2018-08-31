@@ -414,3 +414,15 @@ ul.table-of-contents li {
 div > ul {
     margin-top: 0;
 }
+
+.legend2 {
+    position: absolute;
+    top: -0.2em;
+    right: 20px;
+    background: #fff;
+    line-height:1.2em;
+}
+
+.center {
+    text-align: center;
+}

@@ -15,6 +15,7 @@
             <div class="nav">
                 <ul>
                     <li><a href="#editions" class="navitem">Salesforce Editions</a></li>
+                    <li><a href="#lifecycle-management" class="navitem">Lifecycle Management</a></li>
                     <li><a href="#sandboxes" class="navitem">Sandboxes</a></li>
                     <li><a href="#sandbox-refresh" class="navitem">Sandbox Refreshes</a></li>
                     <li><a href="#sandbox-use-cases" class="navitem">Sandbox Use Cases</a></li>
@@ -65,6 +66,153 @@
                     <hr>
                     <h3>Sandbox Limits by Edition</h3>
                     <img src="images/EditionSandboxLimits.PNG" alt="Sandbox Editions Limitations" />
+                </fieldset>
+                <fieldset>
+                    <legend><a name="lifecycle-management">Application Lifecycle Management</a></legend>
+                    <!-- <div class="legend2">Hello</div> -->
+                    <p>Application lifecycle management is the process of managing an app’s development, from design to final release, and establishing a framework for managing changes. The typical application lifecycle starts with the design of a new app or feature. The app is planned based on requirements analysis and specifications. Next, the app is implemented per the specifications and then tested. The new app is staged for final testing before it gets deployed to production. This cycle repeats for every new app or feature. It’s also used for app maintenance, such as when features are enhanced or bugs are fixed. A governance and change management framework directs the development process.</p>
+                    <div>
+                        <h3>Lifecycle Steps</h3>
+                        <img style="width: 25%; float:right; margin: 25px;" src="https://res.cloudinary.com/hy4kyit2a/image/upload/f_auto,q_auto/doc/trailhead/en-us147eb632233e08de821e667393f9b847.png" alt="Lifecycle Steps Diagram" />
+                        <ol>
+                            <li>
+                                <h4>Plan</h4>
+                                An app starts with planning. This step includes requirements gathering and analysis. The product manager creates design specifications and shares them with the development team for implementation.
+                            </li>
+                            <li>
+                                <h4>Build</h4>
+                                Administrators and software engineers write the app per the design specifications. The development is done on the Salesforce platform using declarative tools—the tools available in the user interface—and programmatic tools, such as Apex, Visualforce, and Lightning Components.
+                            </li>
+                            <li>
+                                <h4>Test</h4>
+                                The app is tested to verify that the changes behave as expected and don’t cause undesired side-effects. The quality assurance team first performs unit and functional testing. A small set of experienced people then provide feedback (user acceptance testing). Staging the changes enables final testing before deploying to production.
+                            </li>
+                            <li>
+                                <h4>Deploy</h4>
+                                When testing is successfully completed and the quality benchmarks have been met, the app can be deployed to production. The release manager manages releases to production. Training employees and partners about the changes is a best practice.
+                            </li>
+                        </ol>
+                    </div>
+                    <hr>
+                    <h3>Development Roles</h3>
+                    <ul>
+                        <li><b>Release manager</b> - Manages the release schedule and coordinates releases
+                            with the business. The release manager could be in charge of pulling changes
+                            from version control. </li>
+    
+                        <li><b>Product manager</b> - Provides the business requirements of apps and
+                            features, and works with the development team to implement those
+                            requirements. The product manager also performs user acceptance testing to
+                            ensure that requirements have been implemented.</li>
+    
+                        <li><b>Software developer</b> - Develops new functionality in sandbox, including
+                            both declarative point-and-click development and code. </li>
+    
+                        <li><b>Quality engineer</b> - Tests new functionality in sandbox.</li>
+    
+                        <li><b>Administrator</b> - Performs administrative tasks in the production org,
+                            and tracks all changes made in production. </li>
+    
+                        <li><b>Trainer</b> - Conducts training of company employees for new applications
+                            and features.</li>
+                    </ul>
+                    <hr>
+                    <h3>Use Governance to Manage Change</h3>
+                    <p>
+                        You’ve learned how to keep your organization lean and clean using the tools that Salesforce provides. However, governance, a method of management, is about more than tools. Governance improves agility by ensuring all members of your team are working together to achieve goals that are aligned with overall business goals.
+                    </p>
+                    <p>Three elements of a responsive, adaptable framework for governance are:</p>
+                    <h4>Center of Excellence</h4>
+                    <p>
+                        A few stakeholders from different functional groups work together to ensure that changes support business goals and follow IT best practices and processes.
+                    </p>
+                    <h4>Release Management</h4>
+                    <p>
+                        You’ve already learned how to use tools like change sets and a sandbox to manage changes. If you use a backlog list to manage priorities, you can work on the most important changes first. And if you design and document a complete release management process as you learn more about your organization, everyone who works with Salesforce will be able to know how to do so safely.
+                    </p>
+                    <h4>Design Standards</h4>
+                    <p>
+                        Follow key standards for coding, testing, integration, large data volumes, and other areas that affect the services you share with other Salesforce customers.
+                    </p>
+                    <hr>
+                    <h3>Create a Release Management Process</h3>
+                    <p>
+                        By using sandbox and permission sets, you’ve already created a simple release management process. Add structure by setting up a release schedule and defining criteria for major versus minor releases.
+                    </p>
+                    <p>Releases typically fall into one of the following categories:</p>
+                    <h4>Daily</h4>
+                    <p>
+                        Bug fixes and simple changes that do not require formal release management, including reports, dashboards, list views, email templates, and user administration.
+                    </p>
+                    <h4>Minor</h4>
+                    <p>
+                        Changes with limited impact, such as a new workflow rule or trigger impacting a single business process. These releases typically require testing, but limited training and change management, and are delivered within a few weeks.
+                    </p>
+                    <h4>Major</h4>
+                    <p>
+                        Changes with significant impact, including configuration and code changes with one or more dependencies. Because these releases greatly affect the user experience and data quality, they require thorough testing, training, and careful change management. Major releases typically occur once a quarter (or like Salesforce, three times a year). Releasing on the same day of the week for minor and major releases is a best practice. This allows for company-wide planning and sets expectations with your business users. In addition, don’t schedule releases near holidays or other major events.
+                    </p>
+                    <hr>
+                    <h3>Design Standards</h3>
+                    <p>
+                        Salesforce is configurable, extendable, and supports integration with other applications and services. By following the same design standards, anyone who modifies your organization can ensure that their changes aren’t in conflict with another group’s changes. In addition, with Salesforce’s multi-tenant architecture, employing design standards helps ensure your changes stay within set governor limits.
+                    </p>
+                    <div class="row">
+                        <div class="column-2">
+                            <b>Some examples of design standards include:</b>
+                            <ul>
+                                <li>Standard naming conventions</li>
+                                <li>Consistently using the Description field</li>
+                                <li>Bulkified code</li>
+                                <li>Standard methods for deprecating classes and fields</li>
+                                <li>Consistent data architecture across all projects</li>
+                            </ul>
+                        </div>
+                        <div class="column-2">
+                            <b>It’s important to have design standards for the following areas:</b>
+                            <ul>
+                                <li>Coding</li>
+                                <li>Testing</li>
+                                <li>Integration</li>
+                                <li>Handling large data volumes</li>
+                                <li>Documentation</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <h3>Development Lifecycle Environments</h3>
+                    <p>
+                        Let’s take a look at how to implement a software development cycle in Salesforce, starting with an easy example using a single development and testing environment. Each development and testing environment is represented in Salesforce by a sandbox. You learn more about sandboxes in a later unit.
+                    </p>
+                    <h4>Single Development and Test Environment</h4>
+                    <p>
+                        For small or quick projects, it’s possible to simplify the development lifecycle by using a single environment for development and testing. If you’re just getting started developing in a sandbox, using a single environment is a good way to begin.
+                    </p>
+                    <p>This simple development scenario is suitable for small and fast projects, such as:</p>
+                    <ul>
+                        <li>New custom objects, tabs, and applications</li>
+                        <li>Integrations with other systems</li>
+                        <li>Apps involving Visualforce, workflow, or new validation rules</li>
+                    </ul>
+                    <h4>Multiple Development and Test Environments</h4>
+                    <p>
+                        As your development process matures, you’ll find that having multiple sandboxes allows greater flexibility. Even adding a single sandbox for testing frees up the developer sandbox for new features while testing proceeds.
+                    </p>
+                    <div class="row">
+                        <div class="column-3 center">
+                            <h5>Standard Development Cycle</h5>
+                            <img src="https://res.cloudinary.com/hy4kyit2a/image/upload/f_auto,q_auto/doc/trailhead/en-us9352d608e21e3d221733bbc48c81f1c1.jpg" alt="Multiple Development and Test Environments Example 1" />
+                        </div>
+                        <div class="column-3 center">
+                            <h5>Multiple Developer Development Flow</h5>
+                            <img src="https://res.cloudinary.com/hy4kyit2a/image/upload/f_auto,q_auto/doc/trailhead/en-us0e263c5fb37fbe6ee87f9ff3d360ba25.jpg" alt="Multiple Development and Test Environments Example 2" />
+                        </div>
+                        <div class="column-3 center">
+                            <h5>Source Control for Code Migration</h5>
+                            <img src="https://res.cloudinary.com/hy4kyit2a/image/upload/f_auto,q_auto/doc/trailhead/en-us4aa8286827cbc31ae7a6df9be669cb03.png" alt="Multiple Development and Test Environments Example 3" />
+                        </div>
+                    </div>
+                    <p></p>
                 </fieldset>
                 <fieldset>
                     <legend><a name="sandboxes">Sandboxes</a></legend>
@@ -141,18 +289,26 @@
                         With the power of Lightning Platform, your organization can run lean and clean. Keeping it lean means making smart customizations the right way, so you enjoy a tailor-made experience with easy maintenance. Keeping it clean means accurate data, so when the business asks, “How many customers bought more of my product this year?” you can trust the answer is right.<br>
                         To keep your organization lean and clean, use a consistent process of build, test, and deploy. People refer to this process as application lifecycle management or change management.
                     </p>
-                    <h4>Build</h4>
-                    <p>
-                        In the appropriate environment, define functional requirements and develop your changes.
-                    </p>
-                    <h4>Test</h4>
-                    <p>
-                        Test your changes. Testing verifies that the changes behave as you expect, and don’t deliver any undesired side-effects. Then, test the changes on a small set of experienced people who can give you feedback (user acceptance testing).
-                    </p>
-                    <h4>Deploy</h4>
-                    <p>
-                        Once testing is successfully completed, make your changes available in production. Training people about the changes is a best practice.
-                    </p>
+                    <div class="row">
+                        <div class="column-3">
+                            <h4 class="center">Build</h4>
+                            <p>
+                                In the appropriate environment, define functional requirements and develop your changes.
+                            </p>
+                        </div>
+                        <div class="column-3">
+                            <h4 class="center">Test</h4>
+                            <p>
+                                Test your changes. Testing verifies that the changes behave as you expect, and don’t deliver any undesired side-effects. Then, test the changes on a small set of experienced people who can give you feedback (user acceptance testing).
+                            </p>
+                        </div>
+                        <div class="column-3">
+                            <h4 class="center">Deploy</h4>
+                            <p>
+                                Once testing is successfully completed, make your changes available in production. Training people about the changes is a best practice.
+                            </p>
+                        </div>
+                    </div>
                     <hr>
                     <h3>What's Safe to Change in Production?</h3>
                     <p>
