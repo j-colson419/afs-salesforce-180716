@@ -1,0 +1,266 @@
+1. What metadata changes can be made directly in a production environment without deploying from
+sandbox? Choose 2 answers
+A. Apex triggers
+B. Visualforce pages
+C. Validation rules
+D. Apex classes
+Answers : B,C
+2. What is the capability of sandbox templates? Choose 2 answers
+A. Create a Partial Copy sandbox from a Partial Copy sandboxes environment.
+B. Specify the object whose data should be replicated in a Partial Copy sandbox environment.
+C. Specify the data range for data being replicated in a Partial Copy sandbox environment.
+D. Save a template for re-use when creating a Partial Copy sandbox environment.
+Answers : B,D
+3. When should Unmanaged packages be created? Choose 2 answers
+A. Deploying from a Developer Edition environment.
+B. Publishing an application for sale on the AppExchange.
+C. Migrating of components from sandbox to production.
+D. Distributing open-source projects on AppExchange.
+Answers : A,D
+4. To Synchronize Accounts, orders and shipments in real time, a developer has built a custom interface between an external system and salesforce, prior to deployment, the developer needs to confirm that the interface can sustain the syncing of thousands of records at a time. Which sandbox environment is recommended to complete performance and load testing?
+A. Partial Sandbox
+B. Developer Sandbox
+C. Developer Pro Sandbox
+D. Full Sandbox
+Answers : D
+5. What is recommended to refresh a full sandbox?
+A. After UAT sign-off.
+B. Whenever a new production used is added.
+C. After a major production release.
+D. Within 3 hours of when it is needed.
+Answers : C
+6. Universal Container installs an unmanaged package. Which of the following are true: (choose 2):
+A. Components of unmanaged packages can be edited
+B. Unmanaged packages can be upgraded
+C. Unmanaged packages have a namespace prefix
+D. Unmanaged packages don’t have a version number
+E. Tests are executed during deployment
+Answers : A,E
+7. When is it advisable to use a Full sandbox?
+A. For training users to on new features
+B. Staging before final deployment
+C. Performance and load testing
+D. All of the above
+Answers : D
+8. What are some of the features and advantages of sandbox templates?
+A. Using sandbox templates increases the amount of data copied.
+B. Sandbox templates are used to import external data.
+C. Sandbox templates are available in all editions.
+D. Sandbox templates allow you to decide which objects to include in sandbox. By limiting the amount of data copied, the sandbox copy process can be faster.
+Answers : D
+9. You have a team of developers who don't need access to production but just need access to sandbox for developing apps. How do you manage their accounts?
+A. Create developer users as inactive users in production, then activate those users in sandbox.
+B. If developers are also production users, you still need to create their accounts in sandbox.
+C. De-activate developer users in sandbox.
+D. Import users from a .csv file.
+Answers : A
+10. Before you can deploy to production, you should:
+A. Use profiles to lock users out of the system
+B. Test your changes first in a test sandbox environment.
+C. Give training documents and release notes to end users
+D. All of the above
+Answers : D
+11. Which of the following are good ways to track changes in production?
+A. Diff the metadata
+B. Use a change log request form
+C. Check the setup audit trail every week
+D. All of the above
+Answers : D
+12. Ideally, who should be in charge of logging all changes in production?
+A. Product manager
+B. Administrator
+C. QA Engineer
+D. Developer
+Answers : B
+13. A metadata type is:
+A. A data type.
+B. A representation of configurations and customizations in Salesforce and is in XML format.
+C. A representation of custom objects only.
+D. JSON representation of settings.
+Answers : B
+14. What is a good way to track changes to customizations and settings that aren't represented as metadata types?
+A. Hire an intern to track the changes.
+B. Use the SOAP API
+C. A change request form and the setup audit trail.
+D. Have everyone write the changes on a whiteboard using different colored markers so you know who did what.
+Answers : C
+15. Choose the best answer based on the following scenario: Salesforce has been upgraded on sandbox instances but not yet on production instances, so your sandbox is now running a newer version than your production org. You have changes you want to deploy from sandbox to production. The changes on the sandbox instance don't depend on any components supported only in the newer version.
+A. You won't be able to deploy from sandbox to production until the production org has been upgraded to the same API version
+B. You can opt out of the Salesforce release
+C. You can use Change Sets, which bypass version limitations
+D. You can change the API version number in the package.xml file to the same as the production organization, and then no new features will be included in the deployment
+Answers : D
+16. Which tool doesn't require a local file system for deploying metadata?
+A. Force.com IDE
+B. Workbench
+C. Change Sets
+D. Force.com Migration Tool
+Answers : C
+17. What is the recommended tool for scriptable deployments to sandbox and Developer Edition orgs?
+A. Force.com Migration Tool
+B. Force.com IDE
+C. Change Sets
+D. All of the above
+Answers : A
+18. Managed packages can be used in which scenarios?
+A. For a one-time setup.
+B. For non-namespaced orgs.
+C. For customizations that are upgradeable and that you distribute to multiple orgs.
+D. For customizations that are not upgradeable.
+Answers : C
+19. How are metadata components specified in package.xml?
+A. Each component is specified in the <name> tag.
+B. Each component is a JSON file.
+C. Each component is specified in the <component> tag.
+D. Each component is specified in the <members> tag and its type is in the <name> tag.
+Answers : D
+20. How do you delete metadata components from an org?
+A. Use change sets to delete a component.
+B. Perform a deployment using a delete manifest file named destructiveChanges.xml.
+C. Perform a deployment using package.xml and specify components with empty bodies.
+D. You can't delete components.
+E. Very, very carefully. Only with supervision from a certified technical architect.
+Answers : B
+21. The Deployment Status page shows the status and test results of what type of deployments?
+A. All deployments including change sets.
+B. Change sets only.
+C. Deployments started from the Force.com Migration Tool and change sets.
+D. Metadata API deployments.
+Answers : A
+22. What is the benefit of reducing test execution times in a deployment? Choose the best answer.
+A. Shorter deployments provide better experience with the software development lifecycle and have a reduced risk of being interrupted by service updates.
+B. Shorter deployments make iterative test deployments faster.
+C. Shorter deployments make iterative test deployments longer because they require more frequent deployments.
+D. Deployment times are outside of my control. Only Astro has the power to change the deployment time.
+Answers : A
+23. How does a quick deployment reduce deployment time to production?
+A. Because tests have run successfully before in a validation, tests aren't run in a quick deployment. The absence of a test run reduces deployment time.
+B. Quick deployment uses a new deployment engine that is more efficient than regular deployments.
+C. Tests aren't rerun in a quick deployment because they are resumed.
+D. B and C
+Answers : A
+24. What is the benefit of test levels? Choose the best answer.
+A. Test levels reduce the time of iterative test deployments.
+B. Test levels reduce the time of iterative test deployments and give you the flexibility to decide how much testing to perform.
+C. Test levels are only useful in production but not in test environments.
+D. Test levels are useful only if you use the Run Specified Tests level.
+Answers : B
+25. Suppose you're deploying a small app that doesn't depend on components in your org. This app has one Apex test class that covers the Apex code in your app. What is the best practice for a fast production deployment? A. Run a deployment with the Run All Tests test level. It's better to always run all tests to ensure that nothing breaks in production.
+B. First run a validation that uses Run Specified Tests to run the test class, followed by a quick deployment.
+C. Run a deployment with no test level set so that the default test behavior occurs.
+D. Run a deployment with the Run Specified Tests level and specify the test class.
+Answers : B
+26. If one of your deployments is interrupted due to a Salesforce service update, what happens?
+A. The deployment is canceled and needs to be manually restarted.
+B. The deployment is restarted, and all tests need to be rerun.
+C. Tests in the deployment are resumed after the last executed test whose result is saved.
+D. Tests in the deployment are resumed from where they last stopped. Previous results aren't saved.
+Answers : C
+27. When is it advisable to use version control?
+A. When you don't have a sandbox or when performing large-scale development.
+B. When using change sets
+C. If you have one developer
+D. If you can't find where the audit trail is stored
+Answers : A
+28. Not all metadata is represented in the Metadata API. This means that:
+A. Your source control system must have a means of storing non-XML data
+B. Any functionality you create in sandbox that isn't represented in the Metadata API, will need to manually re-created in every other environment
+C. Developer Pro sandboxes contain all of your data
+D. All of the above
+Answers : B
+29. A continuous integration system allows you to:
+A. Automate the creation of Change Sets
+B. Automatically create a source control repository
+C. Automate deployments and tests from source control to sandbox
+D. Meet an actual guy named Jenkins
+Answers : C
+30. Which of the following customizations is safe to create in your production org?
+A. Add a master-detail relationship.
+B. Add a dashboard.
+C. Delete a custom object.
+D. Change a field type from text to numbers.
+Answers : B
+31. If you deploy a workflow rule in production before testing it in a separate environment, which of the following can happen?
+A. Your rule could update records incorrectly.
+B. Your rule might not work as intended.
+C. Your rule could send unintended emails or create unnecessary tasks.
+D. All of the above
+Answers : D
+32. What's the correct order for the three main stages of a good change management system?
+A. Test, build, and deploy
+B. Deploy, test, and build
+C. Deploy, build, and test
+D. Build, test, and deploy
+Answers : D
+33. You're working in an Unlimited Edition org where changes are made in production. Which of the following reasons makes the best case for using a sandbox?
+A. You can protect your data by building and testing in a separate environment.
+B. It's faster than coding in production.
+C. You can build castles.
+D. B and C.
+Answers : A
+34. Which of the following isn't a benefit of using change sets?
+A. The target org can choose when to deploy the received change set.
+B. Point-and-click deployment is easier to use than the API or other tools.
+C. You can transfer user licenses from sandbox to production.
+D. A and B.
+Answers : C
+35. What kind of sandbox is best for final staging before production?
+A. Developer
+B. Developer Pro
+C. Partial Copy
+D. Full
+Answers : D
+36. Which is the best way to discover how many sandboxes are available for your org?
+A. In your production org, search for 'Sandbox' in Setup.
+B. In your sandbox, search for 'Sandbox' in Setup.
+C. Call Salesforce Customer Support.
+D. Review your service agreement.
+Answers : A
+37. How do you create a sandbox?
+A. Call Salesforce Customer Support
+B. From the Sandboxes page in the Setup menu
+C. Expose the Sandbox tab in Customize My Tabs
+D. From the Home tab
+Answers : B
+38. What do you do to ensure that sensitive data isn't copied to your Full Copy sandbox?
+A. Create a sandbox data template and then specify it when creating the sandbox.
+B. Delete all sensitive data as soon as it's in the sandbox by using a data template.
+C. Rely on sharing and permission rules to protect sensitive data in a sandbox.
+D. A and B
+Answers : A
+39. Which of the following isn't a benefit of using change sets?
+A. Creating a change set helps you identify missing components.
+B. Validating a change set auto-corrects errors.
+C. You can use the change set more than once, saving time if you have many iterations or a large set of changes.
+D. You can validate your change set before deploying.
+Answers : B
+40. Deploying changes from sandbox to production using change sets is a four-step process. Which of the following isn't one of the steps?
+A. Authorize deployment connections in production.
+B. Create an outbound change set in sandbox.
+C. Upload the change set from sandbox to production.
+D. Delete a deployed change set.
+Answers : D
+41. What is the benefit of validating an inbound change set before deploying? Choose the best answer.
+A. Receiving change sets in advance and then deploying at your convenience
+B. Obtaining test results of the deployment without committing changes
+C. Automatically adding missing components during validation
+D. B and C
+Answers : B
+42. Which of the following isn't a component of a governance framework?
+A. Agile Methodology
+B. Design Standards
+C. Release Management
+D. Center of Excellence
+Answers : A
+43. How does a center of excellence improve velocity?
+A. Ignores user input to focus on internal goals.
+B. Channels all changes through IT.
+C. Helps everyone understand the business priorities.
+D. Keeps best practices on a need-to-know basis.
+Answers : C
+44. Which of the following is an example of a design standard that applies to Salesforce?
+A. Consistently using the Description field
+B. Enabling SAML
+C. Editing a page layout
+D. B and C
+Answers : A
