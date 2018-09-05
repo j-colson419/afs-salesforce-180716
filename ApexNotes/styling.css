@@ -64,7 +64,7 @@ html, body {
 }
 
 /* Change the link color on hover */
-.nav li a:hover {
+.nav li a:hover, .nav button:hover {
     background-color: #003865;
     color: white;
 }
@@ -78,6 +78,34 @@ html, body {
     display: inline;
 }
 
+.quiz-nav ul {
+    padding-top: 10px;
+    columns: 4;
+    list-style: none;
+    column-gap: 0px;
+}
+
+.quiz-nav li a {
+    background-color: #75b2e4;
+    border: solid 2px #003865;
+    border-radius: 5px;
+    padding: 5px 0px;
+    margin: 0px 5px 10px 5px;
+    font-size: 10px;
+}
+
+.quiz-nav li a.active {
+    background-color: #E87722;
+}
+
+.quiz-nav button {
+    background-color: #75b2e4;
+    border: solid 2px #003865;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 15px;
+}
+
 .content {
     float: left;
     margin: 0;
@@ -86,6 +114,16 @@ html, body {
     overflow-y: auto;
     width: calc(100% - 232px);
     /* height: calc(100% - 124px); */
+    height: calc(100% - 33px);
+}
+
+.quiz-content {
+    float: left;
+    margin: 0;
+    display: block;
+    padding: 16px;
+    overflow-y: auto;
+    width: 100%;
     height: calc(100% - 33px);
 }
 
@@ -425,4 +463,66 @@ div > ul {
 
 .center {
     text-align: center;
+}
+
+.question {
+    font-family: sans-serif;
+    border: 5px solid #E87722;
+    background: #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 800px;
+    padding: 80px;
+}
+
+.question-title {
+    padding: 10px;
+}
+
+.option {
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 1px;
+    padding-left: 30px;
+}
+
+.selected {
+    background-color: #003865;
+    color: white;
+}
+
+.option:hover {
+    background-color: #75b2e4;
+}
+
+.selected:hover {
+    background-color: #012644;
+    color: white;
+}
+
+.show-answers .option.selected.correct {
+    background-color: green;
+}
+
+.show-answers .option.selected.correct:hover {
+    background-color: rgb(1, 85, 1);
+}
+
+.show-answers .option.selected.wrong {
+    background-color: red;
+}
+
+.show-answers .option.selected.wrong:hover {
+    background-color: rgb(155, 1, 1);
+}
+
+.show-answers .option.correct {
+    background-color: yellow;
+}
+
+.show-answers .option.correct:hover {
+    background-color: rgb(179, 179, 1);
 }
