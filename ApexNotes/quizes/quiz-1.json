@@ -8,7 +8,8 @@
                 "C": "Validation rules",
                 "D": "Apex classes"
             },
-            "Answers": ["B", "C"] 
+            "Answers": ["B", "C"],
+            "Reorder": true
         },
         { 
             "Question": "What is the capability of sandbox templates? Choose 2 answers",
@@ -18,7 +19,8 @@
                 "C": "Specify the data range for data being replicated in a Partial Copy sandbox environment.",
                 "D": "Save a template for re-use when creating a Partial Copy sandbox environment."
             },
-            "Answers": ["B", "D"] 
+            "Answers": ["B", "D"],
+            "Reorder": true 
         },
         { 
             "Question": "When should Unmanaged packages be created? Choose 2 answers",
@@ -28,7 +30,8 @@
                 "C": "Migrating of components from sandbox to production.",
                 "D": "Distributing open-source projects on AppExchange."
             },
-            "Answers": ["A", "D"] 
+            "Answers": ["A", "D"],
+            "Reorder": true 
         },
         { 
             "Question": "To Synchronize Accounts, orders and shipments in real time, a developer has built a custom interface between an external system and salesforce, prior to deployment, the developer needs to confirm that the interface can sustain the syncing of thousands of records at a time. Which sandbox environment is recommended to complete performance and load testing?",
@@ -38,7 +41,8 @@
                 "C": "Developer Pro Sandbox",
                 "D": "Full Sandbox"
             },
-            "Answers": ["D"] 
+            "Answers": ["D"],
+            "Reorder": true 
         },
         { 
             "Question": "What is recommended to refresh a full sandbox?",
@@ -48,7 +52,8 @@
                 "C": "After a major production release.",
                 "D": "Within 3 hours of when it is needed."
             },
-            "Answers": ["C"] 
+            "Answers": ["C"],
+            "Reorder": true 
         },
         { 
             "Question": "Universal Container installs an unmanaged package. Which of the following are true: (choose 2):",
@@ -59,7 +64,8 @@
                 "D": "Unmanaged packages don’t have a version number",
             "E": "Test are executed during deployment"
         },
-            "Answers": ["A", "E"]
+            "Answers": ["A", "E"],
+            "Reorder": true
         },
         { 
             "Question": "When is it advisable to use a Full sandbox?",
@@ -69,7 +75,8 @@
                 "C": "Performance and load testing",
                 "D": "All of the above"
             },
-            "Answers": ["D"] 
+            "Answers": ["D"],
+            "Reorder": true 
         },
         { 
             "Question": "What are some of the features and advantages of sandbox templates?",
@@ -79,7 +86,8 @@
                 "C": "Sandbox templates are available in all editions.",
                 "D": "Sandbox templates allow you to decide which objects to include in sandbox. By limiting the amount of data copied, the sandbox copy process can be faster."
             },
-            "Answers": ["D"]
+            "Answers": ["D"],
+            "Reorder": true
         },
         { 
             "Question": "You have a team of developers who don't need access to production but just need access to sandbox for developing apps. How do you manage their accounts?",
@@ -89,7 +97,8 @@
                 "C": "De-activate developer users in sandbox.",
                 "D": "Import users from a .csv file."
             },
-            "Answers": ["A"] 
+            "Answers": ["A"],
+            "Reorder": true 
         },
         { 
             "Question": "Before you can deploy to production, you should:",
@@ -99,7 +108,8 @@
                 "C": "Give training documents and release notes to end users",
                 "D": "All of the above"
             },
-            "Answers": ["D"] 
+            "Answers": ["D"],
+            "Reorder": true 
         },
         { 
             "Question": "Which of the following are good ways to track changes in production?",
@@ -109,7 +119,8 @@
                 "C": "Check the setup audit trail every week",
                 "D": "All of the above"
             },
-            "Answers": ["D"] 
+            "Answers": ["D"],
+            "Reorder": true 
         },
         { 
             "Question": "Ideally, who should be in charge of logging all changes in production?",
@@ -119,7 +130,8 @@
                 "C": "QA Engineer",
                 "D": "Developer"
             },
-            "Answers": ["B"] 
+            "Answers": ["B"],
+            "Reorder": true 
         },
         { 
             "Question": "A metadata type is:",
@@ -129,7 +141,8 @@
                 "C": "A representation of custom objects only.",
                 "D": "JSON representation of settings."
             },
-            "Answers": ["B"] 
+            "Answers": ["B"],
+            "Reorder": true 
         },
         { 
             "Question": "What is a good way to track changes to customizations and settings that aren't represented as metadata types?",
@@ -139,7 +152,8 @@
                 "C": "A change request form and the setup audit trail.",
                 "D": "Have everyone write the changes on a whiteboard using different colored markers so you know who did what."
             },
-            "Answers": ["C"] 
+            "Answers": ["C"],
+            "Reorder": true 
         },
         { 
             "Question": "Choose the best answer based on the following scenario: Salesforce has been upgraded on sandbox instances but not yet on production instances, so your sandbox is now running a newer version than your production org. You have changes you want to deploy from sandbox to production. The changes on the sandbox instance don't depend on any components supported only in the newer version.",
@@ -149,7 +163,8 @@
                 "C": "You can use Change Sets, which bypass version limitations",
                 "D": "You can change the API version number in the package.xml file to the same as the production organization, and then no new features will be included in the deployment"
             },
-            "Answers": ["D"] 
+            "Answers": ["D"],
+            "Reorder": true 
         },
         { 
             "Question": "Which tool doesn't require a local file system for deploying metadata?",
@@ -159,7 +174,8 @@
                 "C": "Change Sets",
                 "D": "Force.com Migration Tool"
             },
-            "Answers": ["C"] 
+            "Answers": ["C"],
+            "Reorder": true 
         },
         { 
             "Question": "What is the recommended tool for scriptable deployments to sandbox and Developer Edition orgs?",
@@ -169,7 +185,8 @@
                 "C": "Change Sets",
                 "D": "All of the above"
             },
-            "Answers": ["A"] 
+            "Answers": ["A"],
+            "Reorder": true 
         },
         { 
             "Question": "Managed packages can be used in which scenarios?",
@@ -179,7 +196,8 @@
                 "C": "For customizations that are upgradeable and that you distribute to multiple orgs.",
                 "D": "For customizations that are not upgradeable."
             },
-            "Answers": ["C"] 
+            "Answers": ["C"],
+            "Reorder": true 
         },
         { 
             "Question": "How are metadata components specified in package.xml?",
@@ -189,7 +207,8 @@
                 "C": "Each component is specified in the <component> tag.",
                 "D": "Each component is specified in the <members> tag and its type is in the <name> tag."
             },
-            "Answers": ["D"] 
+            "Answers": ["D"],
+            "Reorder": true 
         },
         { 
             "Question": "How do you delete metadata components from an org?",
@@ -200,7 +219,8 @@
                 "D": "You can't delete components.",
                 "E": "Very very carefully. Only with supervision from a certified technical architect."
             },
-            "Answers": ["B"] 
+            "Answers": ["B"],
+            "Reorder": true 
         },
         { 
             "Question": "The Deployment Status page shows the status and test results of what type of deployments?",
@@ -210,7 +230,8 @@
                 "C": "Deployments started from the Force.com Migration Tool and change sets.",
                 "D": "Metadata API deployments."
             },
-            "Answers": ["A"] 
+            "Answers": ["A"],
+            "Reorder": true 
         },
         { 
             "Question": "What is the benefit of reducing test execution times in a deployment? Choose the best answer.",
@@ -220,7 +241,8 @@
                 "C": "Shorter deployments make iterative test deployments longer because they require more frequent deployments.",
                 "D": "Deployment times are outside of my control. Only Astro has the power to change the deployment time."
             },
-            "Answers": ["A"] 
+            "Answers": ["A"],
+            "Reorder": true 
         },
         { 
             "Question": "How does a quick deployment reduce deployment time to production?",
@@ -230,7 +252,8 @@
                 "C": "Tests aren't rerun in a quick deployment because they are resumed.",
                 "D": "B and C"
             },
-            "Answers": ["A"] 
+            "Answers": ["A"],
+            "Reorder": false
         },
         { 
             "Question": "What is the benefit of test levels? Choose the best answer.",
@@ -240,7 +263,8 @@
                 "C": "Test levels are only useful in production but not in test environments.",
                 "D": "Test levels are useful only if you use the Run Specified Tests level."
             },
-            "Answers": ["B"] 
+            "Answers": ["B"],
+            "Reorder": true 
         },
         { 
             "Question": "Suppose you're deploying a small app that doesn't depend on components in your org. This app has one Apex test class that covers the Apex code in your app. What is the best practice for a fast production deployment?",
@@ -251,7 +275,8 @@
                 "C": "Run a deployment with no test level set so that the default test behavior occurs.",
                 "D": "Run a deployment with the Run Specified Tests level and specify the test class."
             },
-            "Answers": ["B"] 
+            "Answers": ["B"],
+            "Reorder": true 
         },
         {
             "Question": "If one of your deployments is interrupted due to a Salesforce service update, what happens?",
@@ -261,7 +286,8 @@
                 "C": "Tests in the deployment are resumed after the last executed test whose result is saved.",
                 "D": "Tests in the deployment are resumed from where they last stopped. Previous results aren't saved."
             },
-            "Answers": ["C"] 
+            "Answers": ["C"],
+            "Reorder": true 
         },
         { 
             "Question": "When is it advisable to use version control?",
@@ -271,7 +297,8 @@
                 "C": "If you have one developer",
                 "D": "If you can't find where the audit trail is stored"
             },
-            "Answers": ["A"] 
+            "Answers": ["A"],
+            "Reorder": true 
         },
         { 
             "Question": "Not all metadata is represented in the Metadata API. This means that:",
@@ -281,7 +308,8 @@
                 "C": "Developer Pro sandboxes contain all of your data",
                 "D": "All of the above"
             },
-            "Answers": ["B"] 
+            "Answers": ["B"],
+            "Reorder": true 
         },
         { 
             "Question": "A continuous integration system allows you to:",
@@ -291,7 +319,8 @@
                 "C": "Automate deployments and tests from source control to sandbox",
                 "D": "Meet an actual guy named Jenkins"
             },
-            "Answers": ["C"] 
+            "Answers": ["C"],
+            "Reorder": true 
         },
         { 
             "Question": "Which of the following customizations is safe to create in your production org?",
@@ -301,7 +330,8 @@
                 "C": "Delete a custom object.",
                 "D": "Change a field type from text to numbers."
             },
-            "Answers": ["B"] 
+            "Answers": ["B"],
+            "Reorder": true 
         },
         { 
             "Question": "If you deploy a workflow rule in production before testing it in a separate environment, which of the following can happen?",
@@ -311,7 +341,8 @@
                 "C": "Your rule could send unintended emails or create unnecessary tasks.",
                 "D": "All of the above"
             },
-            "Answers": ["D"] 
+            "Answers": ["D"],
+            "Reorder": true 
         },
         { 
             "Question": "What's the correct order for the three main stages of a good change management system?",
@@ -321,7 +352,8 @@
                 "C": "Deploy, build, and test",
                 "D": "Build, test, and deploy"
             },
-            "Answers": ["D"] 
+            "Answers": ["D"],
+            "Reorder": true 
         },
         { 
             "Question": "You're working in an Unlimited Edition org where changes are made in production. Which of the following reasons makes the best case for using a sandbox?",
@@ -331,7 +363,8 @@
                 "C": "You can build castles.",
                 "D": "B and C."
             },
-            "Answers": ["A"] 
+            "Answers": ["A"],
+            "Reorder": false 
         },
         { 
             "Question": "Which of the following isn't a benefit of using change sets?",
@@ -341,7 +374,8 @@
                 "C": "You can transfer user licenses from sandbox to production.",
                 "D": "A and B."
             },
-            "Answers": ["C"] 
+            "Answers": ["C"],
+            "Reorder": false 
         },
         { 
             "Question": "What kind of sandbox is best for final staging before production?",
@@ -351,7 +385,8 @@
                 "C": "Partial Copy",
                 "D": "Full"
             },
-            "Answers": ["D"] 
+            "Answers": ["D"],
+            "Reorder": true 
         },
         { 
             "Question": "Which is the best way to discover how many sandboxes are available for your org?",
@@ -361,7 +396,8 @@
                 "C": "Call Salesforce Customer Support.",
                 "D": "Review your service agreement."
             },
-            "Answers": ["A"] 
+            "Answers": ["A"],
+            "Reorder": true 
         },
         { 
             "Question": "How do you create a sandbox?",
@@ -371,7 +407,8 @@
                 "C": "Expose the Sandbox tab in Customize My Tabs",
                 "D": "From the Home tab"
             },
-            "Answers": ["B"] 
+            "Answers": ["B"],
+            "Reorder": true 
         },
         { 
             "Question": "What do you do to ensure that sensitive data isn't copied to your Full Copy sandbox?",
@@ -381,7 +418,8 @@
                 "C": "Rely on sharing and permission rules to protect sensitive data in a sandbox.",
                 "D": "A and B"
             },
-            "Answers": ["A"] 
+            "Answers": ["A"],
+            "Reorder": false 
         },
         { 
             "Question": "Which of the following isn't a benefit of using change sets?",
@@ -391,7 +429,8 @@
                 "C": "You can use the change set more than once, saving time if you have many iterations or a large set of changes.",
                 "D": "You can validate your change set before deploying."
             },
-            "Answers": ["B"] 
+            "Answers": ["B"],
+            "Reorder": true 
         },
         { 
             "Question": "Deploying changes from sandbox to production using change sets is a four-step process. Which of the following isn't one of the steps?",
@@ -401,7 +440,8 @@
                 "C": "Upload the change set from sandbox to production.",
                 "D": "Delete a deployed change set."
             },
-            "Answers": ["D"] 
+            "Answers": ["D"],
+            "Reorder": true 
         },
         { 
             "Question": "What is the benefit of validating an inbound change set before deploying? Choose the best answer.",
@@ -411,7 +451,8 @@
                 "C": "Automatically adding missing components during validation",
                 "D": "B and C"
             },
-            "Answers": ["B"] 
+            "Answers": ["B"],
+            "Reorder": false 
         },
         { 
             "Question": "Which of the following isn't a component of a governance framework?",
@@ -421,7 +462,8 @@
                 "C": "Release Management",
                 "D": "Center of Excellence"
             },
-            "Answers": ["A"] 
+            "Answers": ["A"],
+            "Reorder": true 
         },
         { 
             "Question": "How does a center of excellence improve velocity?",
@@ -431,7 +473,8 @@
                 "C": "Helps everyone understand the business priorities.",
                 "D": "Keeps best practices on a need-to-know basis."
             },
-            "Answers": ["C"] 
+            "Answers": ["C"],
+            "Reorder": true 
         },
         { 
             "Question": "Which of the following is an example of a design standard that applies to Salesforce?",
@@ -441,7 +484,8 @@
                 "C": "Editing a page layout",
                 "D": "B and C"
             },
-            "Answers": ["A"]     
+            "Answers": ["A"],
+            "Reorder": false     
         }
     ]
 }

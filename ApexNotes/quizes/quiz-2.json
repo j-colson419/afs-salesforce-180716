@@ -1,0 +1,431 @@
+{
+    "Question": "What salesforce functionality is ignored when processing field updates in workflow rules and approval processes? Choose 3 answers.",
+    "Options": {
+        "A": "Validation rules",
+        "B": "Decimal places and character limits",
+        "C": "Record type picklist value assignments",
+        "D": "Field-level security"
+    },
+    "Answers": ["A", "C", "D"]
+},
+{
+    "Question": "In order to delete the Opportunities, Universal Containers would like sales reps to submit requests for approval from their sales manager. What can be used to meet these requirements?",
+    "Options": {
+        "A": "Approval Process with Time-Dependent workflow action.",
+        "B": "Approval Process with Apex Trigger.",
+        "C": "Two-step Approval process.",
+        "D": "Process Builder with Submit for Approval action."
+    },
+    "Answers": ["D"]
+},
+{
+    "Question": "User at Universal Containers need to be able to quickly create a contact record from the Account record’s Chatter feed. How should the App Builder enable the functionality?",
+    "Options": {
+        "A": "By creating a custom “Create a Record” Action on the Account.",
+        "B": "By creating a custom “Detail Page” Button on the Account.",
+        "C": "By creating a custom “Detail Page” Button on the Contract.",
+        "D": "By creating a custom “Create a Record” Action on the Contract."
+    },
+    "Answers": ["A"]
+},
+{
+    "Question": "A Customer Support Manager at Universal Containers would like to implement call scripting for their caller agents. What automation tool can be used to accomplish this?",
+    "Options": {
+        "A": "Workflow",
+        "B": "Lightning process Builder",
+        "C": "Visual Workflow",
+        "D": "Lightning Connect"
+    },
+    "Answers": ["C"]
+},
+{
+    "Question": "",
+    "Options": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+    },
+    "Answers": ["D"]
+},
+{
+    "Question": "",
+    "Options": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+    },
+    "Answers": ["D"]
+}
+
+
+  
+
+
+ 
+
+
+5	
+An App Builder is loading the data into salesforce. To link the new records back to the legacy system, a field will be used to track the legacy ID on the account object. For future data loads this ID will be used when upserting records. Which field attribute should be selected? Choose 2 answers
+Unique 
+
+
+Required 
+
+
+External ID 
+
+
+Text(encrypted) 
+
+
+6	
+Universal Containers is rolling out a new customer service process. Customer service managers will need to edit cases for their subordinates, but not cases for other groups. Managers and users should be able to view all cases. What is the recommended solution to configure this? Choose 2 answers
+Create standard role hierarchies.
+  
+
+
+Set organization-wide sharing defaults to public read/only.
+
+
+Create criteria-based sharing rules. 
+
+
+Set organization-wide sharing defaults to private. 
+
+
+7	
+An app builder would like to streamline the user experience by reflecting summarized calculations of specific fields on various objects. Which field types could be used in roll-up summary fields to accomplish this? Choose 3 answers
+Currency 
+
+
+Percent 
+
+
+Date 
+
+
+Time 
+
+
+8	
+Universal Containers stores invoices in SAP. Users want to view invoice data on the related Account records in Salesforce. How can this be achieved? Choose 2 answers
+Create a custom Invoice object and connect to SAP using Data Loader.
+ 
+
+
+Create an external object connected to an invoice table in SAP.
+ 
+
+
+Connect to an OData Publisher Service for SAP databases. 
+
+
+Use SAP data export functions to load data directly in Salesforce.
+
+
+9	
+What should be done to provide managers access to records of which they are not the owner in a private sharing model?
+Create a Manager permission set and select the “View All Data” option.
+
+
+Create a Manager profile and select the “View My Teams Data” option.
+
+
+Define a Role Hierarchy and use the Grant Access Using Hierarchies option.
+
+
+Set the Manager field for each User Record on the Manager’s team.
+
+
+10	
+What is a true statement regarding roll-up summary fields? Choose 2 answers
+Roll-up summary fields can only be created on the master of a master-detail relationship.
+
+
+The roll-up summary field inherits the field – level security of the child object.
+
+
+Changes to the value of a roll-up summary field column of roll-up summary filters.
+
+
+Multi-select picklist fields can be used in the field column of roll-up summary filters.
+
+
+11	
+A custom field on an account is used to track finance information about a customer. Only members of the Finance Team have access to this field. However, the business wants to allow one customer service agent, who is assigned the customer service profile, read-only access to this field for special circumstances. What is the recommended solution to grant the customer service agent access to the field?
+Create a permission set that allows read-only access to the field via Field Level Security and assigns it to the agent.
+
+
+Create a new profile to allow for read-only access to the field via Field Level Security and assign it to the agent.
+
+
+Update the Customer Service Profile already assigned to the agent to allow for read-only access to the field via Field Level Security.
+
+
+Update the custom field’s Field Level Security in setup to allow the agent read-only access to the assigns.
+
+
+12	
+An app Builder creates an Account validation rule on the Industry field that will throw an error if the length of the field is longer than 6 characters. Another App Builder creates a workflow rule with a field update that sets the Industry field to Technology whenever the Billing City field is set to San Francisco. What will happen the next time a sales person saves an Account with a Billing City of San Francisco?
+The record will save and the Industry field will change to Technology.
+
+
+The record will not save and the validation rule’s error message will be displayed.
+
+
+The record will not save and no error message will be displayed.
+
+
+The record will save but the Industry field will not change to Technology.
+
+
+13	
+Universal Containers uses a custom object to track Site Visits. When the status of a Site Visit is changed from “In Progress” to “On Hold”, the business wants the Site visit owner to be automatically assigned to an “On Hold” queue. Which capability can be used to accomplish this?
+Apex Trigger 
+
+
+Action 
+
+
+Assignment Rule 
+
+
+Visual Workflow 
+
+
+14	
+When should Unmanaged packages be created? Choose 2 answers
+Deploying from a Developer Edition environment. 
+
+
+Publishing an application for sale on the AppExchange. 
+
+
+Migrating of components from sandbox to production. 
+
+
+ Distributing open-source projects on AppExchange. 
+
+
+15	
+When a user creates an Account report, the user does not see Industry as an available field in the report builder. However, this same user is able to see it in the Account page layout. What scenario would cause this?
+The user uses a custom report type which does not include the Industry field.
+
+
+The Industry field has no record values in the Account. 
+
+
+The Industry field is not enabled for the particular record type.
+
+
+The user does not have Industry field visibility in the field – level security.
+
+
+16	
+What is a true statement in regards to managing access to reports and dashboards? Choose 2 answers
+Users with the “Manage Public Reports” permission can organize reports by creating custom report folders and sending invitations to users to access them.
+
+
+Users must have certain permissions to access public, hidden, or shared folders.
+
+
+Users with the “Manage Public Reports” and “Create and Customize Reports” permissions can create custom reports that all users can view.
+
+
+Users that want to grant access to personal folders can manually share a personal folder with a user or public group.
+
+
+17	
+Which setting is available to customize Salesforce1 mobile app for branding?
+Header and search bar color. 
+
+
+The image on the loading page. 
+
+
+Background color on loading page. 
+
+
+Notification and search icon. 
+
+
+18	
+The CRM Manager at Universal Containers has requested that a custom text field be converted to a picklist in order to promote better data hygiene. What needs to be considered before changing the field type? Choose 2 answers
+Existing list views that reference the field may be deleted. 
+
+
+Field references will be removed in Visualforce pages. 
+
+
+All data should be backed up before converting a text field.
+
+
+Changing a field type will remove existing field history. 
+
+
+19	
+At Universal Containers, multiple departments utilize the Case object for different purposes. Some users submit cases for IT and HR requests. Other users provide customer support with case records. How can an App Builder enable different users to see different fields based on the case type?
+Create different case field sets for IT, HR, and Customer Support. Assign different fieldsets by profile.
+
+
+Create different case record types for IT, HR, and Customer Support. Assign different page layouts to each record type by role.
+
+
+Create different case record types for IT, HR, and Customer Support. Assign different page layouts to each record type by profile.
+
+
+Create different case field sets for IT, HR, and Customer Support. Assign different field sets by role.
+
+
+20	
+Universal Containers has deployed custom tabs through change sets, without including the profiles, to Production (Enterprise Edition). Which statement is true in regards to the visibility of custom tabs?
+Custom tabs are default on for all users. 
+
+
+Custom tabs are default off for all users. 
+
+
+Custom tabs are exposed for all users. 
+
+
+Custom tabs are hidden for all users. 
+
+
+21	
+Which values must be defined when creating a new Opportunity Stage? Choose 3 answers
+Close Date 
+
+
+Probability 
+
+
+Forecast Category 
+
+
+Type 
+
+
+22	
+What may occur if workflow rules are reevaluated after a field change by a field update? Choose 2 answers
+Cross-object workflow rules result in re-evaluation after field change.
+
+
+Workflow rules trigger validation rules on field updates. 
+
+
+Workflow rules trigger more workflow rules to be re-evaluated.
+
+
+ A recursive loop potentially results in exceeding organizational limits.
+
+
+23	
+The VP of sales at Universal Containers wants to have a set of screens to guide the inside sales team through collecting and updating data for leads. How can the App Builder accomplish this?
+Workflow 
+
+
+Visual Workflow 
+
+
+Lightning Process Builder 
+
+
+Lightning Connect 
+
+
+24	
+A divisional manager wants to add a chart into a page layout Which report format can be used as the source report to accomplish this? Choose 2 answers.
+Joined format with a chart. 
+
+
+Matrix format with a chart. 
+
+
+Tabular format with a chart. 
+
+
+Summary format with a chart. 
+
+
+25	
+What is a use case for approval processes? Choose 2 answers.
+Update the PTO record field with the user’s manager. 
+
+
+Ensure an opportunity that has at least one product added. 
+
+
+Approve expense reports automatically when less than $50 
+
+
+Require the CFO to review the salary range for all job offers.
+
+
+26	
+Which statement is true about an External ID field? Choose 2 answers.
+The field must contain at least one number and at least one letter.
+
+
+ The field must be unique since duplicates are not allowed within Salesforce.
+
+
+The field can be unique based on case-sensitive or case-insensitive values.
+
+
+The field contains unique record identifiers from a system outside of Salesforce
+
+
+Legend  Correct answer
+ Wrong Answer
+ My Activities	My Activities
+My Activities
+My Quizzes
+My Courses
+My Projects
+Assigned Activities
+Batch Quizzes
+Activities
+This page lists all the activities that assigned to you.
+
+Available Activities
+	
+AFS - Week 7 - Quiz
+Completed Activities
+	
+SF App Builder Prep Quiz-1
+Started On
+09/06/2018
+
+Completed On
+09/06/2018
+
+Highest Score (in %)
+81.5
+
+Attempts Remaining
+0
+
+Status:  Passed View History
+	
+SF App Builder Prep Quiz-2
+Started On
+09/07/2018
+
+Completed On
+09/07/2018
+
+Highest Score (in %)
+57.69
+
+Attempts Remaining
+0
+
+Status:  Failed Close History
+S.No.
+Started On
+Completed On
+Status
+%
+Action
