@@ -1,0 +1,279 @@
+{ 
+    "Quiz": [
+        {
+            "Question": "When an opportunity close date is delayed by more than 60 days, the manager and the VP sales must approve the change. How can this requirement be met? Choose 2 answers",
+            "Options": {
+                "A": "Build a validation rule that does not allow a user to save the opportunity record.   ",
+                "B": "Build an approval process that requires unanimous approval from the manager and VP of sales.",
+                "C": "Create a workflow rule that checks for close datel ess that 60 days and add an email alert.",
+                "D": "Create a lightning process builder flow that submits the record for an approval process."
+            },
+            "Answers": ["B", "D"],
+            "Reorder": true
+        },
+        {
+            "Question": "Which statement is true about field update actions from workflow rules and approval processes? Choose 2 answers",
+            "Options": {
+                "A": "Field update with “re-evaluate workflow rules” selected can cause a recursive loop if the updated field is included in a workflow.",
+                "B": "Field update are not available on currency field if the organization uses multi-currency.",
+                "C": "Field updates to records based on workflow rules and approval processes do not trigger validation rules.",
+                "D": "Field updates are tracked in the history related list of a record regardless of whether or not History tracking is set for those fields."
+            },
+            "Answers": ["A", "C"],
+            "Reorder": true
+        },
+        {
+            "Question": "Which social networks are available in the Lightning Experience and Salesforce1?",
+            "Options": {
+                "A": "Facebook",
+                "B": "Twitter",
+                "C": "LinkedIn",
+                "D": "Klout"
+            },
+            "Answers": ["B"],
+            "Reorder": true
+        },
+        {
+            "Question": "A salesperson at AW computing only see’s the Social Contact’s link for Twitter and not Facebook on his records. Why would this be happening?",
+            "Options": {
+                "A": "The administrator hasn't enabled Social Contacts for Facebook",
+                "B": "Facebook is no longer supported by Social Contacts",
+                "C": "The salesperson's login with Facebook has expired",
+                "D": "None of his Facebook contacts have confirmed the nature of their relationship"
+            },
+            "Answers": ["B"],
+            "Reorder": true
+        },
+        {
+            "Question": "What is true when a field update is set to re-evaluate the workflow rule? (Choose three)",
+            "Options": {
+                "A": "In a batch update, workflow is only retriggered on the entities where there is a change.",
+                "B": "Only workflow rules on the same object as the initial field update will be re-evaluated and triggered.",
+                "C": "Only workflow rules that didn’t fire before will be retriggered.",
+                "D": "Cascade of workflow rule re-evaluation and triggering can happen up to ten times after the initial field update that started it."
+            },
+            "Answers": ["A", "B", "C"],
+            "Reorder": true
+        },
+        {
+            "Question": "Describe the ramifications of field updates and potential for recursion for the following scenario: If a field update for Rule1 triggers Rule2, and a field update for Rule2 triggers Rule1",
+            "Options": {
+                "A": "The updates create a loop and the org limits for workflow time triggers per hour will likely be violated.",
+                "B": "When the second trigger is saved a Imminent Loop Error message will be displayed and the workflow rule update will not save.",
+                "C": "The updates create a loop and the org be blocked until the admin resolves the issue",
+                "D": "Loop is allowed to run 25 times within one hour. If it does not end on its own the process will be stopped by R&D."
+            },
+            "Answers": ["A"],
+            "Reorder": true
+        },
+        {
+            "Question": "Which statements are true regarding Roll-Up Summary fields? (select all that apply)",
+            "Options": {
+                "A": "Once created, you cannot change the detail object selected or delete any field referenced in your roll-up summary definition.",
+                "B": "Because roll-up summary fields are not displayed on edit pages, you can use them in validation rules.",
+                "C": "Validation errors can display when saving either the detail or master record.",
+                "D": "Advanced currency management has no effect on roll-up summary fields."
+            },
+            "Answers": ["A", "B", "C"],
+            "Reorder": true
+        },
+        {
+            "Question": "Which statement about record types is true? Choose 2 answers",
+            "Options": {
+                "A": "Record types can be used to define picklist values available for a given field",
+                "B": "The ability to create records of a specific record type is determined by the profile",
+                "C": "Users cannot view records assigned to a record type their profile does not have access to",
+                "D": "Record types can only be assigned to one profile at a time"
+            },
+            "Answers": ["A","B"],
+            "Reorder": true
+        },
+        {
+            "Question": "What determines whether a user can create a new record using a specific record type?",
+            "Options": {
+                "A": "Profile",
+                "B": "Field level security",
+                "C": "Page layout",
+                "D": "Sharing"
+            },
+            "Answers": ["A"],
+            "Reorder": true
+        },
+        {
+            "Question": "Which of the following are not available in record type?",
+            "Options": {
+                "A": "Opportunity Stage",
+                "B": "Case status",
+                "C": "Lead status, Solution Status",
+                "D": "All of above"
+            },
+            "Answers": ["D"],
+            "Reorder": true
+        },
+        {
+            "Question": "What is true about Salesforce Social Accounts, Contacts, and Leads? (choose 2)",
+            "Options": {
+                "A": "In order to see social information about Accounts and Contacts, the user needs to be logged into their account",
+                "B": "Information for all associated Social Networks are available in Salesforce1",
+                "C": "Social Information is automatically imported to Accounts and Contacts",
+                "D": "Social Information is imported to Accounts and Contacts after selecting a profile from a search in one or more Social Networks"
+            },
+            "Answers": ["A", "D"],
+            "Reorder": true
+        },
+        {
+            "Question": "What is true about Person Accounts? (choose 3)",
+            "Options": {
+                "A": "Person Accounts have different icons than Business Accounts",
+                "B": "A Person Account can only be merged with another Person Account",
+                "C": "A Person Account uses the storage of 1 Account and 1 Contact",
+                "D": "Person Accounts are enabled in Salesforce be default"
+            },
+            "Answers": ["A","B","C"],
+            "Reorder": true
+        },
+        {
+            "Question": "What should you consider when changing field types? (choose 3)",
+            "Options": {
+                "A": "Converting a Text Area (Rich) to a Text Area (Long) can result in a loss of data",
+                "B": "Converting a custom Text field to an Auto-Number field will result in a loss of data",
+                "C": "You cannot convert a Custom Field to a Formula Field",
+                "D": "Converting a Picklsit field to a Multi-Select Picklist field will not result in a loss of data"
+            },
+            "Answers": ["A", "C", "D"],
+            "Reorder": true
+        },
+        {
+            "Question": "In Juratovic Realtors, a House custom object is used to track the Square Footage and the Value of a House. Multiple Houses can be related to a single Opportunity. How would you show the total Square Footage and total value of all related Houses on the Opportunity?",
+            "Options": {
+                "A": "Create a Master-Detail Relationship between Opportunity and House. Create 2 Roll-Up fields. One on Square Footage and one on Value.",
+                "B": "Create a Master-Detail Relationship between Opportunity and House. Create 2 formula fields to calculate the total Square Footage and total Value.",
+                "C": "Create a Lookup Relationship between Opportunity and House. Create 2 Roll-Up fields. One on Square Footage and one on Value.",
+                "D": "Create a Lookup Relationship between Opportunity "
+            },
+            "Answers": ["A"],
+            "Reorder": true
+        },
+        {
+            "Question": "What is true regarding Picklist values in Record Types? (choose 3)",
+            "Options": {
+                "A": "Adding to Master automatically adds to all Record Types",
+                "B": "Adding a Picklist Value to Lead Status, Opportunity Stage requires that you add it to the desired Record Type",
+                "C": "Removing a Picklist Value from Master automatically removes the picklist value from any Record Types that have the value assigned",
+                "D": "Removing a Picklist Value from a Record Type will remove that value as an option on the Picklist. Any existing Data with that value will not have the value removed"
+            },
+            "Answers": ["A","B","D"],
+            "Reorder": true
+        },
+        {
+            "Question": "If a workflow is re-evaluated what will get re-evaluated",
+            "Options": {
+                "A": "Validations",
+                "B": "Workflows that have already fired",
+                "C": "Workflow rules that didn’t fire before.",
+                "D": "Apex Class"
+            },
+            "Answers": ["C"],
+            "Reorder": true
+        },
+        {
+            "Question": "You can’t see a VF page in Salesforce1. What could be the reason? (Choose 2)",
+            "Options": {
+                "A": "Don’t have a tab",
+                "B": "Not a lightening component",
+                "C": "No field access",
+                "D": "Not in the menu bar"
+            },
+            "Answers": ["A", "D"],
+            "Reorder": true
+        },
+        {
+            "Question": "What can you include in a Salesforce1? (Choose 3)",
+            "Options": {
+                "A": "Visualforce Component",
+                "B": "Lightening Component",
+                "C": "Tab",
+                "D": "Action"
+            },
+            "Answers": ["B", "C", "D"],
+            "Reorder": true
+        },
+        {
+            "Question": "You have a custom object that has history records that you want to keep. Because you don’t need some of the field, what you can do?",
+            "Options": {
+                "A": "Trigger + new object",
+                "B": "Workflow + new object",
+                "C": "Record type + page layout",
+                "D": "Record type + page layout + Profiles"
+            },
+            "Answers": ["C"],
+            "Reorder": true
+        },
+        {
+            "Question": "When you want to create a Business process, what must you create?",
+            "Options": {
+                "A": "Sales Process",
+                "B": "Record Types",
+                "C": "Page Layouts",
+                "D": "Profiles"
+            },
+            "Answers": ["B"],
+            "Reorder": true
+        },
+        {
+            "Question": "I want to display 3 paragraphs on a field, which type should I choose? (Choose two)",
+            "Options": {
+                "A": "Text Field",
+                "B": "Text Area",
+                "C": "Text Area (Long)",
+                "D": "Text Area (Rich)"
+            },
+            "Answers": ["C", "D"],
+            "Reorder": true
+        },
+        {
+            "Question": "Users logs time into a custom object LogTime every day. An invoice is created once per month. Invoice is another custom object. What relationship can you create so that on an invoice you can have all the log time by a user?",
+            "Options": {
+                "A": "Master-Detail on Invoice + Rollup Summary on it",
+                "B": "Master-Detail on LogTime + Rollup Summary on it",
+                "C": "LookUp on Invoice + Formula to sum",
+                "D": "LookUp on LogTime + Formula on sum"
+            },
+            "Answers": ["B"],
+            "Reorder": true
+        },
+        {
+            "Question": "Field type conversion. Which of the following are true: (choose 2):",
+            "Options": {
+                "A": "Data can be lost when converting from simple picklist to multi picklist",
+                "B": "Data can be lost when converting from auto number to text",
+                "C": "Data can be lost when converting from number to currency (assuming that field lengths are identical)",
+                "D": "Information can be lost when converting from text area (rich) to text area (long)"
+            },
+            "Answers": ["A", "D"],
+            "Reorder": true
+        },
+        {
+            "Question": "Person Accounts (choose two):",
+            "Options": {
+                "A": "Do use space in both account and contacts table",
+                "B": "Have the same icon as Business accounts",
+                "C": "Can only be merged with other person accounts",
+                "D": "Are enabled via feature license"
+            },
+            "Answers": ["A", "C"],
+            "Reorder": true
+        },
+        {
+            "Question": "Which is true about social accounts:",
+            "Options": {
+                "A": "You can use social accounts data even when you are not logged into the social account",
+                "B": "You need a personal social account in order to see social account data",
+                "C": "You can use social accounts to import data into salesforce",
+                "D": "Connection to social account is established thru a companywide \"named principal\""
+            },
+            "Answers": ["B"],
+            "Reorder": true
+        }
+    ]
+}

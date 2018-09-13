@@ -23,18 +23,20 @@ function readJSONFile(file, onSuccess)
 
 /**
  * Loads the notes on DOMContentLoaded
- * @param {string} locationNotes Name for the notes repository
+ * @param {string} quizFile Which quiz do you wanna take?
  */
-function loadNotes(locationNotes, fileType='cls') {
+function loadNotes(quizFile) {
     window.addEventListener('DOMContentLoaded', function(){
         console.log('DOMContentLoaded');
         var quiz_content = document.getElementById('content');
         var nav = document.getElementById('nav');
 
-        readJSONFile('quizes/quiz-1.json', json => {
+        var number = getUrlParameters().number || 100;
+
+        readJSONFile(`quizes/${quizFile}.json`, json => {
             var questions = shuffle(json['Quiz']);
             var question = {}, q;
-            for (q = 1; q <= questions.length; q++) {
+            for (q = 1; q <= questions.length && q <= number; q++) {
                 var q_div = document.createElement("div");
                 q_div.className = "question";
                 question = questions[q-1];
@@ -98,25 +100,33 @@ function addQuestion(div, question, q_number) {
     var options = question['Options'];
     option_list.className = "options";
 
-    var option_keys = ['A', 'B', 'C', 'D', 'E'], o = 0;
+    var option_keys = ['A', 'B', 'C', 'D', 'E'], o = 0, l = 0, random_keys;
+    if (question['Reorder'])
+        random_keys = shuffle(option_keys);
+    else
+        random_keys = option_keys;
     var option;
-    while (option = options[option_keys[o]]) {
-        var opt_div = document.createElement("div");
-        opt_div.className = "option";
-        opt_div.innerText = option_keys[o] + '. ' + option;
-        opt_div.onclick = (response) => {
-            if (response.target.classList.contains("selected")) {
-                response.target.classList.remove("selected");
+    while (o < random_keys.length) {
+        if (option = options[random_keys[o]]) {
+            var opt_div = document.createElement("div");
+            opt_div.className = "option";
+            opt_div.innerText = option_keys[o-l] + '. ' + option;
+            opt_div.onclick = (response) => {
+                if (response.target.classList.contains("selected")) {
+                    response.target.classList.remove("selected");
+                } else {
+                    response.target.classList.add("selected");
+                }
+            };
+            if (question['Answers'].indexOf(random_keys[o]) != -1) {
+                opt_div.classList.add("correct");
             } else {
-                response.target.classList.add("selected");
+                opt_div.classList.add("wrong");
             }
-        };
-        if (question['Answers'].indexOf(option_keys[o]) != -1) {
-            opt_div.classList.add("correct");
+            option_list.appendChild(opt_div);
         } else {
-            opt_div.classList.add("wrong");
+            l++;
         }
-        option_list.appendChild(opt_div);
         o++;
     }
     div.appendChild(option_list);
@@ -124,10 +134,11 @@ function addQuestion(div, question, q_number) {
 
 /**
  * Shuffles the input array
- * @param {List} array 
+ * @param {List} ordered_array 
  * @returns {List}
  */
-function shuffle(array) {
+function shuffle(ordered_array) {
+    var array = ordered_array.slice();
     var currentIndex = array.length, temporaryValue, randomIndex;
   
     // While there remain elements to shuffle...
@@ -172,4 +183,16 @@ function highlightActiveNav() {
     content.onscroll = highlight;
 
     highlight({ target: content });
+}
+
+/**
+ * Gets the URL Parameter
+ * @returns {*}
+ */
+function getUrlParameters() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
 }
